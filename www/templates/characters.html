@@ -1,0 +1,9 @@
+<ul>
+    <li ng-repeat="character in characters" class="list-group-item">
+        <a ui-sref="character-detail({ id:{{character.id}} })">
+            <img class="src" ng-src="{{character.image.thumb_url}}" alt=""/>
+            {{character.name}}
+        </a>
+    </li>
+</ul>
+
