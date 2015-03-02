@@ -30,7 +30,7 @@ def get_character_detail(id):
   return json.dumps(results)
 
 
-@app.route('/<any(controllers, templates, filters, services):folder>/<path:filename>')
+@app.route('/<any(controllers, templates, filters, services, bower_components):folder>/<path:filename>')
 def toplevel_static(folder, filename):
   filename = safe_join(folder, filename)
   cache_timeout = app.get_send_file_max_age(filename)

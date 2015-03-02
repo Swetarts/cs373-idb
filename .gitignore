@@ -1,2 +1,8 @@
 venv/
 .idea/
+logs/*
+!.gitkeep
+www/node_modules/
+www/bower_components/
+tmp
+.DS_Store
