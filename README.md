@@ -23,7 +23,10 @@ To activate your virtual envrionment run:
 $ source venv/bin/activate
 ```
 
-Now you can install all of the packages for our flask app and everything *should* work.
+Now you can install all of the packages for our flask app and everything *should* work. To do this run
+```bash
+pip3 install -r requirements.txt
+```
 
 # Running the application
 * `$ python server.py`
