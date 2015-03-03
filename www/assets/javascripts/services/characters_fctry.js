@@ -4,7 +4,7 @@ app.factory("charactersFactory", function($http, $q) {
   factory.getCharacters = function() {
     var deffered = $q.defer();
 
-    $http.get("http://localhost:5000/characters", {cache: true})
+    $http.get("http://localhost:5000/api/characters", {cache: true})
       .success(function(data) {
         console.log(data);
         deffered.resolve(data);
@@ -20,7 +20,7 @@ app.factory("charactersFactory", function($http, $q) {
   factory.getCharacterDetail = function(id) {
     var deffered = $q.defer();
 
-    $http.get("http://localhost:5000/characters/" + id, {cache: true})
+    $http.get("http://localhost:5000/api/characters/" + id, {cache: true})
       .success(function(data) {
         console.log(data);
         deffered.resolve(data);

@@ -15,20 +15,20 @@ var app = angular.module('myApp', ['ui.router'])
     $stateProvider
       .state('home', {
         url: "/home",
-        templateUrl: "templates/home.html"
+        templateUrl: "../../templates/home.html"
       })
       .state('about', {
         url: "/about",
-        templateUrl: "templates/about.html"
+        templateUrl: "../../templates/about.html"
       })
       .state('characters', {
         url: "/characters",
-        templateUrl: "templates/characters.html",
+        templateUrl: "../../templates/characters.html",
         controller: "CharactersCtrl"
       })
       .state('character-detail', {
         url: "/characters/:id",
-        templateUrl: "templates/character-detail.html",
+        templateUrl: "../../templates/character-detail.html",
         controller: "CharacterDetailCtrl"
       });
 

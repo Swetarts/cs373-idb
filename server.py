@@ -7,12 +7,14 @@ app = Flask(__name__)
 app.debug = True
 cors = CORS(app)
 
+# Catch all route to correctly handle manually
+# entered URLs and send them to Angular
+@app.route('/', defaults={'path':''})
+@app.route('/<path:path>')
+def index(path):
+  return send_from_directory('www', 'index.html')
 
-@app.route('/<filename>')
-def files(filename):
-  return send_from_directory('www', filename)
-
-@app.route('/characters')
+@app.route('/api/characters')
 @cross_origin()
 def get_characters():
   response = requests.get('http://www.comicvine.com/api/characters/?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json')
@@ -20,7 +22,7 @@ def get_characters():
   results = parsed['results']
   return json.dumps(results)
 
-@app.route('/characters/<id>')
+@app.route('/api/characters/<id>')
 @cross_origin()
 def get_character_detail(id):
   request_url = 'http://www.comicvine.com/api/character/4005-{}?api_key=2a196eae09708f335bc341657e97155564ab9514&format=json'.format(id)
@@ -30,7 +32,7 @@ def get_character_detail(id):
   return json.dumps(results)
 
 
-@app.route('/<any(controllers, templates, filters, services, bower_components):folder>/<path:filename>')
+@app.route('/<any(assets, templates,  bower_components):folder>/<path:filename>')
 def toplevel_static(folder, filename):
   filename = safe_join(folder, filename)
   cache_timeout = app.get_send_file_max_age(filename)
