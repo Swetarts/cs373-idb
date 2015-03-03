@@ -1,9 +1,13 @@
-<ul>
-    <li ng-repeat="character in characters" class="list-group-item">
-        <a ui-sref="character-detail({ id:{{character.id}} })">
-            <img class="src" ng-src="{{character.image.thumb_url}}" alt=""/>
-            {{character.name}}
-        </a>
-    </li>
-</ul>
+<div class="flex-container">
+    <div ng-repeat="character in characters" class="thumbnail flex-items-default">
+        <img ng-src="{{ character.image.thumb_url }}" alt=""/>
+        <div class="caption">
+           <h3>
+               <a ui-sref="character-detail({ id:{{character.id}} })">
+                   {{character.name}}
+               </a>
+           </h3>
+        </div>
+    </div>
+</div>
 
