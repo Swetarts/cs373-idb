@@ -11,7 +11,7 @@ cors = CORS(app)
 # entered URLs and send them to Angular
 @app.route('/', defaults={'path':''})
 @app.route('/<path:path>')
-def index(path):
+def index(**kwargs):
   return send_from_directory('www', 'index.html')
 
 @app.route('/api/characters')
