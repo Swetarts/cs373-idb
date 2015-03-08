@@ -2,34 +2,11 @@ app.factory("charactersFactory", function($http, $q) {
   var factory = {};
 
   factory.getCharacters = function() {
-    var deffered = $q.defer();
-
-    $http.get("http://localhost:5000/api/characters", {cache: true})
-      .success(function(data) {
-        console.log(data);
-        deffered.resolve(data);
-      })
-      .error(function() {
-        console.log("error getting characters");
-        deffered.reject([{'name':'error'}]);
-      });
-
-    return deffered.promise;
+    return $http.get("http://localhost:5000/api/characters", {cache: true});
   };
 
   factory.getCharacterDetail = function(id) {
-    var deffered = $q.defer();
-
-    $http.get("http://localhost:5000/api/characters/" + id, {cache: true})
-      .success(function(data) {
-        console.log(data);
-        deffered.resolve(data);
-      })
-      .error(function(data) {
-        console.log("error getting character:" + id);
-      });
-
-    return deffered.promise
+    return $http.get("http://localhost:5000/api/characters/" + id, {cache: true});
   };
 
   return factory;
