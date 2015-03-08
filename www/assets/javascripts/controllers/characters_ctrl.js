@@ -4,4 +4,6 @@ app.controller('CharactersCtrl', function($scope, charactersFactory) {
   promise.then(function(data) {
       $scope.characters = data;
     });
+
+  $scope.banner = null;
 });
