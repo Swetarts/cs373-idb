@@ -41,3 +41,7 @@ h3.character-name {
     display: block;
 }
 
+@media all and (max-width: 300px) {
+    #characters-banner { display: none; }
+}
+
