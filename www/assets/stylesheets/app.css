@@ -41,6 +41,7 @@ h3.character-name {
     display: block;
 }
 
+/* make banner disappear when screen below 300px*/
 @media all and (max-width: 300px) {
     #characters-banner { display: none; }
 }

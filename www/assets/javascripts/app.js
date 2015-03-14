@@ -3,9 +3,9 @@ var app = angular.module('myApp', ['ui.router'])
 
   .run(function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(e, to) {
-      console.log($state);
-      console.log(e);
-      console.log(to);
+      // console.log($state);
+      // console.log(e);
+      // console.log(to);
     });
   })
 
@@ -24,7 +24,19 @@ var app = angular.module('myApp', ['ui.router'])
       .state('characters', {
         url: "/characters",
         templateUrl: "../../templates/characters.html",
-        controller: "CharactersCtrl"
+        controller: "CharactersCtrl",
+        resolve: {
+          characters: function(charactersFactory, $q) {
+            var deferred = $q.defer();
+
+            charactersFactory.getCharacters()
+              .then(function(data) {
+                deferred.resolve(data.data)
+              });
+
+            return deferred.promise;
+          }
+        }
       })
       .state('character-detail', {
         url: "/characters/:id",
@@ -35,4 +47,3 @@ var app = angular.module('myApp', ['ui.router'])
     $urlRouterProvider.otherwise('/home');
     $locationProvider.html5Mode(true);
 });
-
