@@ -7,19 +7,56 @@
             <tab heading="Description">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <button class="center-block btn btn-primary"ng-click="isCollapsed = !isCollapsed">
+                        <button class="center-block btn btn-primary"ng-click="imageIsCollapsed = !imageIsCollapsed">
                             Toggle Photo
                         </button>
                     </div>
-                    <div class="panel-body" collapse="isCollapsed">
+                    <div class="panel-body" collapse="imageIsCollapsed">
                         <img class='block-center' ng-src="{{ character.image.medium_url }}" alt=""/>
                     </div>
                 </div>
                 <div ng-bind-html="character.description | to_trusted"></div>
             </tab>
-
+    
+            <tab heading="Powers">
+                <div class="list-group">
+                    <a ng-repeat="power in character.powers" class="list-group-item text-center">
+                        {{power.name}}
+                    </a>
+                </div>
+            </tab>
             <tab heading="Issues">static content</tab>
-            <tab heading="Relationships">static content</tab>
+            <tab heading="Relationships">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button class="center-block btn btn-primary"ng-click="friendsIsCollapsed = !friendsIsCollapsed">
+                            Toggle Friends 
+                        </button>
+                    </div>
+                    <div class="panel-body" collapse="friendsIsCollapsed">
+                        <div class="list-group">
+                            <a ng-repeat="friend in character.character_friends" class="list-group-item text-center">
+                                {{friend.name}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button class="center-block btn btn-primary"ng-click="enemiesIsCollapsed = !enemiesIsCollapsed">
+                            Toggle Enemeies
+                        </button>
+                    </div>
+                    <div class="panel-body" collapse="enemiesIsCollapsed">
+                        <div class="list-group">
+                            <a ng-repeat="friend in character.character_enemies" class="list-group-item text-center">
+                                {{friend.name}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </tab>
         </div>
     </tabset>
 </div>

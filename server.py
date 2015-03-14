@@ -36,7 +36,7 @@ def get_character_detail(id):
 def toplevel_static(folder, filename):
   filename = safe_join(folder, filename)
   cache_timeout = app.get_send_file_max_age(filename)
-  return send_from_directory('www', filename, cache_timeout=cache_timeout)
+  return send_from_directory('www', filename)
 
 if __name__ == '__main__':
   app.run()

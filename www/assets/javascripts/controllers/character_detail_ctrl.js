@@ -1,6 +1,8 @@
 app.controller('CharacterDetailCtrl', function($scope, character) {
 
-  $scope.isCollapsed = true;
+  $scope.imageIsCollapsed = true;
+  $scope.friendsIsCollapsed = true;
+  $scope.enemiesIsCollapsed = true;
 
   $scope.character = character;
 

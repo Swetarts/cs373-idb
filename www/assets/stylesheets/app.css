@@ -7,7 +7,34 @@ html {
 
 body {
     background: none;
+
+    /* fix for sticky nav bar overlay */
+    padding-top: 70px;
 }
+
+
+/************************************
+*                                   
+*       Utility               
+*                                   
+*************************************/
+
+.block-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* make banner disappear when screen below 300px*/
+@media all and (max-width: 300px) {
+    #characters-banner { display: none; }
+}
+
+/************************************
+*                                   
+*       Characters page             
+*                                   
+*************************************/
 
 /*
  * helpful link about flexbox
@@ -35,14 +62,40 @@ h3.character-name {
     text-align: center;
 }
 
-.block-center {
-    margin-left: auto;
-    margin-right: auto;
+
+#banner-container {
+    margin-bottom: 1%;
+}
+
+/* override bootflat 100% width */
+.thumbnail a > img, .thumbnail > img {
+    width: auto;
+}
+
+/*.glass::before {
     display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('http://25.media.tumblr.com/f6131152b786236ee6948e16494c9a93/tumblr_mnf4qutKjn1rm7i00o1_1280.jpg') no-repeat center center fixed; ;
+    background-size: cover;
+    content: ' ';
+    opacity: 0.4;
 }
 
-/* make banner disappear when screen below 300px*/
-@media all and (max-width: 300px) {
-    #characters-banner { display: none; }
+.glass {
+    background-color: white;
+}*/
+
+.hover-rise:hover {
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
 }
 
+/************************************
+*                                   
+*       Character Detail             
+*                                   
+*************************************/
