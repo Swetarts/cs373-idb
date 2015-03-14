@@ -1,4 +1,4 @@
-<img class='block-center' ng-src="{{ character.image.medium_url }}" alt=""/>
+<!-- <img class='block-center' ng-src="{{ character.image.medium_url }}" alt=""/>
 <div class="panel panel-default">
     <div class="panel-heading">
         <h2 class="panel-title">{{ character.name }}</h2>
@@ -8,3 +8,30 @@
         </div>
     </div>
 </div>
+ -->
+ <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="text-center">{{character.name}}</h2>
+    </div>
+    <div class="panel-body">
+        <tabset justified="true">
+            <tab heading="Description">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button class="center-block btn btn-primary"ng-click="isCollapsed = !isCollapsed">
+                            Toggle Photo
+                        </button>
+                    </div>
+                    <div class="panel-body" collapse="isCollapsed">
+                        <img class='block-center' ng-src="{{ character.image.medium_url }}" alt=""/>
+                    </div>
+                </div>
+                <div ng-bind-html="character.description | to_trusted"></div>
+            </tab>
+
+            <tab heading="Issues">static content</tab>
+            <tab heading="Relationships">static content</tab>
+        </div>
+    </tabset>
+</div>
+

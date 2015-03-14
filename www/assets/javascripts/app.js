@@ -1,5 +1,5 @@
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', ['ui.router'])
+var app = angular.module('myApp', ['ui.router', 'ui.bootstrap'])
 
   .run(function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(e, to) {
