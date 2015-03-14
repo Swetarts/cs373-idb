@@ -17,6 +17,11 @@ body {
 *       Utility               
 *                                   
 *************************************/
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .block-center {
     margin-left: auto;
@@ -137,3 +142,7 @@ body {
 *       Character Detail             
 *                                   
 *************************************/
+
+#character-detail-panel {
+    width: 75%;
+}
