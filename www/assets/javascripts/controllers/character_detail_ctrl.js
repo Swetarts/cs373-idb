@@ -1,14 +1,7 @@
-app.controller('CharacterDetailCtrl', function($scope, charactersFactory, $stateParams) {
+app.controller('CharacterDetailCtrl', function($scope, character) {
 
   $scope.isCollapsed = true;
 
-  charactersFactory.getCharacterDetail($stateParams['id']).then(
-    function(data){
-      $scope.character = data.data;
-    },
-    function() {
-      console.log("error retrieving character:", $stateParams['id']);
-    }
-  );
+  $scope.character = character;
 
 });

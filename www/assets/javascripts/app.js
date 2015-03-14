@@ -29,10 +29,13 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap'])
           characters: function(charactersFactory, $q) {
             var deferred = $q.defer();
 
-            charactersFactory.getCharacters()
-              .then(function(data) {
+            charactersFactory.getCharacters().then(
+              function(data) {
                 deferred.resolve(data.data)
-              });
+              }, function(error) {
+                console.log("error getting characters", error);
+              }
+            );
 
             return deferred.promise;
           }
@@ -41,7 +44,22 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap'])
       .state('character-detail', {
         url: "/characters/:id",
         templateUrl: "../../templates/character-detail.html",
-        controller: "CharacterDetailCtrl"
+        controller: "CharacterDetailCtrl",
+        resolve: {
+          character: function(charactersFactory, $q, $stateParams) {
+            var deferred = $q.defer();
+
+            charactersFactory.getCharacterDetail($stateParams['id']).then(
+              function(data) {
+                deferred.resolve(data.data);
+              }, function(error) {
+                console.log("error getting character", error);
+              }
+            );
+
+            return deferred.promise;
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/home');

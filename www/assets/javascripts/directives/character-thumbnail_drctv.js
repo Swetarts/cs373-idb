@@ -4,7 +4,7 @@ app.directive('characterThumbnail', function() {
     templateUrl: '../../../templates/character-thumbnail.html',
     link: function(scope, element, attributes) {
       $(element).hover(function() {
-        $('#characters-banner').attr('src', scope.character.image.screen_url);
+        $('#banner-image').attr('src', scope.character.image.screen_url);
       });
     }
   }
