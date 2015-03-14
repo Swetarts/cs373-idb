@@ -20,6 +20,7 @@
     "angular": "~1.3.14",
     "bootstrap": "~3.3.2",
     "angular-ui-router": "~0.2.13",
-    "bootflat": "*"
+    "bootflat": "*",
+    "angular-bootstrap": "~0.12.1"
   }
 }
