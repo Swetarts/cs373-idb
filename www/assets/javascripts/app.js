@@ -69,4 +69,5 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
 // set loading bar under navbar
 app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.parentSelector = '#navbar';
+    cfpLoadingBarProvider.includeSpinner = false;
 }]);
