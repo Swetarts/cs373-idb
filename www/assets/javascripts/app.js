@@ -1,5 +1,5 @@
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', ['ui.router', 'ui.bootstrap'])
+var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading-bar'])
 
   .run(function($rootScope, $state) {
     $rootScope.$on('$stateChangeStart', function(e, to) {
@@ -65,3 +65,8 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap'])
     $urlRouterProvider.otherwise('/home');
     $locationProvider.html5Mode(true);
 });
+
+// set loading bar under navbar
+app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.parentSelector = '#navbar';
+}]);

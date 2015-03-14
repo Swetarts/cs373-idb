@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS and App CSS -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/Bootflat/bootflat/css/bootflat.css">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
     <link rel="stylesheet" href="assets/stylesheets/app.css">
 
     <!-- Bootstrap JS  and jQuery -->
@@ -20,6 +21,7 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
 
     <!-- Our JS files -->
     <script src="assets/javascripts/app.js"></script>
@@ -32,7 +34,7 @@
 </head>
 
 <body ng-app="myApp">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
        <a class="navbar-brand">Comics</a>
         <ul class="nav navbar-nav">
             <li><a ui-sref="home">Home</a></li>

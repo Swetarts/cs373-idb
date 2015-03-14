@@ -21,6 +21,7 @@
     "bootstrap": "~3.3.2",
     "angular-ui-router": "~0.2.13",
     "angular-bootstrap": "~0.12.1",
-    "Bootflat": "~2.0.4"
+    "Bootflat": "~2.0.4",
+    "angular-loading-bar": "~0.7.1"
   }
 }

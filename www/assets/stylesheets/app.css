@@ -30,6 +30,44 @@ body {
     #characters-banner { display: none; }
 }
 
+#loading-bar-spinner {
+    display: block;
+    position: absolute;
+    right: auto;
+    /*left: auto;*/
+    top: auto;
+    bottom: -20px;
+    z-index: 1049;
+}
+
+#loading-bar {
+    position: relative;
+    top: 51px;
+    pointer-events: none;
+    -webkit-pointer-events: none;
+    -webkit-transition: 350ms linear all;
+    -moz-transition: 350ms linear all;
+    -o-transition: 350ms linear all;
+    transition: 350ms linear all;
+}
+
+#loading-bar .bar {
+  -webkit-transition: width 350ms;
+  -moz-transition: width 350ms;
+  -o-transition: width 350ms;
+  transition: width 350ms;
+
+  background: #29d;
+  position: absolute;
+  z-index: 10002;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
 /************************************
 *                                   
 *       Characters page             
@@ -58,7 +96,7 @@ body {
     flex-basis: 200px;
 }
 
-h3.character-name {
+.character-name {
     text-align: center;
 }
 
