@@ -23,6 +23,12 @@ To activate your virtual envrionment run:
 $ source venv/bin/activate
 ```
 
+Note: You may receive an error while attempting to create the virtual environment in Ubuntu 14.04. Apparently Ubuntu 14.04 was shipped with a broken pyvenv. Do the following. This will create the venv without pip. Get pip in the environment afterwards.
+
+```bash
+$ pyvenv-3.4 --without-pip venv
+```
+
 Now you can install all of the packages for our flask app and everything *should* work. To do this run
 ```bash
 pip3 install -r requirements.txt
