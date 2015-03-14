@@ -103,6 +103,7 @@ body {
 
 #banner-container {
     margin-bottom: 1%;
+    min-height: 270px;
 }
 
 /* override bootflat 100% width */
