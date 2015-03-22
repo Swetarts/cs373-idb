@@ -10,6 +10,7 @@ body {
 
     /* fix for sticky nav bar overlay */
     padding-top: 70px;
+    overflow-x: hidden;
 }
 
 /************************************
