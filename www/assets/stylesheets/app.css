@@ -47,7 +47,6 @@ body {
 
 #loading-bar {
     position: relative;
-    top: 51px;
     pointer-events: none;
     -webkit-pointer-events: none;
     -webkit-transition: 350ms linear all;
@@ -115,20 +114,6 @@ body {
 .thumbnail a > img, .thumbnail > img {
     width: auto;
 }
-
-/*.glass::before {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-image: url('http://25.media.tumblr.com/f6131152b786236ee6948e16494c9a93/tumblr_mnf4qutKjn1rm7i00o1_1280.jpg') no-repeat center center fixed; ;
-    background-size: cover;
-    content: ' ';
-    opacity: 0.4;
-}
-
-.glass {
-    background-color: white;
-}*/
 
 .hover-rise:hover {
     -webkit-transform: scale(1.04);
