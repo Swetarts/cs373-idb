@@ -140,10 +140,10 @@ body {
 
 /************************************
 *                                   
-*       Character Detail             
+*       Detail Pages
 *                                   
 *************************************/
 
-#character-detail-panel {
+#character-detail-panel, #person-detail-panel {
     width: 75%;
 }

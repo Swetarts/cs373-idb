@@ -60,8 +60,48 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
             return deferred.promise;
           }
         }
-      });
+      })
+      .state('people', {
+        url: "/people",
+        templateUrl: "../../templates/people.html",
+        controller: "PeopleCtrl",
+        resolve: {
+          people: function(peopleFactory, $q) {
+            var deferred = $q.defer();
 
+            peopleFactory.getPeople().then(
+              function(data) {
+                deferred.resolve(data.data)
+              }, function(error) {
+                console.log("error getting people", error);
+              }
+            );
+
+            return deferred.promise;
+          }
+        }
+      })
+      .state('person-detail', {
+        url: "/people/:id",
+        templateUrl: "../../templates/person-detail.html",
+        controller: "PersonDetailCtrl",
+        resolve: {
+          person: function(peopleFactory, $q, $stateParams) {
+            var deferred = $q.defer();
+
+            peopleFactory.getPersonDetail($stateParams['id']).then(
+              function(data) {
+                deferred.resolve(data.data)
+              }, function(error) {
+                console.log("error getting people", error);
+              }
+            );
+
+            return deferred.promise;
+          }
+        }
+      });
+      
     $urlRouterProvider.otherwise('/home');
     $locationProvider.html5Mode(true);
 });
