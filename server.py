@@ -2,8 +2,10 @@ import requests
 import json
 from flask import *
 from flask.ext.cors import CORS, cross_origin
+from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://swetard-reader:password123@104.239.165.88:5432/swetards'
 app.debug = True
 cors = CORS(app)
 
@@ -57,4 +59,4 @@ def get_person(id):
   return json.dumps(results)
 
 if __name__ == '__main__':
-  app.run()
+  app.run(host='0.0.0.0')
