@@ -46,10 +46,10 @@ You are now connected to database "swetards" as user "postgres".
 ```
 
 ## Popular Commands in `psql`
-`\connect <dbname>` - connect to that database
-`\q` - quit
-`\dt` - list tables in database
-`\l` - list databases
+* `\connect <dbname>` - connect to that database
+* `\q` - quit
+* `\dt` - list tables in database
+* `\l` - list databases
 
 ## IF YOU'RE UPDATING THE SCHEMA
 Here's the workflow that we can script later
@@ -117,4 +117,4 @@ To log in run
 ```bash
 ssh -i .ssh/id_rsa.pub swetard@104.239.165.88
 ```
-Yes, the username is `swetard`. Please get your ssh keys to me **ASAP** so that I can add them to the `authorized_keys` file. K thks
+

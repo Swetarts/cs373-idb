@@ -3,11 +3,17 @@ import json
 from flask import *
 from flask.ext.cors import CORS, cross_origin
 from flask.ext.sqlalchemy import SQLAlchemy
+import config
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://swetard-reader:password123@104.239.165.88:5432/swetards'
-app.debug = True
+# Development settings 
+app.config.from_object('config.DevelopmentConfig')
+# Production settings
+# app.config.from_object('config.ProductionConfig')
 cors = CORS(app)
+db = SQLAlchemy(app)
+
+import models
 
 # Catch all route to correctly handle manually
 # entered URLs and send them to Angular
