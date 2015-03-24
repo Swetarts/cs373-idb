@@ -32,7 +32,7 @@ body {
 
 /* make banner disappear when screen below 300px*/
 @media all and (max-width: 300px) {
-    #characters-banner { display: none; }
+    #banner-container { display: none; }
 }
 
 #loading-bar-spinner {
