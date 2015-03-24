@@ -1,2 +1,52 @@
 <h1>About Page</h1>
 
+<!-- GROUP NAME -->
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSwetards</h2>
+
+<!-- GROUP MEMBERS -->
+<div ng-repeat="member in members" >
+	<div class="panel panel-primary">
+		<style>
+			h2 	{color:white}
+			h3  {color:white}
+		</style>
+		<div class="panel-heading"> 
+			<h3>{{member.name}} </h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-6 col-md-3">
+					<a href="#" class="thumbnail">
+						<img src="..." alt="...">
+					</a>
+				</div>
+			</div>
+			<h4>Bio</h4>
+			{{member.description}}
+			<h4>Major Responsibilities</h4>
+			{{member.responsibilites}}
+			<h4>Number of Commits</h4>
+			{{member.num_commits}}
+			<h4>Number of Issues</h4>
+			{{member.num_issues}}
+			<h4>Number of Unit Tests</h4>
+			{{member.num_uTests}}
+		</div>
+	</div>
+</div>
+
+<!-- Apiary API Link-->
+<div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+		<h3>Apiary API</h3>
+		</div>
+		<div class="panel-body">
+		<h4>Link</h4>
+		<!-- Link for the api -->
+		</div>
+	</div>
+</div>
+
+
+

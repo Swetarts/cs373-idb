@@ -19,7 +19,8 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       })
       .state('about', {
         url: "/about",
-        templateUrl: "../../templates/about.html"
+        templateUrl: "../../templates/about.html",
+        controller: "AboutCtrl"
       })
       .state('characters', {
         url: "/characters",
