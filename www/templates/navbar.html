@@ -1,0 +1,21 @@
+<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collpase" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Comics</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse" collapse="isCollapsed">
+            <ul class="nav navbar-nav" ng-click="isCollapsed = true">
+                <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                <li ui-sref-active="active"><a ui-sref="characters">Characters</a></li>
+                <li ui-sref-active="active"><a ui-sref="people">People</a></li>
+                <li ui-sref-active="active"><a ui-sref="about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

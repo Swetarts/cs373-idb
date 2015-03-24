@@ -25,24 +25,31 @@
 
     <!-- Our JS files -->
     <script src="assets/javascripts/app.js"></script>
+   
     <script src="assets/javascripts/controllers/characters_ctrl.js"></script>
     <script src="assets/javascripts/controllers/character_detail_ctrl.js"></script>
+<<<<<<< HEAD
     <script src="assets/javascripts/controllers/about_ctrl.js"></script>
+=======
+    <script src="assets/javascripts/controllers/home_ctrl.js"></script>
+    <script src="assets/javascripts/controllers/people_ctrl.js"></script>
+    <script src="assets/javascripts/controllers/person_detail_ctrl.js"></script>
+   
+>>>>>>> 44dfb20f6578dd876c5f7ef2daad5ca14eee7e85
     <script src="assets/javascripts/services/characters_fctry.js"></script>
+    <script src="assets/javascripts/services/people_fctry.js"></script>
+   
     <script src="assets/javascripts/filters/to_trusted.js"></script>
-    <script src="assets/javascripts/directives/character-thumbnail_drctv.js"></script>
+    
+    <script src="assets/javascripts/directives/thumbnail_drctv.js"></script>
+    <script src="assets/javascripts/directives/navbar_drctv.js"></script>
 
 </head>
 
 <body ng-app="myApp">
-    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
-       <a class="navbar-brand">Comics</a>
-        <ul class="nav navbar-nav">
-            <li><a ui-sref="home">Home</a></li>
-            <li><a ui-sref="characters">Characters</a></li>
-            <li><a ui-sref="about">About</a></li>
-        </ul>
-    </nav>
+   
+    <!-- Custom navbar directive -->
+    <navbar></navbar>
 
     <div class="container">
         <div ui-view></div>
