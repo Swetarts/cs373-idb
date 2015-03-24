@@ -1,12 +1,12 @@
-app.factory("peopleFactory", function($http, $q) {
+app.factory("peopleFactory", function($http, $q, HOST) {
   var factory = {};
 
   factory.getPeople= function() {
-    return $http.get("http://localhost:5000/api/people", {cache: true});
+    return $http.get(HOST+"/api/people", {cache: true});
   };
 
   factory.getPersonDetail = function(id) {
-    return $http.get("http://localhost:5000/api/people/" + id, {cache: true});
+    return $http.get(HOST+"/api/people/" + id, {cache: true});
   };
 
   return factory;

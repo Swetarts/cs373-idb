@@ -9,6 +9,9 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
     });
   })
 
+  // change if not on local development
+  .constant('HOST', 'http://localhost:5000')
+
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     // Now set up the states
@@ -113,3 +116,4 @@ app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.parentSelector = '#navbar';
     cfpLoadingBarProvider.includeSpinner = false;
 }]);
+
