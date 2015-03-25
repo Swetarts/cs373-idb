@@ -43,8 +43,8 @@ app.controller('AboutCtrl', function($scope) {
 		},
 		{
 			"name":"Alex Fortin",
-			"description":"I like the color white.",
-			"responsibilites":"null",
+			"description":"I enjoy playing soccer and drinking, preferably at the same time. Currently a senior studying brogramming at the University of America. Starting in the summer I will embark on a journey that is software engineering at Blackbaud.",
+			"responsibilites":"Major responsibilities were setting up the database with the one and only Maximilian and populating it. This consisted of figuring out what attributes were needed, the relationships between attributes, and ultimately creating the schema's.",
 			"num_commits":"0",
 			"num_issues":"0",
 			"num_uTests":"0"
