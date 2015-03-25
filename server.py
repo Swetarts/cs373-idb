@@ -2,10 +2,18 @@ import requests
 import json
 from flask import *
 from flask.ext.cors import CORS, cross_origin
+from flask.ext.sqlalchemy import SQLAlchemy
+import config
 
 app = Flask(__name__)
-app.debug = True
+# Development settings 
+app.config.from_object('config.DevelopmentConfig')
+# Production settings
+# app.config.from_object('config.ProductionConfig')
 cors = CORS(app)
+db = SQLAlchemy(app)
+
+import models
 
 # Catch all route to correctly handle manually
 # entered URLs and send them to Angular
@@ -57,4 +65,4 @@ def get_person(id):
   return json.dumps(results)
 
 if __name__ == '__main__':
-  app.run()
+  app.run(host='0.0.0.0')

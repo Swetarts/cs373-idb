@@ -6,3 +6,4 @@ www/node_modules/
 www/bower_components/
 tmp
 .DS_Store
+__pycache__/
