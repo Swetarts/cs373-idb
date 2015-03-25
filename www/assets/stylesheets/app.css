@@ -139,6 +139,10 @@ h1 {
     width: auto;
 }
 
+.thumbnail {
+    padding: 0;
+}
+
 .hover-rise:hover {
     -webkit-transform: scale(1.04);
     transform: scale(1.04);
@@ -150,6 +154,6 @@ h1 {
 *                                   
 *************************************/
 
-#character-detail-panel, #person-detail-panel {
+#character-detail-panel, #person-detail-panel, #issue-detail-panel {
     width: 75%;
 }
