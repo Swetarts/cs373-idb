@@ -105,6 +105,26 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
             return deferred.promise;
           }
         }
+      })
+      .state('issues', {
+        url: "/issues",
+        templateUrl: "../../templates/issues.html",
+        controller: "IssuesCtrl",
+        resolve: {
+          issues: function(issuesFactory, $q, $stateParams) {
+            var deferred = $q.defer();
+
+            issuesFactory.getIssues().then(
+              function(data) {
+                deferred.resolve(data.data)
+              }, function(error) {
+                console.log("error getting issues", error);
+              }
+            );
+
+            return deferred.promise;
+          }
+        }
       });
       
     $urlRouterProvider.otherwise('/home');

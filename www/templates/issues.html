@@ -1,0 +1,9 @@
+<div id="banner-container">
+    <img id="banner-image" class="block-center" src="http://media1.s-nbcnews.com/j/MSNBC/Components/Interactives/_templates/Cast_of_characters/images/Mystery_person.grid-6x2.jpg">
+</div>
+<div class="flex-container">
+    <div ng-repeat="issue in issues" >
+        <!-- custom directive inside of directives folder -->
+        <thumbnail type='issue' model='issue'></thumbnail>
+    </div>
+</div>

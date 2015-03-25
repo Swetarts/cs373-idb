@@ -64,5 +64,14 @@ def get_person(id):
   results = parsed['results']
   return json.dumps(results)
 
+@app.route('/api/issues/')
+@cross_origin()
+def get_issues():
+  request_url = 'http://www.comicvine.com/api/issues?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
+  response = requests.get(request_url)
+  parsed = json.loads(response.content.decode())
+  results = parsed['results']
+  return json.dumps(results)
+
 if __name__ == '__main__':
-  app.run(host='0.0.0.0')
+  app.run()
