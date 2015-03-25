@@ -22,6 +22,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 
     <!-- Our JS files -->
     <script src="assets/javascripts/app.js"></script>
@@ -54,8 +55,9 @@
     <!-- Custom navbar directive -->
     <navbar></navbar>
     <div class="container">
-        <div ui-view></div>
+        <div class="ui-view-container">
+            <div ui-view></div>        
+        </div>
     </div>
-
 </body>
 </html>
