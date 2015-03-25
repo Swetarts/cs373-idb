@@ -6,38 +6,38 @@ from server import db
 ############
 
 character_powers = db.Table('character_powers',
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id')),
-    db.Column('power_id',     db.Integer,     db.ForeignKey('swetards.power.id'))
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id')),
+    db.Column('power_id',     db.Integer,     db.ForeignKey('power.id'))
 )
 
 character_team = db.Table('character_team',
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id')),
-    db.Column('team_id',      db.Integer, db.ForeignKey('swetards.team.id'))
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id')),
+    db.Column('team_id',      db.Integer, db.ForeignKey('team.id'))
 )
 
 character_ally = db.Table('character_ally',
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id')),
-    db.Column('ally_id',      db.String(255), db.ForeignKey('swetards.character.id'))
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id')),
+    db.Column('ally_id',      db.String(255), db.ForeignKey('character.id'))
 )
 
 character_enemy = db.Table('character_enemy',
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id')),
-    db.Column('enemy_id',     db.String(255), db.ForeignKey('swetards.character.id'))
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id')),
+    db.Column('enemy_id',     db.String(255), db.ForeignKey('character.id'))
 )
 
 character_creator = db.Table('character_creator',
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id')),
-    db.Column('creator_id'  , db.String(255), db.ForeignKey('swetards.person.id'))
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id')),
+    db.Column('creator_id'  , db.String(255), db.ForeignKey('person.id'))
 )
 
 comic_person = db.Table('comic_person',
-    db.Column('comic_id',  db.String(255), db.ForeignKey('swetards.comic_series.id')),
-    db.Column('person_id', db.String(255), db.ForeignKey('swetards.person.id'))
+    db.Column('comic_id',  db.String(255), db.ForeignKey('comic_series.id')),
+    db.Column('person_id', db.String(255), db.ForeignKey('person.id'))
 )
 
 comic_characters = db.Table('comic_characters',
-    db.Column('comic_id',     db.String(255), db.ForeignKey('swetards.comic_series.id')),
-    db.Column('character_id', db.String(255), db.ForeignKey('swetards.character.id'))
+    db.Column('comic_id',     db.String(255), db.ForeignKey('comic_series.id')),
+    db.Column('character_id', db.String(255), db.ForeignKey('character.id'))
 )
 
 
@@ -93,7 +93,7 @@ class Comic_Series(db.Model):
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(255))
     launch_date  = db.Column(db.DateTime)
-    publisher_id = db.Column(db.Integer, db.ForeignKey('swetards.publisher.id'))
+    publisher_id = db.Column(db.Integer, db.ForeignKey('publisher.id'))
     people       = db.relationship('Person',                      
                     secondary=comic_person,                             
                     backref=db.backref('comic_series', lazy='dynamic')) 
