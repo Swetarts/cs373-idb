@@ -1,5 +1,5 @@
 # ---------------------------
-# cs373-idb/db_populate_powers.py
+# cs373-idb/db_populate_publishers.py
 # Copyright (C) 2015
 # Swetarts
 # ---------------------------
@@ -9,7 +9,7 @@ import models
 import requests
 import json
 
-request_url = 'http://www.comicvine.com/api/powers/'
+request_url = 'http://www.comicvine.com/api/publishers/'
 payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'name,id', 'offset':'0'}
 response = requests.get(request_url, params=payload)
 num_results = response.json()['number_of_total_results']
