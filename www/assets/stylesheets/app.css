@@ -66,6 +66,10 @@ body {
   border-top-right-radius: 1px;
 }
 
+h1 {
+    font-family: 'Bangers',serif;
+}
+
 /************************************
 *                                   
 *       Characters page             
@@ -110,6 +114,14 @@ body {
     -webkit-flex-basis: 200px;
         -ms-flex-preferred-size: 200px;
             flex-basis: 200px;
+}
+
+.home-thumbnail {
+    background: #29d;
+    -webkit-flex-basis: 242px;
+    -ms-flex-preferred-size: 242px;
+    flex-basis: 242px;
+    height: auto;
 }
 
 .character-name {
