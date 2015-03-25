@@ -25,7 +25,13 @@
                     </a>
                 </div>
             </tab>
-            <tab heading="Issues">static content</tab>
+            <tab heading="Issues">
+                <a ng-repeat="issue in character.issue_credits" 
+                   ng-hide="{{issue.name == ''}}"
+                   class="list-group-item text-center">
+                    {{issue.name}}
+                </a>
+            </tab>
             <tab heading="Relationships">
                 <div class="panel panel-default">
                     <div class="panel-heading">
