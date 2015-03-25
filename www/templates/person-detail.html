@@ -17,8 +17,24 @@
                 </div>
                 <div ng-bind-html="person.description | to_trusted"></div>
             </tab>
-    
-          <tab heading="Issues">static content</tab>
+            
+            <tab heading="Characters">
+                <a ng-repeat="character in person.created_characters" 
+                   ng-hide="{{character.name == ''}}"
+                   ui-sref="character-detail({ id:{{character.id}} })"
+                   class="list-group-item text-center">
+                    {{character.name}}
+                </a>
+            </tab>
+
+            <tab heading="Issues">
+                <a ng-repeat="issue in person.issues" 
+                   ng-hide="{{issue.name == ''}}"
+                   ui-sref="issue-detail({ id:{{issue.id}} })"
+                   class="list-group-item text-center">
+                    {{issue.name}}
+                </a>
+            </tab>
         </div>
     </tabset>
 </div>
