@@ -3,7 +3,6 @@ import json
 from flask import *
 from flask.ext.cors import CORS, cross_origin
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.json import jsonify
 import config
 
 app = Flask(__name__)
@@ -74,11 +73,14 @@ def get_issues():
   results = parsed['results']
   return json.dumps(results)
 
-@app.route('/api/testing')
-def test_getchar():
-  c = models.Character.query.all()
-  print(c)
-  return jsonify(c[0])
+@app.route('/api/issues/<id>')
+@cross_origin()
+def get_issue_detail(id):
+  request_url = 'http://www.comicvine.com/api/issue/4000-{}?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'.format(id)
+  response = requests.get(request_url)
+  parsed = json.loads(response.content.decode())
+  results = parsed['results']
+  return json.dumps(results)
 
 if __name__ == '__main__':
   app.run()

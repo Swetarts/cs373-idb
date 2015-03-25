@@ -28,6 +28,7 @@
             <tab heading="Issues">
                 <a ng-repeat="issue in character.issue_credits" 
                    ng-hide="{{issue.name == ''}}"
+                   ui-sref="issue-detail({ id:{{issue.id}} })"
                    class="list-group-item text-center">
                     {{issue.name}}
                 </a>

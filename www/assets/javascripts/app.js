@@ -125,6 +125,26 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
             return deferred.promise;
           }
         }
+      })
+      .state('issue-detail', {
+        url: "/issues/:id",
+        templateUrl: "../../templates/issue-detail.html",
+        controller: "IssueDetailCtrl",
+        resolve: {
+          issue: function(issuesFactory, $q, $stateParams) {
+            var deferred = $q.defer();
+            
+            issuesFactory.getIssueDetail($stateParams['id']).then(
+              function(data) {
+                deferred.resolve(data.data)
+              }, function(error) {
+                console.log("error getting issues", error);
+              }
+            );
+
+            return deferred.promise;
+          }
+        }
       });
       
     $urlRouterProvider.otherwise('/home');

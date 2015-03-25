@@ -1,0 +1,33 @@
+<div id="issue-detail-panel" class="panel panel-primary center">
+    <div class="panel-heading">
+        <h2 class="text-center">{{issue.name}}</h2>
+    </div>
+    <div class="panel-body">
+        <tabset justified="true">
+            <tab heading="Description">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <button class="center-block btn btn-primary" ng-click="imageIsCollapsed = !imageIsCollapsed">
+                            Toggle Photo
+                        </button>
+                    </div>
+                    <div class="panel-body" collapse="imageIsCollapsed">
+                        <img class='block-center' ng-src="{{ issue.image.medium_url }}" alt=""/>
+                    </div>
+                </div>
+                <div ng-bind-html="issue.description | to_trusted"></div>
+            </tab>
+            <tab heading="Characters"></tab>
+            <tab heading="People">
+                <div class="list-group">
+                    <a ng-repeat="person in issue.person_credits"
+                    ui-sref="person-detail({ id:{{person.id}} })"
+                    class="list-group-item text-center">
+                    {{person.name}}
+                    </a>
+                </div>
+            </tab>
+        </div>
+    </tabset>
+</div>
+
