@@ -27,7 +27,7 @@ app.controller('AboutCtrl', function($scope) {
 		},
 		{
 			"name":"Aaron Dishman",
-			"description":"I like the color yellow.",
+			"description":"Dude's been crushing code for ~3 years, mostly in Java and C, but is up and coming in the Python game. His superpowers include the ability to transform any app into Mobile via Android Studio instantly. Once complete, you know the app is stable because he's mastered the skills of automated tests via Calabash. First appeared in UTCS in 2012, and will make the 'real world' debut this summer, May 2015!! POW! BAMM!",
 			"responsibilites":"null",
 			"num_commits":"0",
 			"num_issues":"0",
