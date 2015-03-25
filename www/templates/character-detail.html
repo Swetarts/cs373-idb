@@ -35,7 +35,9 @@
                     </div>
                     <div class="panel-body" collapse="friendsIsCollapsed">
                         <div class="list-group">
-                            <a ng-repeat="friend in character.character_friends" class="list-group-item text-center">
+                            <a ng-repeat="friend in character.character_friends" 
+                               ui-sref="character-detail({ id:{{friend.id}} })" 
+                               class="list-group-item text-center">
                                 {{friend.name}}
                             </a>
                         </div>
@@ -50,8 +52,10 @@
                     </div>
                     <div class="panel-body" collapse="enemiesIsCollapsed">
                         <div class="list-group">
-                            <a ng-repeat="friend in character.character_enemies" class="list-group-item text-center">
-                                {{friend.name}}
+                            <a ng-repeat="enemy in character.character_enemies" 
+                               ui-sref="character-detail({ id:{{enemy.id}} })" 
+                               class="list-group-item text-center">
+                                {{enemy.name}} 
                             </a>
                         </div>
                     </div>
