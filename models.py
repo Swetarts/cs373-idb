@@ -60,12 +60,16 @@ class Character(db.Model):
     teams       = db.relationship('Team',                               
                     secondary=character_team,                           
                     backref=db.backref('characters', lazy='dynamic'))
-    allies      = db.relationship('Character',                          
-                    secondary=character_ally,                           
-                    backref=db.backref('allies',     lazy='dynamic'))
-    enemies     = db.relationship('Character',                          
+    allies      = db.relationship('Character',
+                    secondary=character_ally,
+                    primaryjoin=(character_ally.c.character_id == id),                          
+                    secondaryjoin=(character_ally.c.ally_id == id),                           
+                    backref=db.backref('allied',     lazy='dynamic'))
+    enemies     = db.relationship('Character',
                     secondary=character_enemy,                          
-                    backref=db.backref('enemies',    lazy='dynamic'))
+                    primaryjoin=(character_enemy.c.character_id == id),
+                    secondaryjoin=(character_enemy.c.enemy_id == id),                         
+                    backref=db.backref('enemied',    lazy='dynamic'))
     creators    = db.relationship('Person',                             
                     secondary=character_creator,                        
                     backref=db.backref('characters', lazy='dynamic'))

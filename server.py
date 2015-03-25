@@ -3,6 +3,7 @@ import json
 from flask import *
 from flask.ext.cors import CORS, cross_origin
 from flask.ext.sqlalchemy import SQLAlchemy
+from flask.json import jsonify
 import config
 
 app = Flask(__name__)
@@ -72,6 +73,12 @@ def get_issues():
   parsed = json.loads(response.content.decode())
   results = parsed['results']
   return json.dumps(results)
+
+@app.route('/api/testing')
+def test_getchar():
+  c = models.Character.query.all()
+  print(c)
+  return jsonify(c[0])
 
 if __name__ == '__main__':
   app.run()
