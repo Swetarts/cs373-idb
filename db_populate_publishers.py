@@ -19,8 +19,8 @@ while True:
 
     for x in list(parsed):
 	    # print(x['id'], x['name'])
-        publisher = models.Power(id=x['id'], name=x['name'])
-        db.session.add(power)
+        publisher = models.Publisher(id=x['id'], name=x['name'])
+        db.session.add(publisher)
         db.session.commit()
 
     payload['offset'] = str(int(payload['offset']) + 100) 
