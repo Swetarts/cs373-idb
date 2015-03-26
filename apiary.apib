@@ -118,10 +118,10 @@ A single **Person** object with all its details
                             }]
             }
 
-# Group Series
-Information for retrieving **Comic Series**
+# Group Issues
+Information for retrieving **Comic Issues**
 
-## Series Collection [/issues]
+## Issues Collection [/issues]
 ### List all Series [GET]
 + Response 200 (application/json)
 
@@ -146,18 +146,19 @@ A single **Issue** object with all its details.
             {  "id"         : 1,
                "title"      : "The Adventures of Captain Obvious",
                "image"      : "imagepath",
-               "launch_date": "5662656000",
+               "launch_date": "566265600",
                "publisher"  : "Just alright Studios",
-               "characters" : [{ "id"  : 1,
-                                 "name": "Captain Obvious"
-                              },
-                              {  "id"  : 2,
-                                 "name": "Discernable Woman"
-                              }],
                "people"     : [{ "id"  : 1,
                                  "name" : "Guy who lives with his mom"
                               },
                               { "id"   : 2,
                                 "name": "The guy who lives with his mom's best friend"
-                              }]
+                              }],
+               "characters" : [{ "id"  : 1,
+                                 "name": "Captain Obvious"
+                              },
+                              {  "id"  : 2,
+                                 "name": "Discernable Woman"
+                              }]                
             }
+
