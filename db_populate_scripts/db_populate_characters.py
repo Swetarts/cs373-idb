@@ -43,24 +43,24 @@ for char_id in list(character_id_list):
     # print(origin)
 
     #Create a new character object
-    character = models.Character(id=id, name=name, alias=alias, image=images, description=description, gender=gender, origin=origin)
+    character = models.Character(id=int(id), name=name, alias=alias, image=images, description=description, gender=gender, origin=origin)
 
     #Add power objects
     powers = parsed['powers']
     for power in list(powers):
-        character.powers.append(db.session.query(models.Power).filter_by(id=power['id']).first())
+        character.powers.append(db.session.query(models.Power).filter_by(id=int(power['id'])).first())
         # print(power['id'], power['name'])
 
     #Add team objects
     teams = parsed['teams']
     for team in list(teams):
-        character.teams.append(db.session.query(models.Team).filter_by(id=team['id']).first())
+        character.teams.append(db.session.query(models.Team).filter_by(id=int(team['id'])).first())
         # print(team['id'], team['name'])
 
     #Add allies
     allies = parsed['character_friends']
     for ally in list(allies):
-        friend = db.session.query(models.Character).filter_by(id=ally['id']).first()
+        friend = db.session.query(models.Character).filter_by(id=int(ally['id'])).first()
         if friend:       
             character.allies.append(friend)
             # print(ally['id'], ally['name'])
@@ -68,7 +68,7 @@ for char_id in list(character_id_list):
     #Add enemies
     enemies = parsed['character_enemies']
     for enemy in list(enemies):
-        nemesis = db.session.query(models.Character).filter_by(id=enemy['id']).first()
+        nemesis = db.session.query(models.Character).filter_by(id=int(enemy['id'])).first()
         if nemesis:
             character.enemies.append(nemesis)
             # print(enemy['id'], enemy['name'])
@@ -76,7 +76,7 @@ for char_id in list(character_id_list):
     #Add creators
     creators = parsed['creators']
     for creator in list(creators):
-        person = db.session.query(models.Person).filter_by(id=creator['id']).first()
+        person = db.session.query(models.Person).filter_by(id=int(creator['id'])).first()
         if person:
             character.creators.append(person)
             # print(creator['id'], creator['name'])
