@@ -9,7 +9,7 @@ import models
 import requests
 import json
 
-comic_id_list = ['362496', '', '', '', '', '', '', '', '', '']
+comic_id_list = ['362496', '2267', '308947', '120834', '105483', '245832', '468444', '434071', '225808', '359962']
 
 request_url = 'http://www.comicvine.com/api/issue/4000-'
 payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,name,image,cover_date,person_credits,character_credits,volume', 'offset':'0'}
@@ -40,20 +40,22 @@ for comic_id in list(comic_id_list):
     publisher_id = vol_response.json()['results']['publisher']['id']
     # print(publisher_id)
 
-    comic = models.Comic_Series(id=id, title=title, image=image, launch_date=launch_date, publisher_id=publisher_id)
+    comic = models.Comic_Series(id=int(id), title=title, image=image, launch_date=launch_date, publisher_id=publisher_id)
 
     #Add featured characters
     characters = parsed['character_credits']
     for character in list(characters):
-        hero = models.Character.query.filter_by(character['id']).first()
-        comic.characters.append(hero) if hero
+        hero = db.session.query(models.Character).filter_by(id=int(character['id'])).first()
+        if hero:
+            comic.characters.append(hero)
         # print(ally['id'], ally['name'])
 
     #Add featured people
     creators = parsed['person_credits']
     for creator in list(creators):
-        person = models.Person.query.filter_by(creator['id']).first()
-        comic.people.append(person) if person
+        person = db.session.query(models.Person).filter_by(id=int(creator['id'])).first()
+        if person:
+            comic.people.append(person)
 
     db.session.add(comic)
     db.session.commit()
