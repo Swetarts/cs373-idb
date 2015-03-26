@@ -48,35 +48,38 @@ for char_id in list(character_id_list):
     #Add power objects
     powers = parsed['powers']
     for power in list(powers):
-        character.powers.append(models.Power.query().filter(id=power['id']).first())
+        character.powers.append(db.session.query(models.Power).filter_by(id=power['id']).first())
         # print(power['id'], power['name'])
 
     #Add team objects
     teams = parsed['teams']
     for team in list(teams):
-        character.teams.append(models.Team.query().filter(id=team['id']).first())
+        character.teams.append(db.session.query(models.Team).filter_by(id=team['id']).first())
         # print(team['id'], team['name'])
 
     #Add allies
     allies = parsed['character_friends']
     for ally in list(allies):
-        friend = models.Character.query.filter_by(ally['id']).first()
-        character.allies.append(friend) if friend
-        # print(ally['id'], ally['name'])
+        friend = db.session.query(models.Character).filter_by(id=ally['id']).first()
+        if friend:       
+            character.allies.append(friend)
+            # print(ally['id'], ally['name'])
 
     #Add enemies
     enemies = parsed['character_enemies']
     for enemy in list(enemies):
-        nemesis = models.Character.query.filter_by(enemy['id']).first()
-        character.enemies.append(nemesis) if nemesis
-        # print(enemy['id'], enemy['name'])
+        nemesis = db.session.query(models.Character).filter_by(id=enemy['id']).first()
+        if nemesis:
+            character.enemies.append(nemesis)
+            # print(enemy['id'], enemy['name'])
 
     #Add creators
     creators = parsed['creators']
     for creator in list(creators):
-        person = models.Person.query.filter_by(creator['id']).first()
-        character.creators.append(person) if person
-        # print(creator['id'], creator['name'])
+        person = db.session.query(models.Person).filter_by(id=creator['id']).first()
+        if person:
+            character.creators.append(person)
+            # print(creator['id'], creator['name'])
 
     db.session.add(character)
     db.session.commit()

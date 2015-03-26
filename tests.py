@@ -1,8 +1,18 @@
+# import unittest
+from flask.ext.testing import TestCase
+from flask import Flask
 import unittest
-from models import Character, Person, Publisher, Comic_Series, Power, Team
-from server import db
+from requests import get
+from models import Character, Person, Comic_Series, Power, Team, Publisher
+from server import app, db
+from requests import get
 
-class FlaskModelTests(unittest.TestCase):
+class FlaskModelTests(TestCase):
+
+    def create_app(self):
+    	app = Flask(__name__)
+    	app.config['SQLALCHEMY_DATABASE_URI'] =  get('http://api.postgression.com').text
+    	return app
 
     def setUp(self):
         db.drop_all()

@@ -7,3 +7,4 @@ www/bower_components/
 tmp
 .DS_Store
 __pycache__/
+*.pyc
