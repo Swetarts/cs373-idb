@@ -3,8 +3,8 @@ app.controller('AboutCtrl', function($scope) {
 	$scope.members = [
 		{
 			"name":"Sean Villars",
-			"description":"I like the color blue.",
-			"responsibilites":"null",
+			"description":"I am a senior about to graduate in May of this year. I like skateboarding, programming, good beer, and kickin it with my bros. After I graduate I am going to start working as a Front End Engineer for Turnitin here in Austin.",
+			"responsibilites":"I was responsible for the front end portion of our application. I set up Angular and programmed the characters, people, and issues poritons of our site along with the details pages for each of those. I also worked with Jerry to help get his feet wet in Angular where he successfully coded up the home and about pages.",
 			"num_commits":"0",
 			"num_issues":"0",
 			"num_uTests":"0"
