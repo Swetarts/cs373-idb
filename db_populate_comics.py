@@ -1,5 +1,5 @@
 # ---------------------------
-# cs373-idb/db_populate_characters.py
+# cs373-idb/db_populate_comics.py
 # Copyright (C) 2015
 # Swetarts
 # ---------------------------
