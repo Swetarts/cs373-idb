@@ -7,6 +7,10 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       // console.log(e);
       // console.log(to);
     });
+
+    $rootScope.$on('$stateChangeSuccess', function() {
+      $("html, body").animate({ scrollTop: 0 }, 200);
+    });
   })
 
   // change if not on local development
