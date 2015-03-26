@@ -34,8 +34,8 @@ body {
     width: 80%;
 }
 
-/* make banner disappear when screen below 300px*/
-@media all and (max-width: 300px) {
+/* make banner disappear when screen below 990px*/
+@media all and (max-width: 990px) {
     #banner-container { display: none; }
 }
 
@@ -134,8 +134,15 @@ h1 {
 
 
 #banner-container {
-    margin-bottom: 1%;
     min-height: 270px;
+    position: fixed;
+    top: 26%;
+    left: 3%;
+}
+
+#banner-container img {
+    vertical-align: middle;
+    border-radius: 5px;
 }
 
 /* override bootflat 100% width */
