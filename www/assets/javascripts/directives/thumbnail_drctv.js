@@ -9,7 +9,7 @@ app.directive('thumbnail', function() {
     link: function(scope, element, attributes) {
       $(element).hover(
         function() {
-          $('#banner-image').attr('src', scope.model.image.screen_url);
+          $('#banner-image').attr('src', scope.model.image.small_url);
         }
       );
     }

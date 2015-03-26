@@ -136,13 +136,14 @@ h1 {
 #banner-container {
     min-height: 270px;
     position: fixed;
-    top: 26%;
+    top: 65px;
     left: 3%;
 }
 
 #banner-container img {
     vertical-align: middle;
     border-radius: 5px;
+    width: 90%;
 }
 
 /* override bootflat 100% width */
