@@ -122,6 +122,46 @@ class FlaskModelTests(unittest.TestCase):
 	    assert c.website == 'www.zlatan.com'
 	    assert c.gender == 'God'
 
+    def test_blank_comic_series(self):
+
+	    comic = Comic_Series(
+	        id='5',
+		)
+	    db.session.add(comic)
+	    db.session.commit()
+	    c = Comic_Series.query.filter_by(id='5').first()
+	    assert c.id == 5
+	    assert c.title == None
+	    assert c.image == None
+	    assert c.publisher_id == None
+
+    def test_comic_series_creation_1(self):
+
+	    comic = Comic_Series(
+	        id='5',
+	        title='Dark Knight',
+	        image='pic',
+		)
+	    db.session.add(comic)
+	    db.session.commit()
+	    c = Comic_Series.query.filter_by(id='5').first()
+	    assert c.id == 5
+	    assert c.title == 'Dark Knight'
+	    assert c.image == 'pic'
+
+    def test_comic_series_creation_2(self):
+
+	    comic = Comic_Series(
+	        id='500',
+	        title='Tower of God',
+	        image='pic',
+		)
+	    db.session.add(comic)
+	    db.session.commit()
+	    c = Comic_Series.query.filter_by(id='500').first()
+	    assert c.id == 500
+	    assert c.title == 'Tower of God'
+	    assert c.image == 'pic'
 
 if __name__ == '__main__':
     unittest.main()
