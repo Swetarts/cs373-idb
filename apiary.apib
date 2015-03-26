@@ -13,10 +13,16 @@ Information for the retrieval of characters
         [{ "id"   : 1,
            "name" : "Captain Obvious",
            "image": "imagepath"
+           "description": "description of the character"
+           "gender": "Male"
+           "origin": "Human"
         },
         {  "id"   : 2,
            "name" : "Discernable Woman",
            "image": "imagepath"
+           "description": "description of the character"
+           "gender": "Female"
+           "origin": "Alien"
         }]
 
 
@@ -115,7 +121,7 @@ A single **Person** object with all its details
 # Group Series
 Information for retrieving **Comic Series**
 
-## Series Collection [/series]
+## Series Collection [/issues]
 ### List all Series [GET]
 + Response 200 (application/json)
 
@@ -126,13 +132,13 @@ Information for retrieving **Comic Series**
            "title": "Obviously, or How I Saved The Planet from Myself"
         }]
         
-## Series [/series/{id}]
-A single **Series** object with all its details.
+## Issues [/issues/{id}]
+A single **Issue** object with all its details.
 
 + Parameters
-    + id (required, number, `1`) ... Numeric `id` of the Series to perform the action with. Has example value.
+    + id (required, number, `1`) ... Numeric `id` of the Issue to perform the action with. Has example value.
     
-### Retrieve a Series [GET]
+### Retrieve some Issues [GET]
 + Response 200 (application/json)
 
     + Body
