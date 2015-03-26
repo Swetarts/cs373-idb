@@ -143,6 +143,7 @@ h1 {
 #banner-container img {
     vertical-align: middle;
     border-radius: 5px;
+    width: 90%;
 }
 
 /* override bootflat 100% width */
