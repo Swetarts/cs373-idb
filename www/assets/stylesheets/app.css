@@ -166,7 +166,7 @@ h1 {
 *                                   
 *************************************/
 
-#character-detail-panel, #person-detail-panel, #issue-detail-panel {
+#character-detail-panel, #person-detail-panel, #issue-detail-panel, #about-detail-panel {
     width: 75%;
 }
 
