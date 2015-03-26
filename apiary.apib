@@ -162,3 +162,30 @@ A single **Issue** object with all its details.
                               }]                
             }
 
+# Group Publisher
+Information for retrieving a **Comic Publisher** and related information
+
+## Publisher Collection [/publisher]
+### Retrieve a Publisher [GET]
++ Response 200 (application/json)
+
+        [{ "id"     : 1,
+           "name"   : "Marvel Comics"
+           "Issues" : [{ "id"  : 1,
+                      "title"  : "The Adventures of Captain Obvious",
+                      "image"  : "imagepath",
+                "launch_date"  : "566265600",
+                  "publisher"  : "Just alright Studios",
+                     "people"  : [{ "id"  : 1,
+                                  "name"  : "Guy who lives with his mom"
+                                  },
+                                  { "id"  : 2,
+                                  "name"  : "The guy who lives with his mom's best friend"
+                                  }],
+                 "characters"  : [{ "id"  : 1,
+                                 "name"   : "Captain Obvious"
+                                  },
+                                  {  "id" : 2,
+                                   "name" : "Discernable Woman"
+                                  }]                
+                        }, ...]
