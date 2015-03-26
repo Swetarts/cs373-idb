@@ -35,10 +35,10 @@ app.controller('AboutCtrl', function($scope) {
 		},
 		{
 			"name":"Tyler Corley",
-			"description":"I like the color brown.",
-			"responsibilites":"null",
-			"num_commits":"0",
-			"num_issues":"0",
+			"description":"I'm a senior at the Univerity of Texas with humble beginnings from the small town of Longview, TX. I graduate in May with a job lined up at eBay in San Jose, CA. I enjoy programming, making music in and outside school, and occasionally finding ways to use emojis in my commit messages 💁.",
+			"responsibilites":"Backend Bistro (Set up API calls to deliver serialized models), Fullmodel SQLAlchemist (Set up Flask models with SQLAlchemy and database migrations), Apiary Expert (Wrote out the API on Apiary.io), Defender of the SWErver (Set up the Rackspace instance and delegated SSH Authentication), and the One Who Dropped the [data]Base (Configured the PostgreSQL database users and mirrored the schema onto tables).",
+			"num_commits":"7",
+			"num_issues":"1",
 			"num_uTests":"0"
 		},
 		{
