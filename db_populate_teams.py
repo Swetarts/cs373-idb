@@ -19,7 +19,7 @@ while True:
 
     for x in list(parsed):
 	    # print(x['id'], x['name'])
-        team = models.Team(id=x['id'], name=x['name'])
+        team = models.Team(id=int(x['id']), name=x['name'])
         db.session.add(team)
         db.session.commit()
 

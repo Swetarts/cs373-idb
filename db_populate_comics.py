@@ -40,20 +40,22 @@ for comic_id in list(comic_id_list):
     publisher_id = vol_response.json()['results']['publisher']['id']
     # print(publisher_id)
 
-    comic = models.Comic_Series(id=id, title=title, image=image, launch_date=launch_date, publisher_id=publisher_id)
+    comic = models.Comic_Series(id=int(id), title=title, image=image, launch_date=launch_date, publisher_id=publisher_id)
 
     #Add featured characters
     characters = parsed['character_credits']
     for character in list(characters):
-        hero = models.Character.query.filter_by(character['id']).first()
-        comic.characters.append(hero) if hero
+        hero = db.session.query(models.Character).filter_by(id=int(character['id'])).first()
+        if hero:
+            comic.characters.append(hero)
         # print(ally['id'], ally['name'])
 
     #Add featured people
     creators = parsed['person_credits']
     for creator in list(creators):
-        person = models.Person.query.filter_by(creator['id']).first()
-        comic.people.append(person) if person
+        person = db.session.query(models.Person).filter_by(id=int(creator['id'])).first()
+        if person:
+            comic.people.append(person)
 
     db.session.add(comic)
     db.session.commit()
