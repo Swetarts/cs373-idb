@@ -198,5 +198,40 @@ class FlaskModelTests(unittest.TestCase):
 	    assert c.id == 900
 	    assert c.name == 'Marvel'
 
+    def test_blank_power(self):
+
+	    power = Power(
+	        id='14',
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='14').first()
+	    assert c.id == 14
+	    assert c.name == None
+
+    def test_power_creation_1(self):
+
+	    power = Power(
+	        id='140',
+	        name='Super Strength'
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='140').first()
+	    assert c.id == 140
+	    assert c.name == 'Super Strength'
+
+    def test_power_creation_2(self):
+
+	    power = Power(
+	        id='1400',
+	        name='Minute Man'
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='1400').first()
+	    assert c.id == 1400
+	    assert c.name == 'Minute Man'
+
 if __name__ == '__main__':
     unittest.main()
