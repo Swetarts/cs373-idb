@@ -1,5 +1,5 @@
 import unittest
-from models import Character, Person, Comic_Series, Power, Team
+from models import Character, Person, Publisher, Comic_Series, Power, Team
 from server import db
 
 class FlaskModelTests(unittest.TestCase):
@@ -162,6 +162,41 @@ class FlaskModelTests(unittest.TestCase):
 	    assert c.id == 500
 	    assert c.title == 'Tower of God'
 	    assert c.image == 'pic'
+
+    def test_blank_publisher(self):
+
+	    publisher = Publisher(
+	        id='9',
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='9').first()
+	    assert c.id == 9
+	    assert c.name == None
+
+    def test_publisher_creation_1(self):
+
+	    publisher = Publisher(
+	        id='90',
+	        name='DC Comics'
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='90').first()
+	    assert c.id == 90
+	    assert c.name == 'DC Comics'
+
+    def test_publisher_creation_2(self):
+
+	    publisher = Publisher(
+	        id='900',
+	        name='Marvel'
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='900').first()
+	    assert c.id == 900
+	    assert c.name == 'Marvel'
 
 if __name__ == '__main__':
     unittest.main()
