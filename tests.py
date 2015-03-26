@@ -3,7 +3,7 @@ from flask.ext.testing import TestCase
 from flask import Flask
 import unittest
 from requests import get
-from models import Character, Person, Comic_Series, Power, Team
+from models import Character, Person, Comic_Series, Power, Team, Publisher
 from server import app, db
 from requests import get
 
@@ -15,6 +15,7 @@ class FlaskModelTests(TestCase):
     	return app
 
     def setUp(self):
+        db.drop_all()
         db.create_all()
 
 
@@ -171,6 +172,111 @@ class FlaskModelTests(TestCase):
 	    assert c.id == 500
 	    assert c.title == 'Tower of God'
 	    assert c.image == 'pic'
+
+    def test_blank_publisher(self):
+
+	    publisher = Publisher(
+	        id='9',
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='9').first()
+	    assert c.id == 9
+	    assert c.name == None
+
+    def test_publisher_creation_1(self):
+
+	    publisher = Publisher(
+	        id='90',
+	        name='DC Comics'
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='90').first()
+	    assert c.id == 90
+	    assert c.name == 'DC Comics'
+
+    def test_publisher_creation_2(self):
+
+	    publisher = Publisher(
+	        id='900',
+	        name='Marvel'
+		)
+	    db.session.add(publisher)
+	    db.session.commit()
+	    c = Publisher.query.filter_by(id='900').first()
+	    assert c.id == 900
+	    assert c.name == 'Marvel'
+
+    def test_blank_power(self):
+
+	    power = Power(
+	        id='14',
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='14').first()
+	    assert c.id == 14
+	    assert c.name == None
+
+    def test_power_creation_1(self):
+
+	    power = Power(
+	        id='140',
+	        name='Super Strength'
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='140').first()
+	    assert c.id == 140
+	    assert c.name == 'Super Strength'
+
+    def test_power_creation_2(self):
+
+	    power = Power(
+	        id='1400',
+	        name='Minute Man'
+		)
+	    db.session.add(power)
+	    db.session.commit()
+	    c = Power.query.filter_by(id='1400').first()
+	    assert c.id == 1400
+	    assert c.name == 'Minute Man'
+
+    def test_blank_team(self):
+
+	    team = Team(
+	        id='38',
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='38').first()
+	    assert c.id == 38
+	    assert c.name == None
+
+    def test_team_creation_1(self):
+
+	    team = Team(
+	        id='1409',
+	        name='Justice League'
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='1409').first()
+	    assert c.id == 1409
+	    assert c.name == 'Justice League'
+
+    def test_team_creation_2(self):
+
+	    team = Team(
+	        id='169',
+	        name='Avengers'
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='169').first()
+	    assert c.id == 169
+	    assert c.name == 'Avengers'
 
 if __name__ == '__main__':
     unittest.main()

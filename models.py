@@ -131,7 +131,7 @@ class Person(db.Model):
     image        = db.Column(db.String(4000))
     birth_date   = db.Column(db.DateTime)
     country      = db.Column(db.String(255))
-    job_title    = db.Column(db.String(255))
+    job_title    = db.Column(db.String(4000))
     website      = db.Column(db.String(255))
     gender       = db.Column(db.String(255))
 
