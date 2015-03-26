@@ -1,5 +1,5 @@
 import unittest
-from models import Character
+from models import Character, Person, Comic_Series, Power, Team
 from server import db
 
 class FlaskModelTests(unittest.TestCase):
@@ -66,6 +66,61 @@ class FlaskModelTests(unittest.TestCase):
 	    assert c.alias == 'Bruce Wayne'
 	    assert c.description == 'Dark Knight'
 	    assert c.origin == 'Human'
+
+    def test_blank_person_creation(self):
+
+	    person = Person(
+	        id='20'
+		)
+	    db.session.add(person)
+	    db.session.commit()
+	    c = Person.query.filter_by(id='20').first()
+	    assert c.id == 20
+	    assert c.name == None
+	    assert c.country == None
+	    assert c.job_title == None
+	    assert c.website == None
+	    assert c.gender == None
+
+    def test_person_creation_1(self):
+
+	    person = Person(
+	        id='2000',
+	        name='Bromethius',
+	        country='Brossia',
+	        job_title='Brah',
+	        website='www.brodown.com',
+	        gender='Bro'
+		)
+	    db.session.add(person)
+	    db.session.commit()
+	    c = Person.query.filter_by(id='2000').first()
+	    assert c.id == 2000
+	    assert c.name == 'Bromethius'
+	    assert c.country == 'Brossia'
+	    assert c.job_title == 'Brah'
+	    assert c.website == 'www.brodown.com'
+	    assert c.gender == 'Bro'
+    
+    def test_person_creation_2(self):
+
+	    person = Person(
+	        id='2001',
+	        name='Zlatan',
+	        country='Zlatan',
+	        job_title='Footballer',
+	        website='www.zlatan.com',
+	        gender='God'
+		)
+	    db.session.add(person)
+	    db.session.commit()
+	    c = Person.query.filter_by(id='2001').first()
+	    assert c.id == 2001
+	    assert c.name == 'Zlatan'
+	    assert c.country == 'Zlatan'
+	    assert c.job_title == 'Footballer'
+	    assert c.website == 'www.zlatan.com'
+	    assert c.gender == 'God'
 
 
 if __name__ == '__main__':
