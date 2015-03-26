@@ -43,7 +43,7 @@ for people_id in list(people_id_list):
     # print(gender)
 
     #Create a new person object
-    person = models.People(id=id, name=name, image=image, birth_date=birth_date, job_title=job_title, gender=gender)
+    person = models.Person(id=id, name=name, image=image, birth_date=birth_date, job_title=job_title, gender=gender)
 
     db.session.add(person)
     db.session.commit()
