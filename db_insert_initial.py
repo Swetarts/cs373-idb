@@ -11,24 +11,24 @@ character = Character (
 	gender='Male',
 	origin='Alien'
 	)
-    ally = character
-    enemy = character
-    power = Power(
-	id=1,
-	name='Flight')
-    power2 = Power(
-	id=14,
-	name='Blast Power')
-    team = Team(
-	id=19241,
-	name='Legion of Superheroes')
-    character.allies.append(ally)
-    character.enemies.append(enemy)
-    character.powers.append(power)
-    character.powers.append(power2)
-    character.teams.append(team)
-    db.session.add(character)
-    db.session.commit()
+ally = character
+enemy = character
+power = Power(
+id=1,
+name='Flight')
+power2 = Power(
+id=14,
+name='Blast Power')
+team = Team(
+id=19241,
+name='Legion of Superheroes')
+character.allies.append(ally)
+character.enemies.append(enemy)
+character.powers.append(power)
+character.powers.append(power2)
+character.teams.append(team)
+db.session.add(character)
+db.session.commit()
     # characters = [
     # Character(
     # id='1698',
