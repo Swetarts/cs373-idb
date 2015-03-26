@@ -233,5 +233,40 @@ class FlaskModelTests(unittest.TestCase):
 	    assert c.id == 1400
 	    assert c.name == 'Minute Man'
 
+    def test_blank_team(self):
+
+	    team = Team(
+	        id='38',
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='38').first()
+	    assert c.id == 38
+	    assert c.name == None
+
+    def test_team_creation_1(self):
+
+	    team = Team(
+	        id='1409',
+	        name='Justice League'
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='1409').first()
+	    assert c.id == 1409
+	    assert c.name == 'Justice League'
+
+    def test_team_creation_2(self):
+
+	    team = Team(
+	        id='169',
+	        name='Avengers'
+		)
+	    db.session.add(team)
+	    db.session.commit()
+	    c = Team.query.filter_by(id='169').first()
+	    assert c.id == 169
+	    assert c.name == 'Avengers'
+
 if __name__ == '__main__':
     unittest.main()
