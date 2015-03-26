@@ -9,12 +9,12 @@ import models
 import requests
 import json
 
-character_id_list = ['1807', '1440', '1696', '1486', '2349', '1698', '2048', '2267', '1443', '1699']
+comic_id_list = ['362496', '', '', '', '', '', '', '', '', '']
 
-request_url = 'http://www.comicvine.com/api/character/4005-'
-payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,name,aliases,description,image,creators,gender,origin,powers,teams,character_friends,character_enemies', 'offset':'0'}
-for char_id in list(character_id_list):
-    api_request = request_url + char_id + '/'
+request_url = 'http://www.comicvine.com/api/issue/4000-'
+payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,name,image,cover_date,person_credits,character_credits,volume', 'offset':'0'}
+for comic_id in list(comic_id_list):
+    api_request = request_url + comic_id + '/'
     response = requests.get(api_request, params=payload)
     num_results = response.json()['number_of_total_results']
 
@@ -23,61 +23,38 @@ for char_id in list(character_id_list):
     id = parsed['id']
     # print(id)
 
-    name = parsed['name']
+    title = parsed['name']
     # print(name)
 
-    #This is ugly but some alias lists are delimited by \r\n and some just \n
-    alias = parsed['aliases'].split('\n')[0].split('\r')[0]
-    # print(alias)
-
-    images = parsed['image']
+    image = parsed['image']['icon_url']
     # print(images)
 
-    description = parsed['description']
-    # print(description)
+    launch_date = parsed['cover_date'].split(' ')[0]
+    # print(launch_date)
 
-    gender = 'male' if parsed['gender'] == 1 else 'female'
-    # print(gender)
+    volume_id = parsed['volume']['id']
+    volume_request = 'http://www.comicvine.com/api/volume/4050-'
+    vol_payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,publisher'}
+    vol_request = volume_request + str(volume_id) + '/'
+    vol_response = requests.get(vol_request, params=vol_payload)
+    publisher_id = vol_response.json()['results']['publisher']['id']
+    # print(publisher_id)
 
-    origin = parsed['origin']['name']
-    # print(origin)
+    comic = models.Comic_Series(id=id, title=title, image=image, launch_date=launch_date, publisher_id=publisher_id)
 
-    #Create a new character object
-    character = models.Character(id=id, name=name, alias=alias, image=images, description=description, gender=gender, origin=origin)
-
-    #Add power objects
-    powers = parsed['powers']
-    for power in list(powers):
-        character.powers.append(models.Power.query().filter(id=power['id']).first())
-        # print(power['id'], power['name'])
-
-    #Add team objects
-    teams = parsed['teams']
-    for team in list(teams):
-        character.teams.append(models.Team.query().filter(id=team['id']).first())
-        # print(team['id'], team['name'])
-
-    #Add allies
-    allies = parsed['character_friends']
-    for ally in list(allies):
-        friend = models.Character.query.filter_by(ally['id']).first()
-        character.allies.append(friend) if friend
+    #Add featured characters
+    characters = parsed['character_credits']
+    for character in list(characters):
+        hero = models.Character.query.filter_by(character['id']).first()
+        comic.characters.append(hero) if hero
         # print(ally['id'], ally['name'])
 
-    #Add enemies
-    enemies = parsed['character_enemies']
-    for enemy in list(enemies):
-        nemesis = models.Character.query.filter_by(enemy['id']).first()
-        character.enemies.append(nemesis) if nemesis
-        # print(enemy['id'], enemy['name'])
-
-    #Add creators
-    creators = parsed['creators']
+    #Add featured people
+    creators = parsed['person_credits']
     for creator in list(creators):
         person = models.Person.query.filter_by(creator['id']).first()
-        character.creators.append(person) if person
-        # print(creator['id'], creator['name'])
+        comic.people.append(person) if person
 
-    db.session.add(character)
+    db.session.add(comic)
     db.session.commit()
     # print('****************************************************************************************************')
