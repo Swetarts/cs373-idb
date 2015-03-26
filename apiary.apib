@@ -1,0 +1,157 @@
+FORMAT: 1A
+
+# 373swetarts
+The Comics API is a **fantastic** way to retrieve information about **comics**, **characters**, and the **people** who helped create them!
+
+# Group Characters
+Information for the retrieval of characters
+
+## Character Collection [/characters]
+### List all Characters [GET]
++ Response 200 (application/json)
+
+        [{ "id"   : 1,
+           "name" : "Captain Obvious",
+           "image": "imagepath"
+        },
+        {  "id"   : 2,
+           "name" : "Discernable Woman",
+           "image": "imagepath"
+        }]
+
+
+## Character [/characters/{id}]
+A single **Character** object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Character to perform action with. Has example value.
+
+### Retrieve a Character [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            {  "id"         : 1,
+            "name"       : "Captain Obvious",
+            "alias"      : "Obvious Lee",
+            "image"      : "image???",
+            "description": "Well he's generally obvious",
+            "gender"     : "male",
+            "origin"     : "Obviousville, OB",
+            "powers"     : [  "Stating the obvious",
+                              "Obvious Ray",
+                              "Obvlivion"
+                           ],
+            "teams"      : [  "Heroes of the Psyche"
+                           ],
+            "allies"     : [{ "id" : 2,
+                              "name": "Discernable Woman"
+                            }],
+            "villans"    : [{ "id" : 3,
+                              "name": "Double Entendre Dave"
+                            }],
+            "creators"    : [{ "id"  : 1,
+                              "name": "Guy who lives with his mom"
+                           },
+                           { "id"  : 2,
+                              "name": "The guy who lives with his mom's best friend"
+                           }],
+            "series"     : [{ "id"   : 1,
+                              "title": "The Adventures of Captain Obvious"
+                           }]
+            }
+
+# Group People
+Information for retrieving infomation about people
+
+## People Collection [/people]
+### List all People [GET]
++ Response 200 (application/json)
+
+        [{ "id"   : 1,
+           "name" : "Guy who lives with his mom"
+        },
+        {  "id"   : 2,
+           "name" : "The guy who lives with his mom's best friend"
+        },
+        {  "id"   : 3,
+           "name" : "The collective internet"
+        }]
+        
+## Person [/people/{id}]
+A single **Person** object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Person to perform the action with. Has example value.
+
+### Retrieve a Person [GET]
++ Response 200 (application/json)
+
+    + Body
+    
+            { "id"        : 1,
+              "name"      : "Guy who lives with his mom",
+              "image"     : "imagepath",
+              "birth_date": "566265600",
+              "country"   : "USA",
+              "job_title" : "Jobless",
+              "website"   : "google.com",
+              "gender"    : "male",
+              "characters": [{ "id"  : 1,
+                               "name": "Captain Obvious"
+                            },
+                            {  "id"  : 2,
+                               "name": "Discernable Woman"
+                            }],
+              "series"    : [{ "id"   : 1,
+                               "title": "The Adventures of Captain Obvious"
+                            }]
+            }
+
+# Group Series
+Information for retrieving **Comic Series**
+
+## Series Collection [/series]
+### List all Series [GET]
++ Response 200 (application/json)
+
+        [{ "id"   : 1,
+           "title": "The Adventures of Captain Obvious"
+        },
+        {  "id"   : 2,
+           "title": "Obviously, or How I Saved The Planet from Myself"
+        }]
+        
+## Series [/series/{id}]
+A single **Series** object with all its details.
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Series to perform the action with. Has example value.
+    
+### Retrieve a Series [GET]
++ Response 200 (application/json)
+
+    + Body
+    
+            {  "id"         : 1,
+               "title"      : "The Adventures of Captain Obvious",
+               "image"      : "imagepath",
+               "launch_date": "566265600",
+               "publisher"  : "Just OK Studios",
+               "characters" : [{ "id"  : 1,
+                                 "name": "Captain Obvious"
+                              },
+                              {  "id"  : 2,
+                                 "name": "Discernable Woman"
+                              }],
+               "people"     : [{ "id"  : 1,
+                                 "name" : "Guy who lives with his mom"
+                              },
+                              { "id"   : 2,
+                                "name": "The guy who lives with his mom's best friend"
+                              }]
+            }
