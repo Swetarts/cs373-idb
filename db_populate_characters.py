@@ -18,15 +18,24 @@ for char_id in list(character_id_list):
     response = requests.get(api_request, params=payload)
     num_results = response.json()['number_of_total_results']
     response = requests.get(api_request, params=payload)
-    print(response.json())
-    # parsed = response.json()['results']
+    parsed = response.json()['results']
+    print(parsed['image']['medium_url'])
+    # print(parsed['powers'])
     # id = parsed['id']
     # teams = parsed['teams']
-    print(id)
+    # print(id)
     print('****************************************************************************************************')
     # break
-    # for x in list(parsed):
-	   #  # print(x['id'], x['name'])
+    # for x in parsed:
+    #     character = Character(
+    #         id=x['id'],
+    #         name=x['name'],
+    #         alias=x['alias'],
+	 #        image=x['image']['medium_url'],
+	 #        description=,
+	 #        gender='Male',
+	 #        origin='Alien'
+    #     )
     #     team = models.Team(id=x['id'], name=x['name'])
     #     db.session.add(team)
     #     db.session.commit()
