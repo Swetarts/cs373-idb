@@ -8,16 +8,16 @@ app.controller('AboutCtrl', function($scope) {
 			"responsibilites":"I was responsible for the front end portion of our application. I set up Angular and programmed the characters, people, and issues poritons of our site along with the details pages for each of those. I also worked with Jerry to help get his feet wet in Angular where he successfully coded up the home and about pages.",
 			"num_commits":"71",
 			"num_issues":"15",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		},
 		{
 			"name":"Maximilian Brown",
 			"image:":"http://imgur.com/9RzkScR&0IMTMLW&vxbT1QN&Ap2J5QI&dLRQOmC#3",
-			"description":"I like the color green.",
-			"responsibilites":"null",
+			"description":"Max is a Computer Science major at the University of Texas at Austin. He is married and has two children. Max enjoys spending his free-time with his family.",
+			"responsibilites":"Worked on database with Tyler.",
 			"num_commits":"20",
 			"num_issues":"3",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		},
 		{
 			"name":"Gerardo Gamboa",
@@ -26,7 +26,7 @@ app.controller('AboutCtrl', function($scope) {
 			"responsibilites":"My responsibilities included started my training in Angular in the front end aspect of the project. I worked with Sean to start practicing Angular and helped out with some things that later became making the home page and about page. Definitely feel a lot better with Angular than when I first started working on this project.",
 			"num_commits":"14",
 			"num_issues":"2",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		},
 		{
 			"name":"Aaron Dishman",
@@ -35,7 +35,7 @@ app.controller('AboutCtrl', function($scope) {
 			"responsibilites":"apiary design and edit, wiki/technical report write up, db population dev, db design, cat coralling",
 			"num_commits":"17",
 			"num_issues":"5",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		},
 		{
 			"name":"Tyler Corley",
@@ -44,7 +44,7 @@ app.controller('AboutCtrl', function($scope) {
 			"responsibilites":"Backend Bistro (Set up API calls to deliver serialized models), Fullmodel SQLAlchemist (Set up Flask models with SQLAlchemy and database migrations), Apiary Expert (Wrote out the API on Apiary.io), Defender of the SWErver (Set up the Rackspace instance and delegated SSH Authentication), and the One Who Dropped the [data]Base (Configured the PostgreSQL database users and mirrored the schema onto tables).",
 			"num_commits":"7",
 			"num_issues":"20",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		},
 		{
 			"name":"Alex Fortin",
@@ -53,7 +53,7 @@ app.controller('AboutCtrl', function($scope) {
 			"responsibilites":"Major responsibilities were setting up the database with the one and only Maximilian and populating it. This consisted of figuring out what attributes were needed, the relationships between attributes, and ultimately creating the schema's.",
 			"num_commits":"25",
 			"num_issues":"2",
-			"num_uTests":"0"
+			"num_uTests":"3"
 		}
 	]
 });
