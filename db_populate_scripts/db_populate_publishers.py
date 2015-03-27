@@ -19,7 +19,7 @@ while True:
 
     for x in list(parsed):
 	    # print(x['id'], x['name'])
-        publisher = models.Publisher(id=x['id'], name=x['name'])
+        publisher = models.Publisher(id=int(x['id']), name=x['name'])
         db.session.add(publisher)
         db.session.commit()
 

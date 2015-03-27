@@ -105,7 +105,6 @@ h1 {
             align-items: flex-start;
 }
 
-
 .flex-items-default {
     width: 200px;
     height: 250px;
@@ -149,6 +148,7 @@ h1 {
 /* override bootflat 100% width */
 .thumbnail a > img, .thumbnail > img {
     width: auto;
+    height:240px;
 }
 
 .thumbnail {
@@ -166,7 +166,7 @@ h1 {
 *                                   
 *************************************/
 
-#character-detail-panel, #person-detail-panel, #issue-detail-panel {
+#character-detail-panel, #person-detail-panel, #issue-detail-panel, #about-detail-panel {
     width: 75%;
 }
 

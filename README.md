@@ -118,3 +118,11 @@ To log in run
 ssh -i .ssh/id_rsa.pub swetard@104.239.165.88
 ```
 
+# Running Tests
+* `$ python3 tests.py`
+
+Note: If you recieve an 'ImportError: No module named 'psycopg2'' run
+* `$ pip install psycopg2`
+and it should fix it
+
+
