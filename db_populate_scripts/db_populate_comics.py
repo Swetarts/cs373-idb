@@ -9,7 +9,7 @@ import models
 import requests
 import json
 
-comic_id_list = ['362496', '', '', '', '', '', '', '', '', '']
+comic_id_list = ['362496', '2267', '308947', '120834', '105483', '245832', '468444', '434071', '225808', '359962']
 
 request_url = 'http://www.comicvine.com/api/issue/4000-'
 payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,name,image,cover_date,person_credits,character_credits,volume', 'offset':'0'}

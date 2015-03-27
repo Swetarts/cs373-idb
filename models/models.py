@@ -49,6 +49,11 @@ comic_characters = db.Table('comic_characters',
 # Models
 ########
 
+
+###########
+# Character
+###########
+
 class Character(db.Model):
     """Represents the character model and pillar for the project.
 
@@ -105,6 +110,10 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % (self.name)
 
+###########
+# Person
+###########
+
 class Person(db.Model):
     """Represents the Person model and pillar for the project.
 
@@ -137,6 +146,10 @@ class Person(db.Model):
 
     def __repr__(self):
         return '<Person %r>' % (self.name)
+
+##############
+# Comic Series
+##############
                    
 class Comic_Series(db.Model):
     """Represents the Comic Series model and pillar for the project.
@@ -173,6 +186,10 @@ class Comic_Series(db.Model):
     def __repr__(self):
         return '<Comic Series %r>' % (self.title)
 
+###########
+# Publisher
+###########
+
 class Publisher(db.Model):
     """Represents the publisher model for a certain comic series. This
     is the only model that references this.
@@ -189,6 +206,10 @@ class Publisher(db.Model):
 
     def __repr__(self):
         return '<Publisher %r>' % (self.name)
+
+#######
+# Power
+#######
 
 class Power(db.Model):
     """A simple character powers model

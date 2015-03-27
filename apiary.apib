@@ -118,11 +118,11 @@ A single **Person** object with all its details
                             }]
             }
 
-# Group Series
-Information for retrieving **Comic Series**
+# Group Issues
+Information for retrieving **Comic Issues**
 
-## Series Collection [/issues]
-### List all Series [GET]
+## Issues Collection [/issues]
+### List all Issues [GET]
 + Response 200 (application/json)
 
         [{ "id"   : 1,
@@ -132,7 +132,7 @@ Information for retrieving **Comic Series**
            "title": "Obviously, or How I Saved The Planet from Myself"
         }]
         
-## Issues [/issues/{id}]
+## Issue [/issues/{id}]
 A single **Issue** object with all its details.
 
 + Parameters
@@ -147,17 +147,71 @@ A single **Issue** object with all its details.
                "title"      : "The Adventures of Captain Obvious",
                "image"      : "imagepath",
                "launch_date": "566265600",
-               "publisher"  : "Just OK Studios",
-               "characters" : [{ "id"  : 1,
-                                 "name": "Captain Obvious"
-                              },
-                              {  "id"  : 2,
-                                 "name": "Discernable Woman"
-                              }],
+               "publisher"  : "Just alright Studios",
                "people"     : [{ "id"  : 1,
                                  "name" : "Guy who lives with his mom"
                               },
                               { "id"   : 2,
                                 "name": "The guy who lives with his mom's best friend"
-                              }]
+                              }],
+               "characters" : [{ "id"  : 1,
+                                 "name": "Captain Obvious"
+                              },
+                              {  "id"  : 2,
+                                 "name": "Discernable Woman"
+                              }]                
             }
+
+<!-- UNDER DEVELOPMENT 
+
+# Group Publisher
+Information for retrieving a **Comic Publisher** and related information
+
+## Publisher Collection [/publisher]
+### Retrieve a Publisher [GET]
++ Response 200 (application/json)
+
+        [{ "id"     : 1,
+           "name"   : "Marvel Comics"
+           "Issues" : [{ "id"  : 1,
+                      "title"  : "The Adventures of Captain Obvious",
+                      "image"  : "imagepath",
+                "launch_date"  : "566265600",
+                  "publisher"  : "Just alright Studios",
+                     "people"  : [{ "id"  : 1,
+                                  "name"  : "Guy who lives with his mom"
+                                  },
+                                  { "id"  : 2,
+                                  "name"  : "The guy who lives with his mom's best friend"
+                                  }],
+                 "characters"  : [{ "id"  : 1,
+                                 "name"   : "Captain Obvious"
+                                  },
+                                  {  "id" : 2,
+                                   "name" : "Discernable Woman"
+                                  }]                
+                        }, ...]
+                        
+# Group Power
+Information for retrieving a **character Power**
+
+## Power [/power]
+### Retrieve a Power [GET]
++ Response 200 (application/json)
+
+        { "id": 1,
+        "name": "Flight"
+        }
+        
+# Group Team
+Information for retrieving a **comic Team**
+
+## Team [/team]
+### Retrieve a Team [GET]
++ Response 200 (application/json)
+
+        { "id": 1,
+        "name": "X-Men"
+        }
+
+-->

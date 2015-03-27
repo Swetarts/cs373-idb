@@ -7,6 +7,10 @@ from models import Character, Person, Comic_Series, Power, Team, Publisher
 from server import app, db
 from requests import get
 
+# ---------------
+# FlaskModelTests
+# ---------------
+
 class FlaskModelTests(TestCase):
 
     def create_app(self):
@@ -22,6 +26,10 @@ class FlaskModelTests(TestCase):
     def tearDown(self):
         db.session.remove()
         db.drop_all()
+
+    # ---------------
+	# Character Tests
+	# ---------------
 
     def test_blank_character_creation(self):
 
@@ -76,6 +84,10 @@ class FlaskModelTests(TestCase):
 	    assert c.alias == 'Bruce Wayne'
 	    assert c.description == 'Dark Knight'
 	    assert c.origin == 'Human'
+
+	# ---------------
+	# Person Tests
+	#---------------
 
     def test_blank_person_creation(self):
 
@@ -132,6 +144,10 @@ class FlaskModelTests(TestCase):
 	    assert c.website == 'www.zlatan.com'
 	    assert c.gender == 'God'
 
+	# ------------------
+	# Comic Series Tests
+	# ------------------
+
     def test_blank_comic_series(self):
 
 	    comic = Comic_Series(
@@ -173,6 +189,10 @@ class FlaskModelTests(TestCase):
 	    assert c.title == 'Tower of God'
 	    assert c.image == 'pic'
 
+	# ---------------
+	# Publisher Tests
+	# ---------------
+
     def test_blank_publisher(self):
 
 	    publisher = Publisher(
@@ -208,6 +228,10 @@ class FlaskModelTests(TestCase):
 	    assert c.id == 900
 	    assert c.name == 'Marvel'
 
+	# ---------------
+	# Power Tests
+	# ---------------
+
     def test_blank_power(self):
 
 	    power = Power(
@@ -242,6 +266,10 @@ class FlaskModelTests(TestCase):
 	    c = Power.query.filter_by(id='1400').first()
 	    assert c.id == 1400
 	    assert c.name == 'Minute Man'
+
+	# ----------
+	# Team Tests
+	# ----------
 
     def test_blank_team(self):
 
