@@ -110,7 +110,6 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % (self.name)
 
-<<<<<<< HEAD
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
@@ -130,7 +129,7 @@ class Character(db.Model):
             'teams': self.serialize_many(self.teams),
             'character_friends': self.serialize_many_characters(self.allies),
             'character_enemies': self.serialize_many_characters(self.enemies),
-            'creators': []
+            'creators': self.serialize_many(self.creators)
         }
 
     def serialize_many(self, attr):
@@ -145,11 +144,22 @@ class Character(db.Model):
             'id': self.id,
             'name': self.name
         }
-=======
+
+    @property
+    def serialize_many_character(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'thumb_url': self.image,
+                'small_url': self.image.replace('square_avatar', 'scale_small')
+            }
+        }
+
 ###########
 # Person
 ###########
->>>>>>> 46598b06548617dbe8ef83326b0c3756d7b7ddc3
+
 
 class Person(db.Model):
     """Represents the Person model and pillar for the project.
@@ -183,6 +193,22 @@ class Person(db.Model):
 
     def __repr__(self):
         return '<Person %r>' % (self.name)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image,
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            },
+            'country': self.country,
+            'job_title': self.job_title,
+            'website': self.website,
+            'gender': self.gender
+        }
 
 ##############
 # Comic Series
@@ -222,6 +248,17 @@ class Comic_Series(db.Model):
 
     def __repr__(self):
         return '<Comic Series %r>' % (self.title)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'image': {
+                'thumb_url': self.image,
+                'small_url': self.image.replace('square_avatar', 'scale_small')
+            }
+        }
 
 ###########
 # Publisher
