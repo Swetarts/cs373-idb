@@ -1,0 +1,1080 @@
+commit e8110747833d07e3345b74741b6911a2d30ec474
+Merge: 02258e4 46598b0
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 20:59:19 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 02258e4cd77246b0c9f06558d58d481227e54fc7
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 20:58:54 2015 -0500
+
+    Added all pics for members
+
+commit 46598b06548617dbe8ef83326b0c3756d7b7ddc3
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 20:49:11 2015 -0500
+
+    New dependency for gunicorn to run the server
+
+commit 9ef2062c2bc2e3d2f49507d001234dbc428d8f07
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 20:14:09 2015 -0500
+
+    Finished with stats for About page.
+
+commit bf272dc0e9848376c3938936e50a0ee526fa569b
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 20:08:21 2015 -0500
+
+    Added the num of commits for each member.
+
+commit 661acf0a91686880416f4e6d3894d6b9ee98c54d
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 20:00:04 2015 -0500
+
+    Added all of the issues for the about page.
+
+commit be3d39b386ca44eef7196feb04e2c9a723a4a94d
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 19:09:48 2015 -0500
+
+    Fixed sir Alexander's mistakes. Tsk Tsk.🔧 Also added the models html generated from github wiki markdown 🆒 (Close #9)
+
+commit 6ffcc7a981e3bab5aacaf05002c94d4fce0c1d76
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 19:04:22 2015 -0500
+
+    Added another member picture.
+
+commit 0b1c76bcbae2d441452b37772fbda7fe4a9b82cb
+Merge: eab13b0 84b7be6
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 19:00:43 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit eab13b07c7056afbe2e0881857c8600fbd242d9e
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 18:59:14 2015 -0500
+
+    Added some pictures. resolves#25, resolves#17
+
+commit 84b7be657f2db30feff790c2c41de92f9c53c7e8
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 18:37:37 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 688cb7b5a8183deb3dda9376eead98150a89e39e
+Merge: 3b0c7d5 32acb62
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 18:24:42 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 32acb62d19b639edfc92f81e9cc233e34568ef06
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 18:22:37 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 76e1198457880fbf608ad69954b52c89348cd606
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:15:20 2015 -0500
+
+    Renamed UML file
+
+commit 313700e602ec3b48f5f36855c6c1d0c77596aed3
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:13:28 2015 -0500
+
+    Removing uneeded text file
+
+commit 07d180312feab51e78a2e2738f8ed00bc5f4afad
+Merge: 9a960a4 c0b0a95
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:12:21 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 9a960a4849c0cdd9f26b328f049b7d81c71a250f
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:12:07 2015 -0500
+
+    Added headers
+
+commit c0b0a954dd4642f0c866a8ee0addb2994fe28ee1
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 18:09:24 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 8641ee0e8a28850d88766434419f68d0eb55b643
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:02:50 2015 -0500
+
+    Folder for models
+
+commit d635f7c7acbca80f925be52cf085613ba224579d
+Merge: cccd8ef 99fa0fc
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:01:13 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit cccd8ef3eea8ac2e46a515700a0afbbc9680fea6
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 18:01:05 2015 -0500
+
+    Moving all scripts into a folder
+
+commit 99fa0fc1b7d89c0061742f4c2798e6f7556b0f2c
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:47:01 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 7d8483dc1fd653481277f43321b4ea59e81e7043
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:46:48 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 0030ae430faccb42159553ef4a69b20395704c75
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 17:44:26 2015 -0500
+
+    added issues to db_populate_comics.py resolves #32
+
+commit 979ea466a0a82fc3e8e0187c84e5674c8c472ed6
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:18:52 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 4b5ee0f635a070434c1b3536c195e78b466b1550
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:18:33 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 62ae1e70dffe1d7189e74b4dff1117ed7d1966a9
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 17:07:34 2015 -0500
+
+    update to all populate scripts
+
+commit 3b0c7d5c7d6ee0f2c41272671996f967948f106e
+Merge: ad866c2 86291ff
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:02:42 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 86291ffe323f14fcd10272e1da008555a41c8e9a
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 17:02:02 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 94c827fbc07d8ad5b4f4593ac09482bb80c79458
+Merge: 2612890 06b4b21
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 17:00:45 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 2612890558a2ad7e77ee32400bbdc178ca709324
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 17:00:23 2015 -0500
+
+    Added documentation for the flask models 🏰🐉
+
+commit ad866c20eb49d920eafb2bacf2d43632e4074c85
+Merge: 914860c 06b4b21
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 16:45:59 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 06b4b2154c37aa429fba29a2cbce0823913e8179
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 21:43:36 2015 +0000
+
+    adding migration data and populate script changes
+
+commit 914860c3ff7df67821874cf417b036117c187536
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Mar 26 16:26:40 2015 -0500
+
+    added some documentation the python server code
+
+commit 5489357b6080915c24179c8ba34252b77f083225
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 16:21:43 2015 -0500
+
+    Adding back lost tests
+
+commit 62f6b34c81e98a428276a3b8a68b394b24cd7162
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 16:19:44 2015 -0500
+
+    Added back lost tests
+
+commit 7c4436c6028d60487742f6e75d3268990ebdfa72
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 16:01:34 2015 -0500
+
+    Updated requirements 👾💃
+
+commit 1222ce2d8617c963f46edcacbf265931578b0919
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 15:54:00 2015 -0500
+
+    Test are now run on a postgression instance instead of the regular database to close #34 💅
+
+commit 4985eac8e327bd770a9ffb6fca22afafc5a5bf36
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:34:07 2015 -0500
+
+    Fixing formatting
+
+commit da9badbe6378c9624f371491d0e181c517fb8f3a
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:33:11 2015 -0500
+
+    Updated readme for testing
+
+commit 787165f945ee176ce730a4d9ea4f81f6c1cfb994
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:28:40 2015 -0500
+
+    Added output files
+
+commit 0ac6fcde28570ef0fa09e0f2cdac6634dd5a16f3
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:11:50 2015 -0500
+
+    Finished testings all models
+
+commit f00816292c05e6144a108f56c290e74a2bd819ac
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:06:58 2015 -0500
+
+    Created tests for powers
+
+commit d6c47589ebe8cf602775ac384dc3d529dfd3e11c
+Merge: 38e6500 524ecf8
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:01:23 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 38e65007820c40fd155a94763dce798919fcf9de
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 14:01:17 2015 -0500
+
+    Created tests for publisher
+
+commit 524ecf83ab03b4dffbec1936ad10e3539b91e3d3
+Merge: d82bb89 ba15806
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 13:43:05 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit ba158067c8f70e6df749b49ea21138df12b0976b
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 13:42:52 2015 -0500
+
+    Created Comic Series Tests
+
+commit d82bb898a16b50db8eac1560146f02811b770698
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Mar 26 13:42:01 2015 -0500
+
+    Finished home page fixes#25
+
+commit 320c62b13bc4b99ac772f7bc85fd47cc01db144c
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 13:29:18 2015 -0500
+
+    Created Person tests
+
+commit 754734134cff13933a14254dfa278b5a0618c796
+Merge: 6b892bb 0c9618b
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 13:14:32 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 6b892bb8b14d85e33c93efb75b162ba7c5a0def5
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Thu Mar 26 13:13:35 2015 -0500
+
+    Finished character flask tests
+
+commit 0c9618b426d1a87c9d4301daea37559d7c525757
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Thu Mar 26 12:51:13 2015 -0500
+
+    Add my bio to the about controller
+
+commit 3eebb29b3929044962c77d9b16b2511f8a064e36
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 03:23:20 2015 -0500
+
+    finished db_populate_comics.py, need to come up with more specific comic issues
+
+commit 2cd99db3792bbe63d90516220b466c273b3b97b6
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 02:46:14 2015 -0500
+
+    started db_populate_comics.py
+
+commit 3386de265ad60e89d71682c0ced61795fdd8fd7c
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 01:37:58 2015 -0500
+
+    finished db_populate_people.py, still need to test
+
+commit a298446100877196bfe2c25c48ea4f930d141f48
+Author: tcorley <tyler_corley@me.com>
+Date:   Thu Mar 26 01:35:09 2015 -0500
+
+    New db migration file😔
+
+commit 2a0e6fc540342602828fd87de5d208a4941de037
+Merge: a411ad8 fe599f0
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 00:15:17 2015 -0500
+
+    resolved merge
+
+commit a411ad8f9115dba1a222fad10cc3527233dea2f1
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Mar 26 00:13:11 2015 -0500
+
+    finished db_populate_characters.py, need to test
+
+commit fe599f071e4356d803dd2d53dd12781aef68aac5
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Wed Mar 25 23:50:15 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 2de184b1c4bd5e2beb1e78282b83f67dcaa64dea
+Merge: 269b51e ea7abac
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 04:04:15 2015 +0000
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 269b51ee2343bd32db6c91bc74d519f934eec07c
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Mar 26 04:04:13 2015 +0000
+
+    db migration
+
+commit fcb1d6eb3b15e388e0a35ab828be7a0069263226
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Wed Mar 25 23:02:29 2015 -0500
+
+    First test
+
+commit ea7abac62dc5ec8429baa2543cbf25aae5499777
+Merge: 8b4724a 712e297
+Author: tcorley <tyler_corley@me.com>
+Date:   Wed Mar 25 22:44:04 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+    
+    # By Alex Fortin
+    # Via Alex Fortin
+    * 'master' of github.com:stv8/cs373-idb:
+      Skeleton for flask tests
+
+commit 8b4724a9b93718f064e67dc45f6f5bdce8ba3010
+Author: tcorley <tyler_corley@me.com>
+Date:   Wed Mar 25 22:43:47 2015 -0500
+
+    Added my bio to the about page 😜
+
+commit 712e29789d5823ab30c04426701205257b6cd519
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Wed Mar 25 22:30:43 2015 -0500
+
+    Skeleton for flask tests
+
+commit 5ad4775ab5b29dfd2b82655a2e27efb54f6e580a
+Merge: 06be434 b9d04d2
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Wed Mar 25 21:25:19 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 06be434b5d1e8f51e7276bc8df0f84fb2002aaeb
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Wed Mar 25 21:25:12 2015 -0500
+
+    Fixed character population
+
+commit b9d04d289ee8484e66a17004265279758f574273
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 21:18:01 2015 -0500
+
+    minor css change
+
+commit d604d0c476d2cc59f31fa707d1bb4ede725e4b3c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 21:15:56 2015 -0500
+
+    different image
+
+commit ed63fae0b7d5c2341d3973b0b0cfe4d8ce6ca21c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 21:15:30 2015 -0500
+
+    resolve #26
+
+commit 63485f697d9b99639b4962dd51cf39947b23be3f
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 21:08:07 2015 -0500
+
+    minor bower fix
+
+commit a8d4d8e0759d1daf03102be23a6e094e9d3f2c82
+Merge: 1e53c52 8dfedcd
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 20:37:54 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 1e53c520a754f869ee1764ed3ea24363a13e5bac
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 20:37:40 2015 -0500
+
+    adjust layout
+
+commit 8dfedcd01e66b8695698d2daf866cf114ffa951d
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Mar 25 19:17:41 2015 -0500
+
+    populate almost complete
+
+commit 4618c2d6449963ef469679119ac9013a99c4585a
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Mar 25 18:46:02 2015 -0500
+
+    for now, description should/is coming from deck identifier instead of description
+
+commit e66cd60f8f3582060d09344abe63fbcd08173ff6
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 16:38:59 2015 -0500
+
+    added db_populate_characters.py, still in progress
+
+commit 89e6c019259b4ad0cb24a08e2b322798874ad054
+Merge: 1dabf08 5cd5edf
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 16:28:45 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 1dabf0855b88f211e0023d191195230604432d80
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 16:28:40 2015 -0500
+
+    resolve #24 strip out anchor tags from description
+
+commit 5cd5edf3004fe038f8db4af812ded2c4903aed36
+Merge: fc9e0e9 ebd837a
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 15:58:11 2015 -0500
+
+    Merge
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit fc9e0e96596662514bf4879a3b872853ecff158e
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 15:57:59 2015 -0500
+
+    added db_populate_teams.py and fixed other populate scripts
+
+commit eaade139067bb050840271094df58599893451e1
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 15:46:18 2015 -0500
+
+    altered db_populate_powers.py and added db_populate_publishers.py
+
+commit ebd837aa708e859540870aeea8ce9aed96be0def
+Merge: cab480f 26d8b98
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 15:46:09 2015 -0500
+
+    fix conflict
+
+commit cab480fb2ed9394f6bc7a0076a2001cdfbcd4712
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 15:44:38 2015 -0500
+
+    resolve #22 add state animations
+
+commit 26d8b985a88a080c92049a1d58b03c4d1d5df31a
+Merge: fb0a7f6 be814a9
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Mar 25 15:38:31 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit fb0a7f62eb001bb267e8d2848619500af0ef6bb2
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Mar 25 15:37:30 2015 -0500
+
+    added a couple characters to db
+
+commit be814a904a5a9311c23119c4cde0026ec61df6c6
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 15:21:57 2015 -0500
+
+    script to add all powers to db
+
+commit abd5c230fa0f1a60b3fffec7239040a579b8fdee
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Mar 25 15:02:51 2015 -0500
+
+    added Aaron's bio to about page
+
+commit 66602a595b906103fb27c7f95fba24500c07c69e
+Merge: 026de16 691fe56
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Mar 25 14:58:36 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 026de167d22b160dcc29bb4b11030b21e6a921a7
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Mar 25 14:58:07 2015 -0500
+
+    Added buttons to main pages on home page.
+
+commit 691fe56ae281ee93986e17d591dccb7fe0fe7cfb
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Mar 25 14:25:29 2015 -0500
+
+    fixed models.py entry types and lengths
+
+commit 434fb1eb33683e7b989b904c310147f7606d81cd
+Merge: b6fdc6d 309afb2
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Mar 25 13:33:26 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+    
+    Conflicts:
+    	server.py
+
+commit 309afb221f33fa11efeab70a532d79b1f2fc226b
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 13:30:55 2015 -0500
+
+    finishing up detail pages
+
+commit b6fdc6d38abc2feb0c9953fccf0783a0676ec4f6
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Mar 25 13:30:55 2015 -0500
+
+    New migrations, server has a test api to work on serialization, models fixed for many to many relationship 👸
+
+commit 1c9334ef59f7cf20a08c6731962587543d841ff7
+Merge: 22ca62b c5905f8
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 12:32:38 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 22ca62b8dfdb117309378911485c1fa0a8f451db
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 12:32:29 2015 -0500
+
+    update thumbnail style
+
+commit c5905f8b8604844f2444a053f7bbe0368ab29daa
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Mar 25 11:14:28 2015 -0500
+
+    Added Alex's bio to About Page
+
+commit 77f14f2b4ccac80fbb13df04fd6fd7ec3f918fbf
+Merge: b32819f 0daa960
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 00:16:29 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit b32819ffe2cddb791af4cf64085b90c0fee2329e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Mar 25 00:16:26 2015 -0500
+
+    add issue detail page
+
+commit 0daa960dbaee03b40bb56745970de30030128e74
+Merge: c202695 cd33c0d
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Tue Mar 24 23:49:06 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit c20269549fce3c7488ceac0ca6439e865b6ef0a0
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Tue Mar 24 23:48:43 2015 -0500
+
+    Fix a few things in the model and it works! 🆒🙏
+
+commit cd33c0d9db1bf06168bf87940d8422b748dfc26d
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Tue Mar 24 23:47:01 2015 -0500
+
+    final change to UML
+
+commit eded8c2e72280445d940cdcc2276c65441029938
+Merge: 9cd28e4 bb48333
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 22:43:34 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 9cd28e4608090778a32aa807b6501b5546f3a6bd
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 22:43:23 2015 -0500
+
+    list issues on character detail page
+
+commit bb4833339b4771b184687a3028993407fe6e93c8
+Merge: d4e3c57 1eac7d6
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Tue Mar 24 22:32:57 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+    UML updated
+
+commit d4e3c575a4e7d283337e3e2fd1e5768ac3909866
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Tue Mar 24 22:32:24 2015 -0500
+
+    edited the UML diagram
+
+commit 1eac7d6946f16ca79a861e1f064296c2f7e43609
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 22:31:33 2015 -0500
+
+    resolve #20
+
+commit 3bf5ced603ae9b4e763404e242bf7c359e416332
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 22:13:39 2015 -0500
+
+    issues page
+
+commit 85353cf57a2cc43376b7088c212b470c4885c1d3
+Merge: 4580917 7cad1d3
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 21:28:56 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 45809178d739118e696d455e8b25f66a628989ab
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 24 21:28:50 2015 -0500
+
+    resolve #16
+
+commit 7cad1d3f60914a67be8250989928eaf04ca49076
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Mar 24 18:27:54 2015 -0500
+
+    🆘🆘🆘Models don't work yet!!🆘🆘🆘 Just putting it in here so that I can continue working on a different computer. Stay tuned 📺
+
+commit f3d8e549579fea7980c31cac3f5f86acf5f4909a
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Tue Mar 24 15:45:51 2015 -0500
+
+    Messing with home page layout. Not finished.
+
+commit b96cf59f3cf931d631f20aefe2a75568a5b062c5
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Tue Mar 24 15:15:40 2015 -0500
+
+    added home page welcome banner
+
+commit 2e0304d06585e98a25a91482c562a8aaf7aafc59
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Mar 24 01:12:40 2015 -0500
+
+    Added new dependencies for SQLAlchemy, an import statement for it in the server, and a configuration entry for the connection to postgres. Also added a line to make the flask app available within the network🐟
+
+commit 59e38fbbc1a2644849077c5e6be700423efd8f46
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 23:28:18 2015 -0500
+
+    Resolve #19
+
+commit b18e725f065a63f843ff7ae3bb5964cb191861b9
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 23:18:30 2015 -0500
+
+    minor css fix
+
+commit 83f517563f0234aa7b31ea1f06ded969a87c05b8
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 23:03:22 2015 -0500
+
+    minor fix
+
+commit d64e06d696ba88d7204f3028fe337a3ecd97d169
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 22:51:14 2015 -0500
+
+    resolve merge conflict
+
+commit 99e3c553d9d6c0e08788d21bf7389341735e1d80
+Merge: 5a927d5 44dfb20
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Mar 23 22:43:17 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+    
+    Conflicts:
+    	www/index.html
+
+commit 5a927d5aca5476ebd84f5e30b79159a0b316b0ad
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Mar 23 22:39:22 2015 -0500
+
+    About Page pretty much completed.
+
+commit 44dfb20f6578dd876c5f7ef2daad5ca14eee7e85
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 17:59:21 2015 -0500
+
+    fix #15
+
+commit 0881964aae1a83158a45743f507d415f1e7ddee9
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 16:40:41 2015 -0500
+
+    abstract navbar into a directive
+
+commit a009625f3389d61991be6254ee06b4568b0ebd84
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 16:33:02 2015 -0500
+
+    change color scheme
+
+commit 39206dd94268148f1b453785107896219f0f2821
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 16:32:23 2015 -0500
+
+    even cleaner
+
+commit 611306717dead510e654eedd97a1a4db92a92615
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 16:30:13 2015 -0500
+
+    cleanup
+
+commit 99fa0d5a81109b7d9c3f81f05467f44c29e8bc85
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 23 16:29:05 2015 -0500
+
+    fix #6, make navbar mobile responsive
+
+commit 16f9a92f91cf60daa61722de0358dbe445fdf2c3
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 21:33:41 2015 -0500
+
+    add people section
+
+commit c2a8f3ebaafbad5d91f710899b9068150ba0ae7a
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 21:33:13 2015 -0500
+
+    make directive a bit more generic
+
+commit 49536bd7bb4a10110ad93430faf4c640bf72ea98
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 21:31:34 2015 -0500
+
+    add person detail endpoint
+
+commit 217f72ab48e73bd3ba78040e4013dc14fa9a9a7f
+Merge: 52eee90 bfa952e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 20:29:30 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 52eee9053a6bc949240246d00d255106ed731d13
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 20:29:02 2015 -0500
+
+    add people route
+
+commit bfa952ef3b8c987b5aebed7b13b32fe0aebc9e4b
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Sun Mar 22 16:25:59 2015 -0500
+
+    Adding information about the postgreSQL database to the README
+
+commit 547e2cccd736c71a6fb9a5ec4f9cc27e7b796c7f
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Mar 22 16:04:54 2015 -0500
+
+    fixed .sql file
+
+commit e6dd7a678dd1440f850583c48ccd61ad259d1b6b
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Mar 22 15:49:59 2015 -0500
+
+    updated .sql for table creation
+
+commit 92b8adaf08ee17b7948c2ec0ebcfa23e4375e859
+Merge: 49f01cf 8c4817d
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 14:33:00 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 49f01cfdb920850d9469a60db27ddd7c84f257da
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 22 14:32:53 2015 -0500
+
+    fix #12"
+
+commit 8c4817d136ea41d3e6298d3267569e1edc0ff977
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Sun Mar 22 13:03:17 2015 -0500
+
+    changed button colors
+
+commit 67a03225df1617c5dccbb48f9e0921260e04d1d2
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 15:01:49 2015 -0500
+
+    make character detail panel smaller
+
+commit afe40d5f1bd267a1e153875c667cab03a4a02c25
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 14:49:46 2015 -0500
+
+    minor tweak
+
+commit b601466512bd74ad5502902a4d462835c6f811f1
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 13:59:59 2015 -0500
+
+    minor bug fix
+
+commit a73ded2a32d18c22f586c271dee2afe2c9e53d1e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 13:53:06 2015 -0500
+
+    added thuper thweet loading bar :p
+
+commit c288e16ae0c0892fe34df7bb2ce5c0fe7c5e9caf
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 12:28:15 2015 -0500
+
+    add relation ships and powers under character detail page
+
+commit a6d7f0ddef37712e8c1f6d19e84392244dd60911
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 10:36:52 2015 -0500
+
+    fix bootflat, we didnt have correct version from bower
+
+commit dfb04304c1266d8c6895f24e2055a58966a7439b
+Merge: 3bdde73 5ba1881
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 10:03:32 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 3bdde73ce1a982dafc1fbac0c0697168bb941737
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sat Mar 14 10:03:25 2015 -0500
+
+    move character detail call into resolve
+
+commit 5ba18819412e269cd712d94b36e2c786973d9d44
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Fri Mar 13 23:56:10 2015 -0500
+
+    added information about venv to README
+
+commit 1bf81bb5cf6add37110ab8d4604ade0af1ceba0a
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Mar 13 23:02:58 2015 -0500
+
+    update character detail page to tabbed interface
+
+commit 717c3da1e25f41e6aff7af3a22437bb8ed5e17e0
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Mar 13 23:02:29 2015 -0500
+
+    added angular bootstrap
+
+commit 7256784e456adfc5e5bd1a6071483b20a159de1b
+Merge: 7f5cfa7 16d212f
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Mar 13 21:34:39 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 7f5cfa7dc71d44078744c5739a8deb75d730d654
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Mar 13 21:34:31 2015 -0500
+
+    move api request into router resolve
+
+commit 16d212fe8cc29af42d99b025a830df1b5a1cd012
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Fri Mar 13 00:30:39 2015 -0500
+
+    added datamodel and sql for tables
+
+commit 2d466bdbd63315f689198fb16f72a2f83d6ba23f
+Merge: a9ba6ed 0e393cf
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 9 16:36:57 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit a9ba6edd94d0be9ed7af907fe99c1dd9028d28b0
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 9 16:36:52 2015 -0500
+
+    make banner disappear when screen size is small
+
+commit 0e393cf0dd3ebe4000f0aed89ef301d0da445b83
+Author: Alex Fortin <alexfortin@utexas.edu>
+Date:   Sun Mar 8 15:40:56 2015 -0500
+
+    Dummy tables with attributes
+
+commit 9c7676a8282080c4d93999851567b7185fc82d6c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 8 00:55:21 2015 -0600
+
+    cleaned up controller and factory
+
+commit 2b6f1d1f1a44e656e336a5076fac818b533020f5
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Mar 8 00:38:24 2015 -0600
+
+    playing around with characters page
+
+commit 63302bd3ee3116c178400cd7ed7b9d983a261171
+Merge: dad184a 64639db
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 19:05:19 2015 -0600
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit dad184afdca75b5de61f3ef2eb5792c7fa9a0c06
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 19:05:12 2015 -0600
+
+    fix for #2 can now manually enter URLs
+
+commit 64639dbfa08165de4081880d38818227fa67ca41
+Author: Tyler Corley <tcorley@tabbedout.com>
+Date:   Tue Mar 3 13:43:24 2015 -0600
+
+    Added requirements file and updated the README for install process 💅
+
+commit e8ffd57f8be6a2543062d666ba12840b95e3447c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 12:07:48 2015 -0600
+
+    remove acciedental file
+
+commit 1137a3d85300acf84bfc3c935e22b30c3628e44e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 12:07:04 2015 -0600
+
+    flexbox layout
+
+commit 799a08df5182ed5fd37815f0661dd51845f4a057
+Merge: 5e0fd1f 9910864
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 12:06:06 2015 -0600
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 5e0fd1fb10c3de5f014a2f6e5093d42fb11b7989
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 3 12:05:23 2015 -0600
+
+    partially handiling manual urls, /characters/id still doesn't work
+
+commit 991086462df27fd6519287610c2773019d74aa3e
+Author: tcorley <tyler_corley@me.com>
+Date:   Mon Mar 2 18:12:16 2015 -0600
+
+    Added information about the server and tidied up a few things in the README 😘
+
+commit ea690b4a28996912334b748a1a9fccb08a866470
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Mon Mar 2 16:34:17 2015 -0600
+
+    Update and rename README to README.md
+
+commit c7c2e8f137b1622bf2450bbe402f0f93c3bd01f2
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 2 16:22:45 2015 -0600
+
+    rename readme
+
+commit 111a96bb1ff23b7be76258190f43ef72ec407f2e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 2 16:21:25 2015 -0600
+
+    Converted assets to bower
+
+commit 6e94a504fb71a28e788c55c4721217349c9c4201
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 2 15:53:45 2015 -0600
+
+    initial sample project
+
+commit 38cefc21b43d316fc3325544a1055ec911e9219f
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Feb 25 22:14:56 2015 -0600
+
+    remove vevn
+
+commit 9a26aa6b1194e448a48c31a38b5aec3babd2cad5
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Feb 25 21:59:52 2015 -0600
+
+    update readme
+
+commit ad0f80deaec7c562aa81f4daafcf7d02ba34caeb
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Feb 25 21:57:35 2015 -0600
+
+    update venv for python 3.4
+
+commit 21e493e692df4b41be609415b6315b15155a5049
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Feb 25 21:48:00 2015 -0600
+
+    Add virtual env
+
+commit 484d660731a0c35197453fa95f9587978ec37688
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Wed Feb 25 21:13:21 2015 -0600
+
+    Initial commit

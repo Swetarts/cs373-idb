@@ -55,7 +55,7 @@ def get_character_detail(id):
 @app.route('/api/people/')
 @cross_origin()
 def get_people():
-  request_url = 'http://www.comicvine.com/api/people?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
+  request_url = 'http://www.comicvine.com/api/people?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=5&format=json'
   response = requests.get(request_url)
   parsed = json.loads(response.content.decode())
   results = parsed['results']
@@ -92,4 +92,4 @@ def get_issue_detail(id):
   return json.dumps(results)
 
 if __name__ == '__main__':
-  app.run()
+  app.run(host='0.0.0.0')
