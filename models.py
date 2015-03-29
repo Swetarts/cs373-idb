@@ -130,7 +130,7 @@ class Person(db.Model):
         image (str): represents the url of the image in which to display
         birth_date (DateTime): When the person was born
         country (str): What country to which a person resides
-        job_title (str): What a person does for a living
+        description (str): What a person does for a living
         website (str): url of the person's personal website
         gender (str): gender of character
     """
@@ -140,26 +140,67 @@ class Person(db.Model):
     image        = db.Column(db.String(4000))
     birth_date   = db.Column(db.DateTime)
     country      = db.Column(db.String(255))
-    job_title    = db.Column(db.String(4000))
+    description  = db.Column(db.String(40000))
     website      = db.Column(db.String(255))
     gender       = db.Column(db.String(255))
 
     def __repr__(self):
         return '<Person %r>' % (self.name)
 
+
 ##############
-# Comic Series
+# Comic Issue
 ##############
                    
-class Comic_Series(db.Model):
-    """Represents the Comic Series model and pillar for the project.
+class Comic_Issue(db.Model):
+    """Represents the Comic Issue model and pillar for the project.
+
+    Everything from id to volume_id is a single attribute of an issue.
+
+    Note:
+        A comic issue pertains to a single comic book.
+
+    Attributes:
+        id (str): id of the comic
+        title (str): title of comic
+        image (str): represents the url of the image in which to display
+        cover_date (DateTime): When the comic was released
+        issue_num: issue number within a volume of comics
+        description: information about the comic
+        volume_id (int): Volume that this issue belongs to
+        people (db.relationship): Which people worked on this comic
+        characters (db.relationship): Which characters appear in the comic
+    """
+    __tablename__ = 'comic_series'
+    id           = db.Column(db.Integer, primary_key=True)
+    title        = db.Column(db.String(255))
+    image        = db.Column(db.String(4000))
+    cover_date   = db.Column(db.DateTime)
+    issue_num    = db.Column(db.Integer)
+    description  = db.Column(db.String(4000))
+    volume_id    = db.Column(db.Integer, db.ForeignKey('comic_series.id'))
+    people       = db.relationship('Person',                      
+                    secondary=comic_person,                             
+                    backref=db.backref('comic_issue', lazy='dynamic')) 
+    characters   = db.relationship('Character', 
+                    secondary=comic_characters, 
+                    backref=db.backref('comic_issue', lazy='dynamic'))
+
+    def __repr__(self):
+        return '<Comic Issue %r>' % (self.title)
+
+
+##############
+# Comic Volume
+##############
+                   
+class Comic_Volume(db.Model):
+    """Represents the Comic Volume model and pillar for the project.
 
     Everything from id to publisher_id is a single attribute of a person.
 
     Note:
-        The schema is noted at a `comic series` when in the comicvine api we're using
-        a `comic issue` to represent the same idea. This will be fixed in a subsequent
-        release.
+        A comic volume refers to a collection of comic issues
 
     Attributes:
         id (str): id of the comic
@@ -174,17 +215,13 @@ class Comic_Series(db.Model):
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
-    launch_date  = db.Column(db.DateTime)
+    num_issues   = db.Column(db.Integer)
+    description  = db.Column(db.String(4000))
+    launch_year  = db.Column(db.DateTime)
     publisher_id = db.Column(db.Integer, db.ForeignKey('publisher.id'))
-    people       = db.relationship('Person',                      
-                    secondary=comic_person,                             
-                    backref=db.backref('comic_series', lazy='dynamic')) 
-    characters   = db.relationship('Character', 
-                    secondary=comic_characters, 
-                    backref=db.backref('comic_series', lazy='dynamic'))
 
     def __repr__(self):
-        return '<Comic Series %r>' % (self.title)
+        return '<Comic Volume %r>' % (self.title)
 
 ###########
 # Publisher
@@ -202,7 +239,12 @@ class Publisher(db.Model):
     __tablename__ = 'publisher'
     id           = db.Column(db.Integer, primary_key=True)
     name         = db.Column(db.String(255))
-    comic_series = db.relationship('Comic_Series', backref='publisher', lazy='dynamic')
+    image        = db.Column(db.String(4000))
+    location_address = db.Column(db.String(400))
+    location_city    = db.Column(String(400))
+    location_state   = db.Column(String(400))
+    description      = db.Column(String(4000))
+    comic_volume = db.relationship('Comic_Volume', backref='publisher', lazy='dynamic')
 
     def __repr__(self):
         return '<Publisher %r>' % (self.name)
@@ -221,6 +263,7 @@ class Power(db.Model):
     __tablename__ = 'power'
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
+    description = db.Column(db.String(4000))
 
     def __repr__(self):
         return '<Power %r>' % (self.name)
@@ -235,6 +278,7 @@ class Team(db.Model):
     __tablename__ = 'team'
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
+    description = db.Column(db.String(4000))
 
     def __repr__(self):
         return '<Team %r>' % (self.name)
