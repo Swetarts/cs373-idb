@@ -53,11 +53,13 @@ body {
     position: relative;
     pointer-events: none;
     -webkit-pointer-events: none;
-    transition: 350ms linear all;
+    -webkit-transition: 350ms linear all;
+            transition: 350ms linear all;
 }
 
 #loading-bar .bar {
-  transition: width 350ms;
+  -webkit-transition: width 350ms;
+          transition: width 350ms;
 
   background: #29d;
   position: absolute;
@@ -87,9 +89,12 @@ h1 {
 .flex-container {
     display:-webkit-flex;
     display:-ms-flexbox;
+    display:-webkit-box;
     display:flex;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
             flex-direction: row;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -102,6 +107,7 @@ h1 {
             align-content: flex-start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
+            -webkit-box-align: start;
             align-items: flex-start;
 }
 
@@ -110,6 +116,7 @@ h1 {
     height: 250px;
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
+            -webkit-box-flex: 0;
             flex-grow: 0;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
@@ -157,7 +164,8 @@ h1 {
 
 .hover-rise:hover {
     -webkit-transform: scale(1.04);
-    transform: scale(1.04);
+    -ms-transform: scale(1.04);
+        transform: scale(1.04);
 }
 
 /************************************
@@ -188,35 +196,29 @@ to prevent collapsing during animation*/
   left: 0;
   right: 0;
   -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
     transition:all .5s ease-in-out;
 }
 
 [ui-view].ng-enter {
   opacity: 0;
   -webkit-transform:scale3d(0.5, 0.5, 0.5);
-  -moz-transform:scale3d(0.5, 0.5, 0.5);
   transform:scale3d(0.5, 0.5, 0.5);
 }
 
 [ui-view].ng-enter-active {
   opacity: 1;
   -webkit-transform:scale3d(1, 1, 1);
-  -moz-transform:scale3d(1, 1, 1);
   transform:scale3d(1, 1, 1);
 }
 
 [ui-view].ng-leave {
   opacity: 1; 
   -webkit-transform:translate3d(0, 0, 0);
-  -moz-transform:translate3d(0, 0, 0);
   transform:translate3d(0, 0, 0);
 }
 
 [ui-view].ng-leave-active {
   opacity: 0;
   -webkit-transform:translate3d(100px, 0, 0);
-  -moz-transform:translate3d(100px, 0, 0);
   transform:translate3d(100px, 0, 0);
 }
