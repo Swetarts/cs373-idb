@@ -12,7 +12,11 @@ var reload        = browserSync.reload;
 gulp.task('js', function() {
   return gulp.src('./www/assets/javascripts/**/*.js')
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./www/dist'))
+    .pipe(gulp.dest('./www/dist'));
+});
+
+gulp.task('minifyjs', function() {
+  return gulp.src('./www/assets/javascripts/**/*.js')
     .pipe(ngAnnotate()) 
     .pipe(uglify())
     .pipe(rename('main.min.js'))
@@ -26,13 +30,15 @@ gulp.task('css', function() {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('serve', ['css'], function() {
+gulp.task('serve', ['css', 'js'], function() {
   browserSync({
-    proxy: "192.168.1.34:5000"
+    proxy: "192.168.1.34:5000",
+    open: false
   });
 
   gulp.watch('./www/assets/stylesheets/*.css', ['css']);
-  gulp.watch('./www/assets/javascripts/**/*.js', ['js']);
+  gulp.watch('./www/assets/javascripts/**/*.js', ['js']).on('change', reload);
+  gulp.watch('./www/templates/*.html').on('change', reload);
 });
 
 
