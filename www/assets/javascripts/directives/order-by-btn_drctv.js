@@ -1,9 +1,9 @@
-app.directive('orderByBtn', function(){
+app.directive('orderBySearchUtil', function(){
   return {
     scope: {
-      model: '='
+      model: '=',
     }, 
-    controller: function($scope, $element, $attrs, $transclude, $filter) {
+    controller: function($scope, $element, $attrs, $transclude, $filter, $parse) {
       $scope.status = {
         isopen: false
       };
@@ -12,6 +12,15 @@ app.directive('orderByBtn', function(){
         $event.preventDefault();
         $event.stopPropagation();
         $scope.status.isopen = !$scope.status.isopen;
+      };
+      
+      console.log($attrs.searchField);
+      $scope.dupModel = $scope.model;
+      $scope.searchFilter = function(text) {
+        // zomg fkn hack i am so 1337
+        var searchObj = {};
+        searchObj[$attrs.searchField] = text;
+        $scope.model = $filter('filter')($scope.dupModel, searchObj);
       };
 
       var orderBy = $filter('orderBy');

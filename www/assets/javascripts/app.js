@@ -15,7 +15,7 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
   })
 
   // change if not on local development
-  .constant('HOST', 'http://104.239.165.88:5000')
+  .constant('HOST', 'http://192.168.1.34:5000')
 
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 

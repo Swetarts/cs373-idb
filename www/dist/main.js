@@ -163,6 +163,101 @@ app.config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
 }]);
 
 
+app.directive('navbar', function(){
+  // Runs during compile
+  return {
+    // name: '',
+    // priority: 1,
+    // terminal: true,
+    // scope: {}, // {} = isolate, true = child, false/undefined = no change
+    // controller: function($scope, $element, $attrs, $transclude) {},
+    // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
+    restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+    templateUrl: 'templates/navbar.html',
+    // replace: true,
+    // transclude: true,
+    // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
+    link: function($scope, iElm, iAttrs, controller) {
+      
+    }
+  };
+});
+
+app.directive('orderBySearchUtil', function(){
+  return {
+    scope: {
+      model: '=',
+    }, 
+    controller: function($scope, $element, $attrs, $transclude, $filter, $parse) {
+      $scope.status = {
+        isopen: false
+      };
+
+      $scope.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.status.isopen = !$scope.status.isopen;
+      };
+      
+      console.log($attrs.searchField);
+      $scope.dupModel = $scope.model;
+      $scope.searchFilter = function(text) {
+        // zomg fkn hack i am so 1337
+        var searchObj = {};
+        searchObj[$attrs.searchField] = text;
+        $scope.model = $filter('filter')($scope.dupModel, searchObj);
+      };
+
+      var orderBy = $filter('orderBy');
+
+      $scope.order = function(predicate, reverse) {
+        $scope.model = orderBy($scope.model, predicate, reverse); 
+        updateOrderOpt(predicate, reverse); 
+      };
+
+      $scope.orderOpt = 'None';
+
+      function updateOrderOpt(predicate, reverse) {
+        if(predicate === 'id') {
+          $scope.orderOpt = 'None';
+        }
+        else if(predicate === 'name' && reverse === false) {
+          $scope.orderOpt = 'Name Ascending';
+        }
+        else if(predicate === 'name' && reverse === true) {
+          $scope.orderOpt = 'Name Descending';
+        }
+        else {
+          $scope.orderOpt = '';
+        }
+      }
+
+    },
+    restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+    templateUrl: '../../../templates/order-by-btn.html',
+    link: function($scope, iElm, iAttrs, controller) {
+      
+    }
+  };
+});
+app.directive('thumbnail', function() {
+  return {
+    replace: true,
+    scope: {
+      model: '=',
+      type: '@'
+    },
+    templateUrl: '../../../templates/thumbnail.html',
+    link: function(scope, element, attributes) {
+      $(element).hover(
+        function() {
+          $('#banner-image').attr('src', scope.model.image.small_url);
+        }
+      );
+    }
+  }
+});
+
 app.controller('AboutCtrl', function($scope) {
 
 	$scope.members = [
@@ -243,42 +338,6 @@ app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar, $fi
 
   // comment in to debug loading bar
   //cfpLoadingBar.start();
-
-  $scope.status = {
-    isopen: false
-  };
-
-  $scope.toggleDropdown = function($event) {
-    $event.preventDefault();
-    $event.stopPropagation();
-    $scope.status.isopen = !$scope.status.isopen;
-  };
-
-  var orderBy = $filter('orderBy');
-
-  $scope.order = function(predicate, reverse) {
-    $scope.characters = orderBy($scope.characters, predicate, reverse); 
-    updateOrderOpt(predicate, reverse); 
-  };
-
-  $scope.orderOpt = 'None';
-
-  function updateOrderOpt(predicate, reverse) {
-    if(predicate === 'id') {
-      $scope.orderOpt = 'None';
-    }
-    else if(predicate === 'name' && reverse === false) {
-      $scope.orderOpt = 'Name Ascending';
-    }
-    else if(predicate === 'name' && reverse === true) {
-      $scope.orderOpt = 'Name Descending';
-    }
-    else {
-      $scope.orderOpt = '';
-    }
-  }
-
-
 });
 
 app.controller('HomeCtrl', function($scope) {
@@ -309,44 +368,6 @@ app.controller('PersonDetailCtrl', function($scope, person) {
 
   $scope.person = person;
 });
-app.directive('navbar', function(){
-  // Runs during compile
-  return {
-    // name: '',
-    // priority: 1,
-    // terminal: true,
-    // scope: {}, // {} = isolate, true = child, false/undefined = no change
-    // controller: function($scope, $element, $attrs, $transclude) {},
-    // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
-    restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
-    templateUrl: '../../templates/navbar.html',
-    // replace: true,
-    // transclude: true,
-    // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-    link: function($scope, iElm, iAttrs, controller) {
-      
-    }
-  };
-});
-
-app.directive('thumbnail', function() {
-  return {
-    replace: true,
-    scope: {
-      model: '=',
-      type: '@'
-    },
-    templateUrl: '../../../templates/thumbnail.html',
-    link: function(scope, element, attributes) {
-      $(element).hover(
-        function() {
-          $('#banner-image').attr('src', scope.model.image.small_url);
-        }
-      );
-    }
-  }
-});
-
 app.filter('strip_anchors', function(){
     return function(text) {
       return text.replace(/<\/?a[^>]*>/g, "");

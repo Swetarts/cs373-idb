@@ -177,6 +177,11 @@ h1 {
           flex-basis: 0px;
 }
 
+#filter-search-bar {
+  height: auto;
+  margin-bottom: 10px;
+}
+
 /************************************
 *                                   
 *       Detail Pages
