@@ -3,6 +3,7 @@ To get your application up and running you need a couple of things:
 * [npm](https://www.npmjs.com/)
 * [Bower](http://bower.io)
 * Python 3.4
+* [Gulp](http://gulpjs.com/)
 
 After you get bower installed, run this command inside of the **root** project directory (cs373-idb)
 ```bash
@@ -10,6 +11,20 @@ $ bower install
 ```
 
 This will create the directory `www/bower_components` and install all of our front end assets such as Angular and Bootstrap there.
+
+Next install gulp and dependencies
+```bash
+$ npm install -g gulp
+...
+$ npm install
+```
+
+You can now run gulp tasks. For default just run 
+```bash
+$ gulp
+```
+This will kick off the browser-sync server. You might need to adjust the `proxy` setting inside of `gulp.js` to point at wherever you are hosting your local server.
+
 
 After that create a python virtual environment with
 ```bash
@@ -50,61 +65,6 @@ You are now connected to database "swetards" as user "postgres".
 * `\q` - quit
 * `\dt` - list tables in database
 * `\l` - list databases
-
-## IF YOU'RE UPDATING THE SCHEMA
-Here's the workflow that we can script later
-```bash
-swetards=# drop schema public cascade;
-NOTICE:  drop cascades to 14 other objects
-DETAIL:  drop cascades to table "COMIC_SERIES"
-drop cascades to table "CHARACTER"
-drop cascades to table "PEOPLE"
-drop cascades to table "PUBLISHER"
-drop cascades to table "GENDER"
-drop cascades to table " COMIC_PEOPLE"
-drop cascades to table "CHARACTER_CREATOR"
-drop cascades to table "CHARACTER_ENEMY"
-drop cascades to table "CHARACTER_ALLY"
-drop cascades to table "COMIC_CHARACTERS"
-drop cascades to table "POWER"
-drop cascades to table "CHARACTER_POWER"
-drop cascades to table "TEAM"
-drop cascades to table "CHARACTER_TEAM"
-DROP SCHEMA
-swetards=# create schema public;
-CREATE SCHEMA
-swetards=# \q
-
-postgres@swerver:/home/swetard/cs373-idb$ psql swetards -f Sweetarts_datamodel.sql
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-CREATE TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-ALTER TABLE
-
-```
 
 # Running the application
 * `$ python server.py`
