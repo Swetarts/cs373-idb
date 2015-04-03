@@ -123,6 +123,7 @@ h1 {
     -webkit-flex-basis: 200px;
         -ms-flex-preferred-size: 200px;
             flex-basis: 200px;
+}
 
 .home-thumbnail {
   background: #29d;
