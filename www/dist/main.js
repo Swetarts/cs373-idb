@@ -366,6 +366,15 @@ app.directive('orderByBtn', function(){
     }
   };
 });
+app.directive('thumbnailSummary', function(){
+  return {
+    scope: {
+      collection: '=',
+      type: '@'
+    },
+    restrict: 'E', 
+    templateUrl: 'templates/thumbnail-summary.html'
+});
 app.directive('thumbnail', function() {
   return {
     replace: true,
