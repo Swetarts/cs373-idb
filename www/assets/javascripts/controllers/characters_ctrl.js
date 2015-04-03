@@ -1,4 +1,4 @@
-app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar) {
+app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar, $filter) {
 
   $scope.characters = characters;
 

@@ -8,13 +8,14 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       // console.log(to);
     });
 
+    // Moves screen to top after state change
     $rootScope.$on('$stateChangeSuccess', function() {
       $("html, body").animate({ scrollTop: 0 }, 200);
     });
   })
 
   // change if not on local development
-  .constant('HOST', 'http://104.239.165.88:5000')
+  .constant('HOST', 'http://192.168.1.63:5000')
 
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -236,7 +237,7 @@ app.controller('CharacterDetailCtrl', function($scope, character) {
   $scope.character = character;
 
 });
-app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar) {
+app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar, $filter) {
 
   $scope.characters = characters;
 
@@ -272,6 +273,31 @@ app.controller('PersonDetailCtrl', function($scope, person) {
 
   $scope.person = person;
 });
+app.directive('filterSearch', function(){
+  // Runs during compile
+  return {
+    scope: {
+      model: '=',
+      searchField: '@'
+    },
+    controller: function($scope, $element, $attrs, $transclude, $filter) {
+      $scope.dupModel = $scope.model;
+
+      $scope.searchFilter = function(text) {
+        // zomg fkn hack i am so 1337
+        var searchObj = {};
+        searchObj[$scope.searchField] = text;
+        
+        $scope.model = $filter('filter')($scope.dupModel, searchObj);
+      };
+    },
+    restrict: 'E', 
+    templateUrl: 'templates/filter-search.html',
+    link: function($scope, iElm, iAttrs, controller) {
+      
+    }
+  };
+});
 app.directive('navbar', function(){
   // Runs during compile
   return {
@@ -282,10 +308,59 @@ app.directive('navbar', function(){
     // controller: function($scope, $element, $attrs, $transclude) {},
     // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
-    templateUrl: '../../templates/navbar.html',
+    templateUrl: 'templates/navbar.html',
     // replace: true,
     // transclude: true,
     // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
+    link: function($scope, iElm, iAttrs, controller) {
+      
+    }
+  };
+});
+
+app.directive('orderByBtn', function(){
+  return {
+    scope: {
+      model: '=',
+    }, 
+    controller: function($scope, $element, $attrs, $transclude, $filter) {
+      $scope.status = {
+        isopen: false
+      };
+
+      $scope.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        $scope.status.isopen = !$scope.status.isopen;
+      };
+      
+      var orderBy = $filter('orderBy');
+
+      $scope.order = function(predicate, reverse) {
+        $scope.model = orderBy($scope.model, predicate, reverse); 
+        updateOrderOpt(predicate, reverse); 
+      };
+
+      $scope.orderOpt = 'None';
+
+      function updateOrderOpt(predicate, reverse) {
+        if(predicate === 'id') {
+          $scope.orderOpt = 'None';
+        }
+        else if(predicate === 'name' && reverse === false) {
+          $scope.orderOpt = 'Name Ascending';
+        }
+        else if(predicate === 'name' && reverse === true) {
+          $scope.orderOpt = 'Name Descending';
+        }
+        else {
+          $scope.orderOpt = '';
+        }
+      }
+
+    },
+    restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+    templateUrl: '../../../templates/order-by-btn.html',
     link: function($scope, iElm, iAttrs, controller) {
       
     }
@@ -314,6 +389,8 @@ app.filter('strip_anchors', function(){
       return text.replace(/<\/?a[^>]*>/g, "");
     };
 });
+
+
 app.filter('to_trusted', function($sce){
     return function(text) {
       return $sce.trustAsHtml(text);

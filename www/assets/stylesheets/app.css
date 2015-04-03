@@ -1,16 +1,16 @@
 /* app css stylesheet */
 
 html {
-    background: url('http://25.media.tumblr.com/f6131152b786236ee6948e16494c9a93/tumblr_mnf4qutKjn1rm7i00o1_1280.jpg') no-repeat center center fixed;
-    background-size: cover;
+  background: url('http://25.media.tumblr.com/f6131152b786236ee6948e16494c9a93/tumblr_mnf4qutKjn1rm7i00o1_1280.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 body {
-    background: none;
+  background: none;
 
-    /* fix for sticky nav bar overlay */
-    padding-top: 70px;
-    overflow-x: hidden;
+  /* fix for sticky nav bar overlay */
+  padding-top: 70px;
+  overflow-x: hidden;
 }
 
 /************************************
@@ -19,34 +19,34 @@ body {
 *                                   
 *************************************/
 .center {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .block-center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .image-container {
-    width: 80%;
+  width: 80%;
 }
 
 /* make banner disappear when screen below 990px*/
 @media all and (max-width: 990px) {
-    #banner-container { display: none; }
+  #banner-container { display: none; }
 }
 
 #loading-bar-spinner {
-    display: block;
-    position: absolute;
-    right: auto;
-    /*left: auto;*/
-    top: auto;
-    bottom: -20px;
-    z-index: 1049;
+  display: block;
+  position: absolute;
+  right: auto;
+  /*left: auto;*/
+  top: auto;
+  bottom: -20px;
+  z-index: 1049;
 }
 
 #loading-bar {
@@ -60,7 +60,6 @@ body {
 #loading-bar .bar {
   -webkit-transition: width 350ms;
           transition: width 350ms;
-
   background: #29d;
   position: absolute;
   z-index: 10002;
@@ -73,7 +72,7 @@ body {
 }
 
 h1 {
-    font-family: 'Bangers',serif;
+  font-family: 'Bangers',serif;
 }
 
 /************************************
@@ -124,48 +123,62 @@ h1 {
     -webkit-flex-basis: 200px;
         -ms-flex-preferred-size: 200px;
             flex-basis: 200px;
-}
 
 .home-thumbnail {
-    background: #29d;
-    -webkit-flex-basis: 242px;
-    -ms-flex-preferred-size: 242px;
-    flex-basis: 242px;
-    height: auto;
+  background: #29d;
+  -webkit-flex-basis: 242px;
+  -ms-flex-preferred-size: 242px;
+  flex-basis: 242px;
+  height: auto;
 }
 
 .character-name {
-    text-align: center;
+  text-align: center;
 }
 
 
 #banner-container {
-    min-height: 270px;
-    position: fixed;
-    top: 65px;
-    left: 3%;
+  min-height: 270px;
+  position: fixed;
+  top: 65px;
+  left: 3%;
 }
 
 #banner-container img {
-    vertical-align: middle;
-    border-radius: 5px;
-    width: 90%;
+  vertical-align: middle;
+  border-radius: 5px;
+  width: 90%;
 }
 
 /* override bootflat 100% width */
 .thumbnail a > img, .thumbnail > img {
-    width: auto;
-    height:240px;
+  width: auto;
+  height:240px;
 }
 
 .thumbnail {
-    padding: 0;
+  padding: 0;
 }
 
 .hover-rise:hover {
     -webkit-transform: scale(1.04);
     -ms-transform: scale(1.04);
         transform: scale(1.04);
+}
+
+#order-by-btn {
+  margin-bottom: 10px;
+  width: auto;
+  height: auto;
+  -webkit-flex-basis: 0px;
+      -ms-flex-preferred-size: 0px;
+          flex-basis: 0px;
+}
+
+#filter-search-bar {
+  height: auto;
+  margin-bottom: 10px;
+>>>>>>> gulp-integration
 }
 
 /************************************
@@ -175,7 +188,7 @@ h1 {
 *************************************/
 
 #character-detail-panel, #person-detail-panel, #issue-detail-panel, #about-detail-panel {
-    width: 75%;
+  width: 75%;
 }
 
 /************************************
@@ -196,7 +209,7 @@ to prevent collapsing during animation*/
   left: 0;
   right: 0;
   -webkit-transition:all .5s ease-in-out;
-    transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
 }
 
 [ui-view].ng-enter {

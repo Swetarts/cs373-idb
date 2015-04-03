@@ -8,13 +8,14 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       // console.log(to);
     });
 
+    // Moves screen to top after state change
     $rootScope.$on('$stateChangeSuccess', function() {
       $("html, body").animate({ scrollTop: 0 }, 200);
     });
   })
 
   // change if not on local development
-  .constant('HOST', 'http://104.239.165.88:5000')
+  .constant('HOST', 'http://192.168.1.63:5000')
 
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
