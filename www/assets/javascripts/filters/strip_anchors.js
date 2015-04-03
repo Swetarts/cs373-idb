@@ -3,3 +3,4 @@ app.filter('strip_anchors', function(){
       return text.replace(/<\/?a[^>]*>/g, "");
     };
 });
+

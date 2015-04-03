@@ -1,8 +1,4 @@
 <div class="flex-container">
-    <div id="filter-search-bar" class="form-search search-only flex-items-default">
-            <i class="search-icon glyphicon glyphicon-search"></i>
-            <input ng-model="searchInput" ng-change="searchFilter(searchInput)" class="form-control search-query" placeholder="Search"/>
-        </div>
     <div id='order-by-btn' class="btn-group flex-items-default" dropdown is-open="status.isopen">
         <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
             Sort By: {{orderOpt}} <span class="caret"></span>
