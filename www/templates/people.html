@@ -5,7 +5,8 @@
         </div>
     </div>
     <div class="col-md-7 col-sm-12">
-        <order-by-search-util model='people' search-field="name"></order-by-search-util>
+        <filter-search model="people" search-field="name"></filter-search>
+        <order-by-btn model="people"></order-by-btn>
         <div class="flex-container">
             <div ng-repeat="person in people">
                 <!-- custom directive inside of directives folder -->
