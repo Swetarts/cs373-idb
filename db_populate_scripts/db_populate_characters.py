@@ -57,21 +57,21 @@ for char_id in list(character_id_list):
         character.teams.append(db.session.query(models.Team).filter_by(id=int(team['id'])).first())
         # print(team['id'], team['name'])
 
-    #Add allies
-    allies = parsed['character_friends']
-    for ally in list(allies):
-        friend = db.session.query(models.Character).filter_by(id=int(ally['id'])).first()
-        if friend:       
-            character.allies.append(friend)
-            # print(ally['id'], ally['name'])
+    # #Add allies
+    # allies = parsed['character_friends']
+    # for ally in list(allies):
+    #     friend = db.session.query(models.Character).filter_by(id=int(ally['id'])).first()
+    #     if friend:       
+    #         character.allies.append(friend)
+    #         # print(ally['id'], ally['name'])
 
-    #Add enemies
-    enemies = parsed['character_enemies']
-    for enemy in list(enemies):
-        nemesis = db.session.query(models.Character).filter_by(id=int(enemy['id'])).first()
-        if nemesis:
-            character.enemies.append(nemesis)
-            # print(enemy['id'], enemy['name'])
+    # #Add enemies
+    # enemies = parsed['character_enemies']
+    # for enemy in list(enemies):
+    #     nemesis = db.session.query(models.Character).filter_by(id=int(enemy['id'])).first()
+    #     if nemesis:
+    #         character.enemies.append(nemesis)
+    #         # print(enemy['id'], enemy['name'])
 
     #Add creators
     creators = parsed['creators']
