@@ -171,7 +171,7 @@ class Comic_Issue(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_series'
+    __tablename__ = 'comic_issue'
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
@@ -211,7 +211,7 @@ class Comic_Volume(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_series'
+    __tablename__ = 'comic_volume'
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
