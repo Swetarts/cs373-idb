@@ -178,7 +178,7 @@ class Comic_Issue(db.Model):
     cover_date   = db.Column(db.DateTime)
     issue_num    = db.Column(db.Integer)
     description  = db.Column(db.String(4000))
-    volume_id    = db.Column(db.Integer, db.ForeignKey('comic_series.id'))
+    volume_id    = db.Column(db.Integer, db.ForeignKey('comic_volume.id'))
     people       = db.relationship('Person',                      
                     secondary=comic_person,                             
                     backref=db.backref('comic_issue', lazy='dynamic')) 
