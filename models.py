@@ -35,7 +35,7 @@ character_creator = db.Table('character_creator',
 )
 
 comic_person = db.Table('comic_person',
-    db.Column('comic_id',  db.Integer, db.ForeignKey('comic_series.id')),
+    db.Column('comic_id',  db.Integer, db.ForeignKey('comic_issue.id')),
     db.Column('person_id', db.Integer, db.ForeignKey('person.id'))
 )
 
