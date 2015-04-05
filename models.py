@@ -241,9 +241,9 @@ class Publisher(db.Model):
     name         = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
     location_address = db.Column(db.String(400))
-    location_city    = db.Column(String(400))
-    location_state   = db.Column(String(400))
-    description      = db.Column(String(4000))
+    location_city    = db.Column(db.String(400))
+    location_state   = db.Column(db.String(400))
+    description      = db.Column(db.String(4000))
     comic_volume = db.relationship('Comic_Volume', backref='publisher', lazy='dynamic')
 
     def __repr__(self):
