@@ -170,6 +170,20 @@ h1 {
     width: 75%;
 }
 
+
+/************************************
+*                                   
+*       Home Pages
+*                                   
+*************************************/
+
+.carousel_imgs {
+  vertical-align: center;
+  position: center;
+  height:240px;
+}
+
+
 /************************************
 *                                   
 *       Animation
