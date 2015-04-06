@@ -42,7 +42,7 @@ while True:
         description = x['deck']
         # print(description)
 
-        publisher = models.Publisher(id=int(id), name=name, image=image, location_address=location_address, location_city=location_city, location_state=location_state, description=deck)
+        publisher = models.Publisher(id=int(id), name=name, image=image, location_address=location_address, location_city=location_city, location_state=location_state, description=description)
         db.session.add(publisher)
         db.session.commit()
 
