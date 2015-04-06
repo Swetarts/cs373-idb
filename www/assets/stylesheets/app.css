@@ -89,6 +89,7 @@ h1 {
     display:-webkit-flex;
     display:-ms-flexbox;
     display:-webkit-box;
+    display:-webkit-flex;
     display:flex;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;

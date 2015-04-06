@@ -4,6 +4,7 @@
             <img id="banner-image" class="" src="http://media1.s-nbcnews.com/j/MSNBC/Components/Interactives/_templates/Cast_of_characters/images/Mystery_person.grid-6x2.jpg">
         </div>
     </div>
+
     <div class="col-md-7 col-sm-12">
         <!-- custom directive -->
         <filter-search model="collection" search-field="name"></filter-search>
@@ -12,7 +13,7 @@
         <div class="flex-container">
             <div ng-repeat="model in collection" >
                 <!-- custom directive inside of directives folder -->
-                <thumbnail type='type' model='model'></thumbnail>
+                <thumbnail type="{{ type }}" model='model'></thumbnail>
             </div>
         </div>
     </div>

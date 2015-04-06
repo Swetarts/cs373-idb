@@ -15,7 +15,7 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
   })
 
   // change if not on local development
-  .constant('HOST', 'http://192.168.1.63:5000')
+  .constant('HOST', 'http://localhost:5000')
 
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
@@ -240,7 +240,7 @@ app.controller('CharacterDetailCtrl', function($scope, character) {
 app.controller('CharactersCtrl', function($scope, characters, cfpLoadingBar, $filter) {
 
   $scope.characters = characters;
-
+  
   // comment in to debug loading bar
   //cfpLoadingBar.start();
 });
@@ -374,6 +374,7 @@ app.directive('thumbnailSummary', function(){
     },
     restrict: 'E', 
     templateUrl: 'templates/thumbnail-summary.html'
+  }
 });
 app.directive('thumbnail', function() {
   return {
@@ -389,6 +390,8 @@ app.directive('thumbnail', function() {
           $('#banner-image').attr('src', scope.model.image.small_url);
         }
       );
+      console.log("thumb", scope.type);
+
     }
   }
 });

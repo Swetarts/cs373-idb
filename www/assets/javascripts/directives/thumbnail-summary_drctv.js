@@ -6,4 +6,5 @@ app.directive('thumbnailSummary', function(){
     },
     restrict: 'E', 
     templateUrl: 'templates/thumbnail-summary.html'
+  }
 });

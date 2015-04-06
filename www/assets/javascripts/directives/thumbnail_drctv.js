@@ -12,6 +12,8 @@ app.directive('thumbnail', function() {
           $('#banner-image').attr('src', scope.model.image.small_url);
         }
       );
+      console.log("thumb", scope.type);
+
     }
   }
 });
