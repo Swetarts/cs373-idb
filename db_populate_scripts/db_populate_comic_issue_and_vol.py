@@ -73,7 +73,7 @@ for comic_id in list(comic_id_list):
         vol_publisher_id = vol_parsed['publisher']['id']
         # print(vol_publisher_id)
 
-        volume = models.Comic_Volume(id=int(vol_id), title=vol_title, image=vol_image, num_issues=vol_num_issues, description=vol_description, launch_year=vol_launch_year, publisher_id=vol_publisher_id)
+        volume = models.Comic_Volume(id=int(vol_id), title=vol_title, image=vol_image, num_issues=vol_num_issues, description=vol_description, launch_year=int(vol_launch_year), publisher_id=vol_publisher_id)
 
         db.session.add(volume)
         db.session.commit()

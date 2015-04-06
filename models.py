@@ -217,7 +217,7 @@ class Comic_Volume(db.Model):
     image        = db.Column(db.String(4000))
     num_issues   = db.Column(db.Integer)
     description  = db.Column(db.String(4000))
-    launch_year  = db.Column(db.DateTime)
+    launch_year  = db.Column(db.Integer)
     publisher_id = db.Column(db.Integer, db.ForeignKey('publisher.id'))
 
     def __repr__(self):
