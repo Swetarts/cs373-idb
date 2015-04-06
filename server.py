@@ -25,7 +25,7 @@ def index(**kwargs):
 # when you load up the index html page this cathces
 # any asset, template, or bower component to properly send them
 # to avoid a 404
-@app.route('/<any(assets, templates,  bower_components):folder>/<path:filename>')
+@app.route('/<any(assets, templates,  bower_components, dist):folder>/<path:filename>')
 def toplevel_static(folder, filename):
   filename = safe_join(folder, filename)
   cache_timeout = app.get_send_file_max_age(filename)

@@ -1,15 +1,1 @@
-<div class="row">
-    <div class="col-md-5">
-        <div id="banner-container" class="">
-            <img id="banner-image" class="" src="http://media1.s-nbcnews.com/j/MSNBC/Components/Interactives/_templates/Cast_of_characters/images/Mystery_person.grid-6x2.jpg">
-        </div>
-    </div>
-    <div class="col-md-7 col-sm-12">
-        <div class="flex-container">
-            <div ng-repeat="character in characters" >
-                <!-- custom directive inside of directives folder -->
-                <thumbnail type='character' model='character'></thumbnail>
-            </div>
-        </div>
-    </div>
-</div>
+<thumbnail-summary collection="characters" type="character"></thumbnail-summary>

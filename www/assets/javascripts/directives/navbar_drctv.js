@@ -8,7 +8,7 @@ app.directive('navbar', function(){
     // controller: function($scope, $element, $attrs, $transclude) {},
     // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
-    templateUrl: '../../templates/navbar.html',
+    templateUrl: 'templates/navbar.html',
     // replace: true,
     // transclude: true,
     // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),

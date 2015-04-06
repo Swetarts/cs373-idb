@@ -32,9 +32,11 @@ for people_id in list(people_id_list):
     birth_date = parsed['birth'].split(' ')[0]
     # print(birth_date)
 
-    #This is not an accurate lable, may need to change in future release
-    job_title = parsed['deck']
-    # print(job_title)
+    country = parsed['country']
+    # print(country)
+
+    description = parsed['deck']
+    # print(description)
 
     website = parsed['website']
     # print(website)
@@ -43,7 +45,7 @@ for people_id in list(people_id_list):
     # print(gender)
 
     #Create a new person object
-    person = models.Person(id=int(id), name=name, image=image, birth_date=birth_date, job_title=job_title, gender=gender)
+    person = models.Person(id=int(id), name=name, image=image, birth_date=birth_date, country=country, description=description, gender=gender)
 
     db.session.add(person)
     db.session.commit()

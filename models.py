@@ -35,12 +35,12 @@ character_creator = db.Table('character_creator',
 )
 
 comic_person = db.Table('comic_person',
-    db.Column('comic_id',  db.Integer, db.ForeignKey('comic_series.id')),
+    db.Column('comic_id',  db.Integer, db.ForeignKey('comic_issue.id')),
     db.Column('person_id', db.Integer, db.ForeignKey('person.id'))
 )
 
 comic_characters = db.Table('comic_characters',
-    db.Column('comic_id',     db.Integer, db.ForeignKey('comic_series.id')),
+    db.Column('comic_id',     db.Integer, db.ForeignKey('comic_issue.id')),
     db.Column('character_id', db.Integer, db.ForeignKey('character.id'))
 )
 
@@ -171,14 +171,14 @@ class Comic_Issue(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_series'
+    __tablename__ = 'comic_issue'
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
     cover_date   = db.Column(db.DateTime)
     issue_num    = db.Column(db.Integer)
     description  = db.Column(db.String(4000))
-    volume_id    = db.Column(db.Integer, db.ForeignKey('comic_series.id'))
+    volume_id    = db.Column(db.Integer, db.ForeignKey('comic_volume.id'))
     people       = db.relationship('Person',                      
                     secondary=comic_person,                             
                     backref=db.backref('comic_issue', lazy='dynamic')) 
@@ -211,13 +211,13 @@ class Comic_Volume(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_series'
+    __tablename__ = 'comic_volume'
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
     num_issues   = db.Column(db.Integer)
     description  = db.Column(db.String(4000))
-    launch_year  = db.Column(db.DateTime)
+    launch_year  = db.Column(db.Integer)
     publisher_id = db.Column(db.Integer, db.ForeignKey('publisher.id'))
 
     def __repr__(self):
@@ -241,9 +241,9 @@ class Publisher(db.Model):
     name         = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
     location_address = db.Column(db.String(400))
-    location_city    = db.Column(String(400))
-    location_state   = db.Column(String(400))
-    description      = db.Column(String(4000))
+    location_city    = db.Column(db.String(400))
+    location_state   = db.Column(db.String(400))
+    description      = db.Column(db.String(4000))
     comic_volume = db.relationship('Comic_Volume', backref='publisher', lazy='dynamic')
 
     def __repr__(self):
