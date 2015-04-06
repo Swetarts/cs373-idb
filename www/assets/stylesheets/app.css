@@ -121,9 +121,6 @@ h1 {
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    -webkit-flex-basis: 200px;
-        -ms-flex-preferred-size: 200px;
-            flex-basis: 200px;
 }
 
 .home-thumbnail {
@@ -172,9 +169,6 @@ h1 {
   margin-bottom: 10px;
   width: auto;
   height: auto;
-  -webkit-flex-basis: 0px;
-      -ms-flex-preferred-size: 0px;
-          flex-basis: 0px;
 }
 
 #filter-search-bar {
