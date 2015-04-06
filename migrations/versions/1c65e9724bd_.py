@@ -1,13 +1,13 @@
 """empty message
 
-Revision ID: 35ce397b8e1
+Revision ID: 1c65e9724bd
 Revises: None
-Create Date: 2015-04-05 23:13:11.987223
+Create Date: 2015-04-06 08:05:38.335149
 
 """
 
 # revision identifiers, used by Alembic.
-revision = '35ce397b8e1'
+revision = '1c65e9724bd'
 down_revision = None
 
 from alembic import op
@@ -71,12 +71,6 @@ def upgrade():
     sa.ForeignKeyConstraint(['character_id'], ['character.id'], ),
     sa.ForeignKeyConstraint(['enemy_id'], ['character.id'], )
     )
-    op.create_table('character_ally',
-    sa.Column('character_id', sa.Integer(), nullable=True),
-    sa.Column('ally_id', sa.Integer(), nullable=True),
-    sa.ForeignKeyConstraint(['ally_id'], ['character.id'], ),
-    sa.ForeignKeyConstraint(['character_id'], ['character.id'], )
-    )
     op.create_table('character_powers',
     sa.Column('character_id', sa.Integer(), nullable=True),
     sa.Column('power_id', sa.Integer(), nullable=True),
@@ -89,13 +83,19 @@ def upgrade():
     sa.ForeignKeyConstraint(['character_id'], ['character.id'], ),
     sa.ForeignKeyConstraint(['creator_id'], ['person.id'], )
     )
+    op.create_table('character_ally',
+    sa.Column('character_id', sa.Integer(), nullable=True),
+    sa.Column('ally_id', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['ally_id'], ['character.id'], ),
+    sa.ForeignKeyConstraint(['character_id'], ['character.id'], )
+    )
     op.create_table('comic_volume',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=255), nullable=True),
     sa.Column('image', sa.String(length=4000), nullable=True),
     sa.Column('num_issues', sa.Integer(), nullable=True),
     sa.Column('description', sa.String(length=4000), nullable=True),
-    sa.Column('launch_year', sa.DateTime(), nullable=True),
+    sa.Column('launch_year', sa.Integer(), nullable=True),
     sa.Column('publisher_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['publisher_id'], ['publisher.id'], ),
     sa.PrimaryKeyConstraint('id')
@@ -132,9 +132,9 @@ def downgrade():
     op.drop_table('comic_person')
     op.drop_table('comic_issue')
     op.drop_table('comic_volume')
+    op.drop_table('character_ally')
     op.drop_table('character_creator')
     op.drop_table('character_powers')
-    op.drop_table('character_ally')
     op.drop_table('character_enemy')
     op.drop_table('character_team')
     op.drop_table('power')
