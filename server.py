@@ -7,13 +7,13 @@ import config
 
 app = Flask(__name__)
 # Development settings 
-# app.config.from_object('config.DevelopmentConfig')
+app.config.from_object('config.DevelopmentConfig')
 # Production settings
 # app.config.from_object('config.ProductionConfig')
 cors = CORS(app)
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
-# import models
+import models
 
 # Catch all route to correctly handle manually
 # entered URLs and send them to Angular

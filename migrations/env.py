@@ -24,10 +24,6 @@ target_metadata = current_app.extensions['migrate'].db.metadata
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
-########################
-# Run Migrations Offline
-########################
-
 def run_migrations_offline():
     """Run migrations in 'offline' mode.
 
@@ -45,12 +41,6 @@ def run_migrations_offline():
 
     with context.begin_transaction():
         context.run_migrations()
-
-
-########################
-# Run Migrations Online
-########################
-
 
 def run_migrations_online():
     """Run migrations in 'online' mode.
