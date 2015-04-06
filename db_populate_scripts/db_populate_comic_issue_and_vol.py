@@ -43,7 +43,7 @@ for comic_id in list(comic_id_list):
 
     # Check for existance of volume
     volume_exists = db.session.query(models.Comic_Volume).filter_by(id=int(volume_id)).first()
-    if !volume_exists:
+    if volume_exists = None:
 
         volume_request = 'http://www.comicvine.com/api/volume/4050-'
         vol_payload = {'api_key':'83ff911e240812bc29cf73246626fe319a6a4b71', 'format':'json', 'field_list':'id,title,image,count_of_issues,deck,start_year,publisher'}
