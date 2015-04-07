@@ -12,6 +12,11 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
     $rootScope.$on('$stateChangeSuccess', function() {
       $("html, body").animate({ scrollTop: 0 }, 200);
     });
+
+    var slap = new Audio("assets/sounds/slap.mp3");
+    $("a").on('click', function() {
+      slap.play();
+    });
   })
 
   // change if not on local development
