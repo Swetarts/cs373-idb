@@ -13,35 +13,57 @@
 
 
 
+<!-- <div>
+  <carousel interval="myInterval">
+    <slide ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+      <div class="carousel-caption">
+        <h4>Slide {{$index}}</h4>
+      </div>
+    </slide>
+  </carousel>
+</div> -->
+  
+
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
     <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+  <!-- <div class="carousel-inner carousel_imgs" role="listbox">
+    <slide ng-repeat="slide in slides" active="slide.active">
+      <img ng-src="{{slide.image}}" style="margin:auto;">
+    </slide>
+  </div> -->
+  <img ng-src="{{slide.image}}"
+  </slide>
   <div class="carousel-inner carousel_imgs" role="listbox">
     <div class="item active carousel_imgs">
-      <img src="http://www.fantastic-four.nl/marvel-superheroes-website-marvel-now.jpg">
+      <img src="http://www.fantastic-four.nl/marvel-superheroes-website-marvel-now.jpg" style="margin:auto;">
     </div>
 
     <div class="item carousel_imgs">
-      <img src="http://creationrevolution.com/wp-content/uploads/2013/12/dc-comics-all-super-heroes-hd-wallpapers-download-free-wallpapers.jpg">
+      <img src="http://www.bu.edu/today/files/2013/07/t_4740907330_d101750ba5_o.jpg" style="margin:auto;">
     </div>
 
     <div class="item carousel_imgs">
-      <img src="http://fc07.deviantart.net/fs70/i/2011/299/2/3/spiderman_vs_venom_vs_carnage_by_1_at_7-d4e11z1.jpg">
+      <img src="http://media.ignimgs.com/media/ign/imgs/minisites/topN/comic-book-heroes/top100_comic_heroes_cover.jpg" style="margin:auto;">
     </div>
 
     <div class="item carousel_imgs">
-      <img src="http://www.bigthompsoncrossfit.com/wp-content/uploads/2014/10/Justice-League-vs-Avengers.jpg">
+      <img src="http://uploads.neatorama.com/images/posts/177/57/57177/1357476489-0.jpg" style="margin:auto;">
+    </div>
+
+    <div class="item carousel_imgs">
+      <img src="http://static.comicvine.com/uploads/original/0/6063/3396087-xmenjimlee.jpg" style="margin:auto;">
     </div>
   </div>
 
-  <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -58,7 +80,6 @@
 
 <div>
 <p> 
-<br>
 <br>
 <br>
 </p>
