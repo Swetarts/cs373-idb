@@ -36,6 +36,11 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
         templateUrl: "../../templates/about.html",
         controller: "AboutCtrl"
       })
+      .state('unitTests', {
+        url: "/unitTests",
+        templateUrl: "../../templates/unitTests.html",
+        controller: "UnitTestsCtrl"
+      })
       .state('characters', {
         url: "/characters",
         templateUrl: "../../templates/characters.html",
@@ -295,6 +300,10 @@ app.controller('PersonDetailCtrl', function($scope, person) {
   $scope.imageIsCollapsed = true;
 
   $scope.person = person;
+});
+app.controller('UnitTestsCtrl', function($scope) {
+
+
 });
 app.directive('filterSearch', function(){
   // Runs during compile

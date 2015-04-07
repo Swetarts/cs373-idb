@@ -36,6 +36,11 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
         templateUrl: "../../templates/about.html",
         controller: "AboutCtrl"
       })
+      .state('unitTests', {
+        url: "/unitTests",
+        templateUrl: "../../templates/unitTests.html",
+        controller: "UnitTestsCtrl"
+      })
       .state('characters', {
         url: "/characters",
         templateUrl: "../../templates/characters.html",
