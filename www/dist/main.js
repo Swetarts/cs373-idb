@@ -249,7 +249,7 @@ app.controller('HomeCtrl', function($scope) {
 
 	$scope.myInterval = 4000;
 
-	var slides = $scope.slides = [
+	$scope.slides = [
 		{
 			"image":"http://www.fantastic-four.nl/marvel-superheroes-website-marvel-now.jpg"
 		},
