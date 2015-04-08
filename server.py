@@ -39,8 +39,8 @@ def toplevel_static(folder, filename):
 @cross_origin()
 def get_characters():
   try:
-    results = json.dumps([i.serialize for i in db.session.query(models.Character).all()])
-  except ProgrammingError:
+    results = json.dumps([i.serialize_clipped for i in db.session.query(models.Character).all()])
+  except Exception:
     request_url = 'http://www.comicvine.com/api/characters/?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
@@ -54,23 +54,24 @@ def get_characters():
 @cross_origin()
 def get_character_detail(id):
   try:
-    raise NotImplementedError
-  except NotImplementedError:
+    result = json.dumps(models.Character.query.filter_by(id=id).first().serialize)
+  except Exception:
     request_url = 'http://www.comicvine.com/api/character/4005-{}?api_key=2a196eae09708f335bc341657e97155564ab9514&format=json'.format(id)
+    print(request_url)
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
     p = parsed['results']
-    results = json.dumps(p)
+    result = json.dumps(p)
 
-  return results
+  return result
 
 # defines the behavior of a HTTP get request for people
 @app.route('/api/people/')
 @cross_origin()
 def get_people():
   try:
-    raise NotImplementedError
-  except NotImplementedError:
+    results = json.dumps([i.serialize_clipped for i in db.session.query(models.Person).all()])
+  except Exception:
     request_url = 'http://www.comicvine.com/api/people?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=5&format=json'
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
@@ -84,15 +85,15 @@ def get_people():
 @cross_origin()
 def get_person(id):
   try:
-    raise NotImplementedError
-  except NotImplementedError:
+    result = json.dumps(models.Person.query.filter_by(id=id).first().serialize)
+  except Exception:
     request_url = 'http://www.comicvine.com/api/person/4040-{}?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'.format(id)
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
     p = parsed['results']
-    results = json.dumps(p)
+    result = json.dumps(p)
 
-  return results
+  return result
 
 # defines the behavior of a HTTP get request for all issues
 @app.route('/api/issues/')

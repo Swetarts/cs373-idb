@@ -119,7 +119,7 @@ class Character(db.Model):
             'alias': self.alias,
             'image': {
                 'medium_url': self.image.replace('square_avatar', 'scale_medium'),
-                'thumb_url': self.image,
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
                 'small_url': self.image.replace('square_avatar', 'scale_small')  
             },
             'description': self.description,
@@ -127,6 +127,7 @@ class Character(db.Model):
             'origin': self.origin,
             'powers': self.serialize_many(self.powers),
             'teams': self.serialize_many(self.teams),
+            #TODO fix below and implement 'creators'
             'character_friends': self.serialize_many_characters(self.allies),
             'character_enemies': self.serialize_many_characters(self.enemies),
             'creators': []
@@ -143,6 +144,18 @@ class Character(db.Model):
         return {
             'id': self.id,
             'name': self.name
+        }
+
+    @property
+    def serialize_clipped(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            }
         }
 
 ###########
@@ -181,6 +194,36 @@ class Person(db.Model):
 
     def __repr__(self):
         return '<Person %r>' % (self.name)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            },
+            'birth_date': self.birth_date,
+            'country': self.country,
+            'description': self.description,
+            'website': self.website,
+            'gender': self.gender
+            #TODO Link issues and Characters here
+        }
+
+    @property
+    def serialize_clipped(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            }
+        }
 
 
 ##############
