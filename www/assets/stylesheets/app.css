@@ -75,6 +75,10 @@ h1 {
   font-family: 'Bangers',serif;
 }
 
+.bottom-buffer {
+  margin-bottom: 10px;
+}
+
 /************************************
 *                                   
 *       Characters page             

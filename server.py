@@ -100,7 +100,7 @@ def run_tests():
     outs, errs = script.communicate()
   except:
     script.kill()
-  errs = errs.decode('ascii')
+  errs = errs.decode()
   return json.dumps({"results": errs})
 
 

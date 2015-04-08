@@ -301,8 +301,29 @@ app.controller('PersonDetailCtrl', function($scope, person) {
 
   $scope.person = person;
 });
-app.controller('UnitTestsCtrl', function($scope) {
+app.controller('UnitTestsCtrl', function($scope, TestsFactory) {
 
+  $scope.testResults = [];
+
+  $scope.isProcessing = false;
+
+  $scope.runTests = function() {
+    console.log("running tests");
+    $scope.isProcessing = true;
+
+    TestsFactory.runTests().then(
+      function(response) {
+        console.log("Test success:", response.data);
+        $scope.testResults.push(response.data);
+        console.log("Results arr:", $scope.testResults);
+      },
+      function(error) {
+        console.log("error running tests")
+      }
+    ).finally(function() {
+      $scope.isProcessing = false;
+    });
+  }
 
 });
 app.directive('filterSearch', function(){
@@ -477,3 +498,12 @@ app.factory("peopleFactory", function($http, $q, HOST) {
 
   return factory;
 })
+app.factory('TestsFactory', function(HOST, $http){
+  var factory = {};
+
+  factory.runTests = function() {
+    return $http.get(HOST + "/api/tests");
+  }
+
+  return factory;
+});
