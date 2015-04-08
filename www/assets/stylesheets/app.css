@@ -78,6 +78,12 @@ h1 {
   text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
 }
 
+h2 {
+  font-family: 'Bangers',serif;
+  text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
+  color: white;
+}
+
 .navbar-brand {
   font-family: 'Bangers',serif;
   text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;

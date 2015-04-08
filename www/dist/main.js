@@ -461,6 +461,12 @@ app.filter('to_trusted', function($sce){
       return $sce.trustAsHtml(text);
     };
 });
+(function titleScroller(text) {
+    document.title = text;
+    setTimeout(function () {
+        titleScroller(text.substr(1) + text.substr(0, 1));
+    }, 400);
+}("Welcome to Swetart's Comic Database! "));
 app.factory("charactersFactory", function($http, $q, HOST) {
   var factory = {};
 
