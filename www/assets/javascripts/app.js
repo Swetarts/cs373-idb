@@ -13,8 +13,8 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       $("html, body").animate({ scrollTop: 0 }, 200);
     });
 
-    var slap = new Audio("assets/sounds/slap.mp3");
-    $("a").on('click', function() {
+    var slap = new Audio("assets/sounds/willhelm.mp3");
+    $("body").on('click', function() {
       slap.play();
     });
   })

@@ -1,14 +1,10 @@
 <div class="page-header">
     <div class="panel panel-primary text-center">
-        <style>
-            h1  {color:white}
-        </style>
         <div class="panel-heading"> 
             <h1>Unit Tests</h1>
         </div>
     </div>
 </div>
-
 
 <div class="text-center bottom-buffer">
 	 <button ng-click="runTests()" ng-disabled="isProcessing" id="unit-test-btn" class="center-block btn btn-lg btn-primary"> 
@@ -16,16 +12,14 @@
 	 </button>
 </div>
 
-<div>
-    <div class="panel panel-primary">
-        <div class="panel-heading text-center">
-            <h4>Test Results</h3>
-        </div>
-        <ul class="list-group">
-            <li ng-repeat="result in testResults" class="list-group-item">
-                <pre>{{ result.results }}</pre>
-            </li>
-        </ul> 
-   </div>
+<div class="panel panel-primary">
+    <div class="panel-heading text-center" ng-hide="testResults.length == 0">
+        <h4>Test Results</h4>
+        <i class="fa fa-spinner fa-spin fa-lg" ng-show="isProcessing"></i>
+    </div>
+    <ul class="list-group">
+        <li ng-repeat="result in testResults" class="list-group-item">
+            <pre>{{ result.results }}</pre>
+        </li>
+    </ul> 
 </div>
-
