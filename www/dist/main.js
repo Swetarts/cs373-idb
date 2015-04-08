@@ -301,8 +301,29 @@ app.controller('PersonDetailCtrl', function($scope, person) {
 
   $scope.person = person;
 });
-app.controller('UnitTestsCtrl', function($scope) {
+app.controller('UnitTestsCtrl', function($scope, TestsFactory) {
 
+  $scope.testResults = [];
+
+  $scope.isProcessing = false;
+
+  $scope.runTests = function() {
+    console.log("running tests");
+    $scope.isProcessing = true;
+
+    TestsFactory.runTests().then(
+      function(response) {
+        console.log("Test success:", response.data);
+        $scope.testResults.push(response.data);
+        console.log("Results arr:", $scope.testResults);
+      },
+      function(error) {
+        console.log("error running tests")
+      }
+    ).finally(function() {
+      $scope.isProcessing = false;
+    });
+  }
 
 });
 app.directive('filterSearch', function(){
@@ -337,7 +358,9 @@ app.directive('navbar', function(){
     // priority: 1,
     // terminal: true,
     // scope: {}, // {} = isolate, true = child, false/undefined = no change
-    // controller: function($scope, $element, $attrs, $transclude) {},
+    controller: function($scope, $element, $attrs, $transclude) {
+        $scope.logo = '../assets/images/'+Math.floor(Math.random() * 31)+'.png';
+    },
     // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
     restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
     templateUrl: 'templates/navbar.html',
@@ -477,3 +500,12 @@ app.factory("peopleFactory", function($http, $q, HOST) {
 
   return factory;
 })
+app.factory('TestsFactory', function(HOST, $http){
+  var factory = {};
+
+  factory.runTests = function() {
+    return $http.get(HOST + "/api/tests");
+  }
+
+  return factory;
+});

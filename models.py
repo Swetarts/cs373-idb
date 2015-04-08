@@ -110,6 +110,54 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % (self.name)
 
+    @property
+    def serialize(self):
+        """Return object data in easily serializeable format"""
+        return {
+            'id' : self.id,
+            'name': self.name,
+            'alias': self.alias,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            },
+            'description': self.description,
+            'gender': self.gender,
+            'origin': self.origin,
+            'powers': self.serialize_many(self.powers),
+            'teams': self.serialize_many(self.teams),
+            #TODO fix below and implement 'creators'
+            'character_friends': self.serialize_many_characters(self.allies),
+            'character_enemies': self.serialize_many_characters(self.enemies),
+            'creators': []
+        }
+
+    def serialize_many(self, attr):
+        return [ item.serialize for item in attr ]
+
+    def serialize_many_characters(self, attr):
+        return [ item.serialize_ally_enemy for item in attr ]
+
+    @property
+    def serialize_ally_enemy(self):
+        return {
+            'id': self.id,
+            'name': self.name
+        }
+
+    @property
+    def serialize_clipped(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            }
+        }
+
 ###########
 # Person
 ###########
@@ -146,6 +194,36 @@ class Person(db.Model):
 
     def __repr__(self):
         return '<Person %r>' % (self.name)
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            },
+            'birth_date': self.birth_date,
+            'country': self.country,
+            'description': self.description,
+            'website': self.website,
+            'gender': self.gender
+            #TODO Link issues and Characters here
+        }
+
+    @property
+    def serialize_clipped(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            }
+        }
 
 
 ##############
@@ -268,6 +346,13 @@ class Power(db.Model):
     def __repr__(self):
         return '<Power %r>' % (self.name)
 
+    @property
+    def serialize(self, full_data=True):
+        return {
+            'id': self.id,
+            'name': self.name
+        }
+
 class Team(db.Model):
     """A simple character powers team
 
@@ -282,5 +367,12 @@ class Team(db.Model):
 
     def __repr__(self):
         return '<Team %r>' % (self.name)
+
+    @property
+    def serialize(self, full_data=True):
+        return {
+            'id': self.id,
+            'name': self.name
+        }
 
 
