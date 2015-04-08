@@ -4,16 +4,17 @@ from flask import *
 from flask.ext.cors import CORS, cross_origin
 from flask.ext.sqlalchemy import SQLAlchemy
 import config
+import subprocess
 
 app = Flask(__name__)
 # Development settings 
-# app.config.from_object('config.DevelopmentConfig')
+app.config.from_object('config.DevelopmentConfig')
 # Production settings
 # app.config.from_object('config.ProductionConfig')
 cors = CORS(app)
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
-#import models
+import models
 
 # Catch all route to correctly handle manually
 # entered URLs and send them to Angular
@@ -90,6 +91,18 @@ def get_issue_detail(id):
   parsed = json.loads(response.content.decode())
   results = parsed['results']
   return json.dumps(results)
+
+@app.route('/api/tests')
+def run_tests():
+  print("Running tests")
+  script = subprocess.Popen("python tests.py", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  try:
+    outs, errs = script.communicate()
+  except:
+    script.kill()
+  errs = errs.decode('ascii')
+  return json.dumps({"results": errs})
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
