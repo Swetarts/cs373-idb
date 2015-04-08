@@ -26,7 +26,7 @@ for comic_id in list(comic_id_list):
     title = parsed['name']
     # print(name)
 
-    image = parsed['image']['thumb_url']
+    image = parsed['image']['icon_url']
     # print(images)
 
     cover_date = parsed['cover_date'].split(' ')[0]
