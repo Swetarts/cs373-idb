@@ -62,7 +62,7 @@ body {
 #loading-bar .bar {
   -webkit-transition: width 350ms;
           transition: width 350ms;
-  background: #29d;
+  /*background-color: reds;*/
   position: absolute;
   z-index: 10002;
   top: 0;

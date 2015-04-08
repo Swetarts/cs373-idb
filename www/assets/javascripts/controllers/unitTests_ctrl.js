@@ -12,14 +12,14 @@ app.controller('UnitTestsCtrl', function($scope, TestsFactory) {
       function(response) {
         console.log("Test success:", response.data);
         $scope.testResults.push(response.data);
-        console.log("Results arr:", $scope.testResults);
       },
       function(error) {
         console.log("error running tests")
       }
-    ).finally(function() {
+    )
+    .finally(function() {
       $scope.isProcessing = false;
     });
-  }
+  };
 
 });
