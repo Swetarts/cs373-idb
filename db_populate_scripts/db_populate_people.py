@@ -26,7 +26,7 @@ for people_id in list(people_id_list):
     name = parsed['name']
     # print(name)
 
-    image = parsed['image']['icon_url']
+    image = parsed['image']['thumb_url']
     # print(image)
 
     birth_date = parsed['birth'].split(' ')[0]

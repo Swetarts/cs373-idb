@@ -27,7 +27,7 @@ while True:
         if(x['image'] == None):
             image = 'None'
         else:
-            image = x['image']['icon_url']
+            image = x['image']['thumb_url']
         # print(image)
 
         location_address = x['location_address']

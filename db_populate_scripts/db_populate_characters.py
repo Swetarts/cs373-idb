@@ -30,7 +30,7 @@ for char_id in list(character_id_list):
     alias = parsed['aliases'].split('\n')[0].split('\r')[0]
     # print(alias)
 
-    images = parsed['image']['icon_url']
+    images = parsed['image']['thumb_url']
     # print(images)
 
     description = parsed['description']
