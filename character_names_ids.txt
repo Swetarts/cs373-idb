@@ -1,0 +1,132 @@
+{"id":1440,"name":"Wolverine"}
+{"id":1441,"name":"Magneto"}
+{"id":1442,"name":"Captain America"}
+{"id":1443,"name":"Spider-Man"}
+{"id":1444,"name":"Storm"}
+{"id":1445,"name":"Juggernaut"}
+{"id":1446,"name":"Rogue"}
+{"id":1449,"name":"She-Hulk"}
+{"id":1451,"name":"Falcon"}
+{"id":1453,"name":"Spider-Woman"}
+{"id":1455,"name":"Iron Man"}
+{"id":1456,"name":"Doctor Strange"}
+{"id":1457,"name":"Emma Frost"}
+{"id":1459,"name":"Cyclops"}
+{"id":1460,"name":"Colossus"}
+{"id":1461,"name":"Nightcrawler"}
+{"id":1462,"name":"Beast"}
+{"id":1464,"name":"Iceman"}
+{"id":1466,"name":"Scarlet Witch"}
+{"id":1467,"name":"Quicksilver"}
+{"id":1468,"name":"Doctor Doom"}
+{"id":1469,"name":"Mystique"}
+{"id":1470,"name":"Toad"}
+{"id":1475,"name":"Hawkeye"}
+{"id":1476,"name":"Namor"}
+{"id":1477,"name":"Black Panther"}
+{"id":1479,"name":"Black Cat"}
+{"id":1480,"name":"Gwen Stacy"}
+{"id":1483,"name":"Kingpin"}
+{"id":1485,"name":"Doctor Octopus"}
+{"id":1486,"name":"Venom"}
+{"id":1487,"name":"J. Jonah Jameson"}
+{"id":1488,"name":"Lizard"}
+{"id":1489,"name":"Flash Thompson"}
+{"id":1490,"name":"Carnage"}
+{"id":1499,"name":"Gambit"}
+{"id":1504,"name":"Vision"}
+{"id":1505,"name":"Professor X"}
+{"id":1525,"name":"Punisher"}
+{"id":1573,"name":"Electra"}
+{"id":1686,"name":"Superboy"}
+{"id":1691,"name":"Dick Grayson"}
+{"id":1696,"name":"Harley Quinn"}
+{"id":1697,"name":"Poison Ivy"}
+{"id":1698,"name":"Catwoman"}
+{"id":1699,"name":"Batman"}
+{"id":1702,"name":"Joker"}
+{"id":1780,"name":"Aunt May"}
+{"id":1926,"name":"War Machine"}
+{"id":2048,"name":"Wonder Woman"}
+{"id":2111,"name":"Darkhawk"}
+{"id":2112,"name":"Angel"}
+{"id":2113,"name":"Namorita"}
+{"id":2114,"name":"Thing"}
+{"id":2120,"name":"Human Torch"}
+{"id":2122,"name":"Weapon Y"}
+{"id":2126,"name":"Rhino"}
+{"id":2149,"name":"Galactus"}
+{"id":2151,"name":"Mr. Fantastic"}
+{"id":2156,"name":"Shatterstar"}
+{"id":2157,"name":"Cable"}
+{"id":2158,"name":"Warpath"}
+{"id":2175,"name":"Sebastian Shaw"}
+{"id":2190,"name":"Invisible Woman"}
+{"id":2242,"name":"Ultron"}
+{"id":2250,"name":"Red Skull"}
+{"id":2267,"name":"Hulk"}
+{"id":2268,"name":"Thor"}
+{"id":2349,"name":"Darkseid"}
+{"id":2351,"name":"Supergirl"}
+{"id":2357,"name":"Aquaman"}
+{"id":2635,"name":"Mephisto"}
+{"id":3174,"name":"Silver Samurai"}
+{"id":3176,"name":"Psylocke"}
+{"id":3179,"name":"Mr. Sinister"}
+{"id":3182,"name":"Blob"}
+{"id":3200,"name":"Black Widow"}
+{"id":3202,"name":"Nick Fury"}
+{"id":3223,"name":"Union Jack"}
+{"id":3228,"name":"Electro"}
+{"id":3239,"name":"Scarecrow"}
+{"id":3336,"name":"Saul Constantine"}
+{"id":3337,"name":"Adam Constantine"}
+{"id":3338,"name":"Maria Constantine"}
+{"id":3390,"name":"Violator"}
+{"id":3423,"name":"Callisto"}
+{"id":3530,"name":"Mandarin"}
+{"id":3544,"name":"Sandman"}
+{"id":3546,"name":"Havok"}
+{"id":3548,"name":"Kitty Pryde"}
+{"id":3552,"name":"Jean Grey"}
+{"id":3554,"name":"Pyro"}
+{"id":3587,"name":"Mirage"}
+{"id":3588,"name":"Deathstroke"}
+{"id":3617,"name":"Jonathan Kent"}
+{"id":3715,"name":"Mr. Freeze"}
+{"id":3718,"name":"Riddler"}
+{"id":3725,"name":"Killer Croc"},
+{"id":3726,"name":"Scarecrow"}
+{"id":3727,"name":"James Gordon"}
+{"id":3738,"name":"Lucius Fox"}
+
+{"id":1253,"name":"Lightning Lad"}
+{"id":4324,"name":"Loki"}
+{"id":4333,"name":"Mysterio"}
+{"id":4459,"name":"Vulture"}
+{"id":4562,"name":"Jubilee"}
+{"id":4563,"name":"Sabretooth"}
+{"id":4917,"name":"Talia al Ghul"}
+{"id":5466,"name":"Hellboy"}
+{"id":5547,"name":"Lana Lang"}
+{"id":5652,"name":"Ghost Rider"}
+{"id":5936,"name":"Green Arrow"}
+{"id":6803,"name":"Howard the Duck"}
+{"id":6805,"name":"Adam Warlock"}
+{"id":6806,"name":"Gamora"}
+{"id":6807,"name":"Drax the Destroyer"}
+{"id":7570,"name":"Blade"}
+{"id":7606,"name":"Deadpool"}
+{"id":7607,"name":"Thanos"}
+{"id":7608,"name":"Silver Sable"}
+{"id":7612,"name":"Apocalypse"}
+
+{"id":8724,"name":"Bullseye"}
+
+
+persons:
+
+['40467','5614','40382','40841','7082','40468','3380','41468','40724','40893','1251','1252','1270','1280','1293','1299','1302','1303','1325','1326','1349','1350','1351','1352','1361','1385','1429','1433','1435','1436','1437','1509','1513','1514','1515','1516','1524','1531','1533','1537','1539','1540','1541','1543','1547','1575','1598','1602','1610','1613','1635','1642','1645','1647','1656','1657','1658','1662','1663','1664','1669','1672','1673','1675','1676','1678','1679','1693','1700','1703','1704','1732','1733','1734','1751','1752','1760','1761','1764','1768','1769','1770','1772','1773','1774','1775','1785','1795','1796','1804','1805','1806','1811','1812','1816','1817','1824','1825','1827','1828','1839','1840','1841','1905','1906','1915','1916','1921','1922','1923']
+
+issues:
+['6422','105342','14667','105403','6694','6686','33921','6428','5883','105764','105811','37736','30769','8428','34018','107870','6023','7072','105683','108764','35666','12422','34415','27158','36544','68545','4189','4190','4191','4192','4193','4194','4195','4196','4197','4198','4199','4201','4202','4203','4204','4205','4207','4208','4209','4210','4211','4213','4214','4215','4217','4218','4219','4220','4221','4223','4225','4226','4227','4229','4230','4231','4232','4233','4234','4235','4236','4238','4239','4240','4241','4242','4243','4244','4245','4246','4248','4249','4251','4252','4253','4255','4256','4257','4258','4259','4260','4261','4267','4268','4269','4270','4271','4272','4273','4274','4275','4276','4278','4279','4280','4281','4282','4283','4284','4285','4287','4288','4290','4291','4292','4293','4295','4296','4297','4299','4300','4301','4302','4304','4305','4306','4307','4308','4310','4311']
