@@ -25,6 +25,14 @@ $ gulp
 ```
 This will kick off the browser-sync server. You might need to adjust the `proxy` setting inside of `gulp.js` to point at wherever you are hosting your local server.
 
+After you install the bower components you need to install the `gulp` dependencies.Run:
+```bash
+$ npm install
+```
+This will install all of the dev dependencies inside of the `package.json` file.
+
+### **Important**
+You must at least run `$ gulp js` in order to generate the `main.js` file that is used in `index.html`. Failing to do so will leave you with an empty site. 
 
 After that create a python virtual environment with
 ```bash
