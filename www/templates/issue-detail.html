@@ -17,7 +17,15 @@
                 </div>
                 <div ng-bind-html="issue.description | to_trusted"></div>
             </tab>
-            <tab heading="Characters"></tab>
+            <tab heading="Characters">
+                <div class="list-group">
+                    <a ng-repeat="character in issue.character_credits" 
+                    ui-sref="character-detail({ id:{{character.id}} })"
+                    class="list-group-item text-center">
+                    {{character.name}}
+                    </a>
+                </div> 
+            </tab>
             <tab heading="People">
                 <div class="list-group">
                     <a ng-repeat="person in issue.person_credits"
