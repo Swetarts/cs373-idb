@@ -40,7 +40,8 @@ def toplevel_static(folder, filename):
 def get_characters():
   try:
     results = json.dumps([i.serialize_clipped for i in db.session.query(models.Character).all()])
-  except Exception:
+  except Exception as e:
+    print(e)
     request_url = 'http://www.comicvine.com/api/characters/?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
@@ -133,6 +134,7 @@ def run_tests():
     outs, errs = script.communicate()
   except:
     script.kill()
+  print(outs.decode())
   errs = errs.decode()
   return json.dumps({"results": errs})
 
