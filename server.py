@@ -41,7 +41,7 @@ def get_characters():
   try:
     results = json.dumps([i.serialize_clipped for i in db.session.query(models.Character).all()])
   except Exception as e:
-    print(e)
+    print("GAGGOT" + str(e))
     request_url = 'http://www.comicvine.com/api/characters/?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
     response = requests.get(request_url)
     parsed = json.loads(response.content.decode())
@@ -55,8 +55,9 @@ def get_characters():
 @cross_origin()
 def get_character_detail(id):
   try:
-    result = json.dumps(models.Character.query.filter_by(id=id).first().serialize)
-  except Exception:
+    result = json.dumps(db.session.query(models.Character).filter_by(id=id).first().serialize)
+  except Exception as e:
+    print("GAGGOT" + str(e))
     request_url = 'http://www.comicvine.com/api/character/4005-{}?api_key=2a196eae09708f335bc341657e97155564ab9514&format=json'.format(id)
     print(request_url)
     response = requests.get(request_url)
