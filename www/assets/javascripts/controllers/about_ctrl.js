@@ -13,7 +13,7 @@ app.controller('AboutCtrl', function($scope) {
 		{
 			"name":"Maximilian Brown",
 			"image":"http://i.imgur.com/Ap2J5QI.jpg?1",
-			"description": "Helped Tyler with the database, again."
+			"description": "Helped Tyler with the database, again.",
 			// "description":"Max is a Computer Science major at the University of Texas at Austin. He is married and has two children. When he isn't at work or school, he enjoys spending time with his family. Max recently started collecting comic books with his son and when they have time, Max and his son like to look for 'bad guys'.",
 			"responsibilites":"Developed the data model/ UML diagram for the database utilizing navicat data modeler. Created python scripts to automate parsing of comicvine API data and populating our server hosted database. Worked with flask models to ensure compatibility with acutal data.",
 			"num_commits":"20",
