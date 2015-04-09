@@ -102,7 +102,7 @@ def get_person(id):
 @cross_origin()
 def get_issues():
   try:
-    raise NotImplementedError
+    results = json.dumps([i.serialize_clipped for i in db.session.query(models.Comic_Issue).all()])
   except NotImplementedError:
     request_url = 'http://www.comicvine.com/api/issues?api_key=2a196eae09708f335bc341657e97155564ab9514&limit=10&format=json'
     response = requests.get(request_url)

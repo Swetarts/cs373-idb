@@ -126,25 +126,20 @@ class Character(db.Model):
             'gender': self.gender,
             'origin': self.origin,
             'powers': self.serialize_many(self.powers),
-            'teams': self.serialize_many(self.teams)
-            #TODO fix below and implement 'creators'
-            # 'character_friends': self.serialize_many_characters(self.allies),
-            # 'character_enemies': self.serialize_many_characters(self.enemies),
-            # 'creators': self.serialize(self.person)
+            'teams': self.serialize_many(self.teams),
+            'character_friends': self.serialize_many_characters(self.allies),
+            'character_enemies': self.serialize_many_characters(self.enemies),
+            'creators': self.serialize_many_characters(self.creators),
+            'issue_credits': self.serialize_many_characters(self.comic_issue)
         }
 
     def serialize_many(self, attr):
         return [ item.serialize for item in attr ]
 
     def serialize_many_characters(self, attr):
-        return [ item.serialize_ally_enemy for item in attr ]
-
-    @property
-    def serialize_ally_enemy(self):
-        return {
-            'id': self.id,
-            'name': self.name
-        }
+        result = [ item.serialize_clipped for item in attr ]
+        print(result)
+        return result
 
     @property
     def serialize_clipped(self):
@@ -209,8 +204,10 @@ class Person(db.Model):
             'country': self.country,
             'description': self.description,
             'website': self.website,
-            'gender': self.gender
+            'gender': self.gender,
             #TODO Link issues and Characters here
+            'issue_credits': [i.serialize_clipped for i in self.comic_issue],
+            'character_credits': [i.serialize_clipped for i in self.creators]
             
         }
 
@@ -268,6 +265,35 @@ class Comic_Issue(db.Model):
     def __repr__(self):
         return '<Comic Issue %r>' % (self.title)
 
+    @property
+    def serialize_clipped(self):
+        return {
+            'id': self.id,
+            'name': self.title,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            }
+        }
+
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'name': self.title,
+            'image': {
+                'medium_url': self.image.replace('square_avatar', 'scale_medium'),
+                'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
+                'small_url': self.image.replace('square_avatar', 'scale_small')  
+            },
+            'cover_date': self.cover_date,
+            'issue_num': self.issue_num,
+            'description': self.description,
+            'volume_id': self.volume_id,
+            'person_credits' : [i.serialize_clipped for i in self.people],
+            'character_credits': [i.serialize_clipped for i in self.characters]
+        }
 
 ##############
 # Comic Volume
