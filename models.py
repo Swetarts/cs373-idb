@@ -126,11 +126,11 @@ class Character(db.Model):
             'gender': self.gender,
             'origin': self.origin,
             'powers': self.serialize_many(self.powers),
-            'teams': self.serialize_many(self.teams),
+            'teams': self.serialize_many(self.teams)
             #TODO fix below and implement 'creators'
-            'character_friends': self.serialize_many_characters(self.allies),
-            'character_enemies': self.serialize_many_characters(self.enemies),
-            'creators': self.serialize(self.person)
+            # 'character_friends': self.serialize_many_characters(self.allies),
+            # 'character_enemies': self.serialize_many_characters(self.enemies),
+            # 'creators': self.serialize(self.person)
         }
 
     def serialize_many(self, attr):
