@@ -13,10 +13,10 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       $("html, body").animate({ scrollTop: 0 }, 200);
     });
 
-    // var slap = new Audio("assets/sounds/willhelm.mp3");
-    // $("body").on('click', function() {
-    //   slap.play();
-    // });
+    
+    var easter_egg = new Konami(function() { 
+      (new Audio("assets/sounds/willhelm.mp3")).play();
+    });
   })
 
   // change if not on local development
