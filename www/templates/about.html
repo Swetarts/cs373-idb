@@ -5,7 +5,7 @@
 
 
 <!-- GROUP MEMBERS -->
-<div ng-repeat="member in members">
+<div ng-repeat="member in members" class="about-detail-panel center">
 	<div class="panel panel-primary center">
 		<div class="panel-heading text-center"> 
 			<h2>{{member.name}}</h2>
@@ -17,13 +17,16 @@
 				</a>
 			
 				<tabset justified="true">
-			    	<tab heading="Bio">
+			    	<tab>
+			    		<tab-heading><h5>Bio</h5></tab-heading>
 						{{member.description}}
 					</tab>
-					<tab heading="Responsibilites">
+					<tab>
+			    		<tab-heading><h5>Responsibilities</h5></tab-heading>
 			    		{{member.responsibilites}}
 					</tab>
-					<tab heading="Stats">
+					<tab>
+			    		<tab-heading><h5>Stats</h5></tab-heading>
 			    		<h4>Number of Commits</h4>
 							{{member.num_commits}}
 						<h4>Number of Issues</h4>
@@ -38,7 +41,7 @@
 </div>
 
 <!-- Apiary API Link-->
-<div>
+<div class="about-detail-panel center">
 	<div class="panel panel-primary">
 		<div class="panel-heading text-center">
 		<h3>Apiary API</h3>
@@ -52,7 +55,7 @@
 </div>
 
 <!-- Github Link-->
-<div>
+<div class="about-detail-panel center">
 	<div class="panel panel-primary">
 		<div class="panel-heading text-center">
 		<h3>Github Repo</h3>

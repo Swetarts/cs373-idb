@@ -223,8 +223,12 @@ h3.thumbnail-name {
 *                                   
 *************************************/
 
-#character-detail-panel, #person-detail-panel, #issue-detail-panel, #about-detail-panel {
+#character-detail-panel, #person-detail-panel, #issue-detail-panel, .about-detail-panel {
   width: 75%;
+}
+
+.about-detail-panel {
+  width: 50%;
 }
 
 
