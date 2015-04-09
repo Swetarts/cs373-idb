@@ -73,16 +73,16 @@ body {
   border-top-right-radius: 1px;
 }
 
-h1 {
-  font-family: 'Bangers',serif;
-  text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
-}
-
-h2 {
+h1, h2, h3, h5, h6 {
   font-family: 'Bangers',serif;
   text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
   color: white;
 }
+
+h3.thumbnail-name {
+  margin: 0px;
+}
+
 
 .navbar-brand {
   font-family: 'Bangers',serif;
