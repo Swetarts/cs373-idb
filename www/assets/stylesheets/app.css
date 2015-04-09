@@ -2,8 +2,8 @@
 
 html {
   /*background: url('http://25.media.tumblr.com/f6131152b786236ee6948e16494c9a93/tumblr_mnf4qutKjn1rm7i00o1_1280.jpg') no-repeat center center fixed;*/
-  background: url('http://fc09.deviantart.net/fs71/i/2014/006/4/d/comic_book_collage_by_comicsnjunk-d716r2k.png') no-repeat center center fixed;
-
+  /*background: url('http://fc09.deviantart.net/fs71/i/2014/006/4/d/comic_book_collage_by_comicsnjunk-d716r2k.png') no-repeat center center fixed;*/
+  background: url('../images/comic_book_collage_background.png') no-repeat center center fixed;
   background-size: cover;
 }
 
