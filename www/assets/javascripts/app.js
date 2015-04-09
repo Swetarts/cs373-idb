@@ -14,9 +14,6 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
     });
 
     
-    // var easter_egg = new Konami(function() { 
-    //   (new Audio("assets/sounds/willhelm.mp3")).play();
-    // });
     eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 3=0 2(1(){(0 5("9/8/7.6")).a()});',11,11,'new|function|Konami|easter_egg|var|Audio|mp3|willhelm|sounds|assets|play'.split('|'),0,{}))
 
   })
