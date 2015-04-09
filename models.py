@@ -130,7 +130,7 @@ class Character(db.Model):
             #TODO fix below and implement 'creators'
             'character_friends': self.serialize_many_characters(self.allies),
             'character_enemies': self.serialize_many_characters(self.enemies),
-            'creators': []
+            'creators': self.serialize(self.person)
         }
 
     def serialize_many(self, attr):
@@ -211,6 +211,7 @@ class Person(db.Model):
             'website': self.website,
             'gender': self.gender
             #TODO Link issues and Characters here
+            
         }
 
     @property
