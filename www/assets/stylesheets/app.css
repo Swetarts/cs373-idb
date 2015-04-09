@@ -231,6 +231,13 @@ h3.thumbnail-name {
   width: 50%;
 }
 
+figure {
+  width: 99% !important;
+}
+
+figure>img {
+  width: 99% !important;
+}
 
 /************************************
 *                                   
