@@ -36,8 +36,8 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
         templateUrl: "../../templates/about.html",
         controller: "AboutCtrl"
       })
-      .state('unitTests', {
-        url: "/unitTests",
+      .state('tests', {
+        url: "/tests",
         templateUrl: "../../templates/unitTests.html",
         controller: "UnitTestsCtrl"
       })
