@@ -2,7 +2,9 @@
     <div class="thumbnail flex-items-default hover-rise">
         <div class="panel-primary"> 
             <div class="panel-heading text-center">
-                <h3 class="thumbnail-name">{{model.name}}</h3>
+                <h3 class="thumbnail-name" ng-hide="type === 'issue'">
+                    {{model.name}}
+                </h3>
             </div>
             <div class="panel-body text-center">
                 <img class="img-rounded" ng-src="{{ model.image.thumb_url }}" alt=""/>

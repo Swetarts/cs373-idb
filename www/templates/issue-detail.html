@@ -12,7 +12,9 @@
                         </button>
                     </div>
                     <div class="panel-body" collapse="imageIsCollapsed">
+                    <figure>
                         <img class='block-center' ng-src="{{ issue.image.medium_url }}" alt=""/>
+                    </figure>
                     </div>
                 </div>
                 <div ng-bind-html="issue.description | to_trusted"></div>
