@@ -1,3 +1,675 @@
+commit 80cd2192e82cfb1eecb8835857300c216870ace3
+Merge: 65570f3 f4b80d3
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 20:23:18 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 65570f340fa4ebdf555192d385ab8099c8b2fed5
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 20:23:16 2015 -0500
+
+    mobile serach bar fix
+
+commit f4b80d386d222282000f650e653c30d00656f4d0
+Merge: e696c46 960d9c2
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 9 20:08:59 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit e696c46318b90212c2da0baafd9b020bef5178be
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 9 20:05:01 2015 -0500
+
+    😩 Close #64
+
+commit 960d9c24434182bb5ac95b725e49b2e560715752
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 20:04:41 2015 -0500
+
+    Updated about page
+
+commit d061e49fdc2f76609280d20ce46f488e303ede65
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 19:54:16 2015 -0500
+
+    updated about page
+
+commit 8aee6f1b4809df4c855551ccf7fafce7252ca10a
+Merge: e62ff16 7e15c89
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 19:15:27 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit e62ff16a204453c289cf4568804e25edc30a7292
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 19:15:18 2015 -0500
+
+    fix issues title and issues images
+
+commit 7e15c89cdf44222a2a717513f7a129e0bbcb274d
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Apr 9 19:11:38 2015 -0500
+
+    closes #63
+
+commit a5b69f45da82f3f10b381a476a0a850d18d4850a
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Apr 9 19:01:08 2015 -0500
+
+    closes #62
+
+commit b29f11dfdf7135fab9ae9e38dd96f35a93096062
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:57:25 2015 -0500
+
+    prevent description images from going outside of the page
+
+commit 946f9e9db0398eed4b3a66730c9c8983d03ff088
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:19:59 2015 -0500
+
+    :poop: :poop:
+
+commit c56554fcdd4e8803c9c98b226f9aed2d31561434
+Merge: dbb726e 566062f
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:19:03 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit dbb726e5933389e27dee5942654830f7b93c1dda
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:18:57 2015 -0500
+
+    lol :poop:
+
+commit 566062f1d71dd25d4009008069853795e730c21b
+Merge: db21690 408f84f
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 9 18:17:23 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 408f84f286b351585ac085bcafb2f831babe5d9f
+Merge: 6e8497d 0793722
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:16:56 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit db21690e0120d0146fccfbaae7e526a76ec97c13
+Merge: aa0d017 0793722
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 9 18:16:48 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit aa0d01794686ce7b468bc9f81e4a5d1972802135
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 9 18:16:35 2015 -0500
+
+    It's alive! The DB is now producing serialized models. #yaassss (close #28) 👾👻
+
+commit 6e8497d42d5c14df70c6775a48baa13f88c8ac98
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 18:16:19 2015 -0500
+
+    there may or may not be an easter egg in our site
+
+commit 079372262382f57e84bfc8361217ff746f2b2a94
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Apr 9 18:04:31 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit ca14fbda43984d8a39c569c6d0e14305653285e5
+Merge: 1aa56f4 9cab959
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 17:59:15 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 1aa56f43ae4b7f9fb7e55a03ca0a389fcdc5a9a8
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 17:58:36 2015 -0500
+
+    updated member sizes in about page.
+
+commit 9cab9598a9b60d61c9541d483d2c5ea7614e2599
+Merge: b2c8dd6 d40d711
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 17:57:24 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit b2c8dd61769ef1b68c0bb78695c316643248cc5e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 9 17:57:13 2015 -0500
+
+    fixes
+
+commit d40d7117841ff09d344bd43bb7802264e49afe61
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Apr 9 16:59:00 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 895f7bda3333a89fd478283353ea2a1a2e130e9f
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 15:46:58 2015 -0500
+
+    commented out the sound feature
+
+commit 269d14d9b391788975ea40e031edc9c0a50d4016
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 15:04:20 2015 -0500
+
+    Finished uploading all pictures to repo
+
+commit f42cee35cc0dac9ad979b016d698c4da2023f1cd
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 14:00:21 2015 -0500
+
+    adding pictures to repo
+
+commit 0c278deae48c3c7407ae3cd8dbf7e8b9ff5f7d12
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 21:24:58 2015 -0500
+
+    I JUST ISOALTED THE ISSUE. TYBAE AARON FOR THE WILD RIDE FOR TRYING TO FIND THE ISSUE🗽🚀
+
+commit c4a64df7dd8ba0c6085ef8060b3cd2a42dbfdb14
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 20:53:55 2015 -0500
+
+    This should be the one.
+
+commit bd3e3a42f4bdf381ce1b57be8a9875f01ebb2468
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 20:51:41 2015 -0500
+
+    "It's not government work unless you have to do it twice" - Gerry Gergich, Pawnee Parks and Rec Department, 2011. 🐔
+
+commit de30ddb4c7a171a353d83ff452bfe4cef71b6467
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 20:45:14 2015 -0500
+
+    Comma, Comma, Comma, Chameleon
+
+commit 6f397fed66cf153682a8723e36aaa8075e63df92
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 20:44:20 2015 -0500
+
+    😏😏😏😏😏😏😏😏😏😏😏😏😏😏😏
+
+commit 361969d0b7f9430639294264ea49bd2b1e8b8af1
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 8 20:38:39 2015 -0500
+
+    UNIT TESTS ARE FIXED THANKS TO ME (fix #54)
+    Unit tests are now *Slightly faster* thanks to a new set up/tear down (close #57)
+    Script made to run all tests in order, though the populate scripts need to be moved to the root directory to work correctly. (close #52)
+
+commit 85452007cccad9357bcfe77f4015ae06a6aeed2b
+Merge: 6cf66c8 4d453f4
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Apr 8 20:02:14 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 6cf66c819a9ec09bce48d2a2ad32dde41bc7d651
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Apr 8 20:01:50 2015 -0500
+
+    added something to serialize
+
+commit 4d453f4865c803d4de0c233d8ddec7744249a8b1
+Merge: 694aeff 82343af
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 8 19:46:21 2015 -0500
+
+    fix
+
+commit 694aeffe631d3f4c698c6108d2a4baec0bb36301
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 8 19:45:42 2015 -0500
+
+    adjust random loading bar color
+
+commit 82343affdf477ff1d5c41ca7c8cc9fd9ee81f491
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 19:30:44 2015 -0500
+
+    Changed name of tests on nav bar
+
+commit f8b9092a7054afa6273c57b4c1ca2147083d1d0c
+Merge: bd9116e edbe4c6
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 19:05:41 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit bd9116ebf91ebb5a812a14cd3a531aa5096a9aa5
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 19:05:14 2015 -0500
+
+    updated bios and added github link
+
+commit edbe4c6eb4e5a967a15b5dfc20d5cd106281d4cc
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Wed Apr 8 19:04:05 2015 -0500
+
+    Update README.md
+
+commit 5cdf89855bb6bfd545d300494a8175aef56e39b3
+Merge: 5fc1f3f 6853ebe
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 17:27:08 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 5fc1f3f4153af4c64c49aca6e0df9a196f6cab37
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 17:26:51 2015 -0500
+
+    changing about us. still work in progress.
+
+commit 6853ebe2837d4dca9a549badd2c8b27ae388dcc0
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 8 13:32:18 2015 -0500
+
+    unit tests stuff
+
+commit 9da1bbb5d79fea8ccba49959e59399627d078206
+Merge: 0e3be2d cafdd00
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 8 13:30:16 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 0e3be2db2c1f71e47770f3384f94c7784841da9d
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 8 13:28:37 2015 -0500
+
+    add random color for loading bar
+
+commit cafdd002d420237dcd2de568de483f235077f758
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 12:10:20 2015 -0500
+
+    updated all fonts
+
+commit c68aea44d1f9a9685b96e9486fdf72826496b5b5
+Merge: aa28738 0194016
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 11:46:09 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit aa287381abd62f0e412dca62a792bf6634e4466b
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Wed Apr 8 11:43:34 2015 -0500
+
+    Changed background
+
+commit 019401615ff885d0d8e6f51e7df0c27625c04361
+Author: tcorley <tyler_corley@me.com>
+Date:   Wed Apr 8 01:19:57 2015 -0500
+
+    Character and person serialization is partially complete. Need to test the joins to make sure they work. Issues are TODO 😲
+
+commit f426c5943b07d28dcae0a564ff67dbc8add4f8fd
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Apr 8 01:01:14 2015 -0500
+
+    changed images back
+
+commit 4516144e6f027d38e4458c482e0195c9832b6f56
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Wed Apr 8 00:51:36 2015 -0500
+
+    changed image type in db scripts, resolves #56
+
+commit 0d78d30725c140e6b92e2958d319b846fc89e0fc
+Author: tcorley <tyler_corley@me.com>
+Date:   Wed Apr 8 00:31:39 2015 -0500
+
+    Added a Captain America favicon and a scrolling title. #notsorry 💅
+
+commit f00bd28e412292df3845e8bf3f46f6545ad3e86b
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 7 23:57:28 2015 -0500
+
+    Added the changes from the model-integration branch. Also put the db calls in try-catches just in case the db isn't init'd for some reason. There's also boilerplate code for each of the api calls that will call the comic vine API if the db isn't up to snuff. There are also serialization methods in the models code now, unfinished though. 🌝
+
+commit 304402b4580a5185a3ab54049878d79623ebc636
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Tue Apr 7 23:53:46 2015 -0500
+
+    removed all db migrations
+
+commit 76efbdcf112b50693c510791bab45d583a69d152
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Tue Apr 7 23:16:40 2015 -0500
+
+    closes #50, more character, issues, and persons
+
+commit 5eb46268fc75353d8f42c6468538d90d4b149ac7
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 7 23:00:52 2015 -0500
+
+    Small change courtesy of the Angular Wrangler 😎
+
+commit ae4c016026fec17d471c91193cae636e753544e0
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 7 22:46:52 2015 -0500
+
+    Bangers font looks sexier with font-shadow 😏.
+    
+    "Form of...Super Navbar!"  - Navbar, 2015. (Styled up the navbar a bit, hover over the icon and refresh the page 😜)
+
+commit abf23e32114a785d757162051cd4bcb641234cab
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Apr 7 20:57:29 2015 -0500
+
+    Resolve #55 Unit test page is done
+
+commit 268f813e8b93d60d4c917b2cc760c1cdbdb29f13
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Apr 7 19:39:14 2015 -0500
+
+    API call for running tests
+
+commit 7b266c32d5dd79741aa6973de6de98a7dcfa5883
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Tue Apr 7 16:33:33 2015 -0500
+
+    added a unitTests page
+
+commit b1b9f39da17776957e7d15a34eebd416cf9a7f48
+Merge: b80b1b9 6f98431
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Tue Apr 7 13:27:32 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit b80b1b90c1bea9afe3d9a7a213a0654a9ea1a4df
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Tue Apr 7 13:27:06 2015 -0500
+
+    added a mouseover in homepage. Stil in progress
+
+commit 6f98431da3ae5b4c2095115061326df980686502
+Merge: 188ba43 2dad1dc
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Apr 6 23:27:23 2015 -0500
+
+    Merge branch 'master' of github.com:stv8/cs373-idb
+
+commit 188ba4346a398e341a10e35b47ba2fc3880b1273
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Apr 6 23:27:10 2015 -0500
+
+    added punch sound :poop:
+
+commit 2dad1dc153ddb7c13e78e2acbb292c8550b27dbc
+Merge: 11c4633 c9771f6
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Apr 6 23:18:57 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 11c463392d8f74ffc03a22309d6dfd3817228ff7
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Apr 6 23:17:35 2015 -0500
+
+    made more adjustments to carousel in homepage
+
+commit c9771f62430939cb3c395e39b6df53bcba338227
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Apr 6 14:05:19 2015 -0500
+
+    fix centering for order by btn on chrome
+
+commit 7d9ada7fe7369da99b4ad5fea7fc46b61950246e
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Apr 6 12:42:55 2015 -0500
+
+    fixed a problem with type-details.
+
+commit 187a95e89b1920684949b26f8f99fa524ed40ba5
+Merge: bc1d0b8 6cdfcfa
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Apr 6 11:39:14 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit bc1d0b824e417c51748197f574198420a94cac74
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Mon Apr 6 11:38:28 2015 -0500
+
+    has some unfinished changes to homepage.
+
+commit 6cdfcfad82896c702293f7812b2a467d43c969cb
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Mon Apr 6 08:17:14 2015 +0000
+
+    Max commiting, DB is populated with 10 entries for each pillar, need to test relationships
+
+commit b27fc0e1051d6b1432456b5ad3f5e47f7f1fba86
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:58:52 2015 -0500
+
+    changed data type on comic_volumes, updated scripts
+
+commit 68188f8ae69bc259ea793f8ebf685928c2ee0902
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:42:46 2015 -0500
+
+    debug scripts
+
+commit b16a407f205e5ba6adf0e43e68ca7387a0d963d5
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:40:20 2015 -0500
+
+    debug scripts
+
+commit a294b9defd0cb03cd2de2993184b86b899f56455
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:39:01 2015 -0500
+
+    debug populate scripts
+
+commit baad6e9bf50120791a2d609f7b35a4a2250ca4cc
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:35:36 2015 -0500
+
+    fixed populate issues and vol script
+
+commit 6be8e0dfca160833fd8c7e36353e14dd756f190e
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:20:24 2015 -0500
+
+    debug db scripts
+
+commit 7d6fa925328c1a8a42b97b5d1619beb4f06df4af
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:11:42 2015 -0500
+
+    debug db scripts
+
+commit b4a427593be647c20a16b3a7b3be01e3427665c2
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Mon Apr 6 02:02:19 2015 -0500
+
+    fixed db scripts for new models, resolves #41
+
+commit 423f23877d557411bc22d58e670863a3b536d932
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Mon Apr 6 01:28:45 2015 +0000
+
+    Max made this commit! removed all old migrations, got db working with new models.py which includes volumes, db contains publishers, teams, and powers, resolves #42
+
+commit 4fb6ad03068e56690c5d8be9714fe6f5fae7ee01
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Apr 5 18:13:55 2015 -0500
+
+    debugging models.py
+
+commit d3ee003392c931abcefb745e654917d3c58fae35
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Apr 5 18:10:53 2015 -0500
+
+    another change to models.py
+
+commit 5317a8aa87bf4b64b55fa3faa6b62297299c303e
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Apr 5 18:09:24 2015 -0500
+
+    fixed junction table name
+
+commit 768acc44ff7c9480466f0a22f9392dbb3659020a
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sat Apr 4 23:41:37 2015 -0500
+
+    fixed models.py publisher attribute types, resolves #48
+
+commit b9b1c12f55897ccd93ea131bc75c5e1a9595ee70
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sat Apr 4 00:27:05 2015 -0500
+
+    fixed models.py
+
+commit 361d6c64349ef3dae63fe9460f2208613ef9db43
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Fri Apr 3 23:20:42 2015 -0500
+
+    factored out character allies and enemies from db_populate scripts
+
+commit 39a498906c696e4bf44b9f02535e4a4ef598fa6c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 16:04:03 2015 -0500
+
+    directives errrywhere
+
+commit 71b836c2336581522cf9a2653ec529bd2d9ce8e0
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:37:34 2015 -0500
+
+    another minor fix
+
+commit 5858988dd3012b1e15fe4c25282d69e62a1c4bd6
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:36:39 2015 -0500
+
+    minor fix
+
+commit 0bb0da9f1304c9da926b36bf7c79a0f575876b67
+Merge: 9f39aae a056719
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:34:30 2015 -0500
+
+    fix merge conflict
+
+commit 9f39aae77df2773946f2e84398cff0c31003ff81
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:31:18 2015 -0500
+
+    update .gitignore
+
+commit a056719a5b884eebf8bdead757743c07f28442c7
+Author: stv8 <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:29:23 2015 -0500
+
+    fix up templates
+
+commit ece9ff6e77777e5bc99ce737de8fdd2c6bf2daf3
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Fri Apr 3 15:28:38 2015 -0500
+
+    update README to include gulp :beer: info
+
+commit b7ba445917ce87d58851f1c73a51608012670598
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 2 22:37:28 2015 -0500
+
+    put search bar into its own directive
+
+commit 1f485e8131e5a1f551b7b46524991ed799ddeb39
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 22:42:20 2015 -0500
+
+    super :one::three::three::seven: search function
+
+commit 68d0457cc2d861f11a9c1412ee86162851b01b6c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 17:14:51 2015 -0500
+
+    clean up
+
+commit 728ffb1e62216890938ffe1a97223e0d7dfbd50e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 17:14:13 2015 -0500
+
+    add order button to summary pages
+
+commit 354086868531279605ed2e3c51365a8897d15e6f
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 17:13:42 2015 -0500
+
+    abstract order button into directive
+
+commit d7f5e8061ce2533989f2cda25c9fb477ce5d1ca4
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 16:58:07 2015 -0500
+
+    sort by on characters page
+
+commit 8b884c5f07b00f3114d57ae79955c2f39d783458
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 1 16:57:21 2015 -0500
+
+    gulp tweak
+
+commit 564605279428d8fe44f9976b4b1551e27fdebe51
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 31 22:56:44 2015 -0500
+
+    gulp gulp gulp
+
+commit 9c44b05c0d6fc0cdceb80f251ad45f7298b0cc30
+Author: stv8 <stvillars8@gmail.com>
+Date:   Tue Mar 31 18:36:40 2015 -0500
+
+    more gulp :beer: fun
+
+commit a721bace1755155a5048cdad4b455d63b60cf09c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Mon Mar 30 16:21:54 2015 -0500
+
+    messing with gulp, concat our js into one file
+
+commit 15ed66716bc3840c7afa04b5efccc92c32c67749
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Mar 29 02:16:40 2015 -0500
+
+    fixed Max's bio and contribution section
+
+commit 8c26c4461eca1f556bc3ee2769237ac82a9f57ea
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Sun Mar 29 01:52:20 2015 -0500
+
+    updated UML.pdf and models.py to add additional attributes and account for comic volumes and issues, resolves #38, resolves #39
+
+commit adb9d73993a41be1447f577abd000752a23d5eff
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Fri Mar 27 02:48:36 2015 +0000
+
+    adding git log and other stuff
+
 commit e8110747833d07e3345b74741b6911a2d30ec474
 Merge: 02258e4 46598b0
 Author: jergamb <ggambo_13@utexas.edu>
