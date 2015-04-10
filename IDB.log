@@ -1,3 +1,15 @@
+commit f75af7f3fe4979c4884c2a596219b8c93e2f7301
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 20:39:50 2015 -0500
+
+    added a total stats panel
+
+commit 76e9b80aab191742c68e2fc75c37014d92cd359c
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 20:27:25 2015 -0500
+
+    Updated the commit log
+
 commit 80cd2192e82cfb1eecb8835857300c216870ace3
 Merge: 65570f3 f4b80d3
 Author: stv8 <stvillars8@gmail.com>
