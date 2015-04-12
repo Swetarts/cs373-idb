@@ -13,8 +13,39 @@ body {
   overflow-x: hidden;
 }
 
+.centered-text {
+  text-align: center;
+  width: 650px;
+  height:100px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin: 200px 0 0 -325px;
+}
+
+.centered-text>h1 {
+  font-size: 60px;
+}
+
 #main-container {
   padding-top: 37px;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(../images/comic_book_collage_background.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-divice-width: 800px) {
+  #bgvid {display: none;}
+  .centered-text>h1 {font-size: 30px;}
 }
 
 /************************************
@@ -159,6 +190,9 @@ h3.thumbnail-name {
 .flex-items-default {
     width: 200px;
     height: 275px;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
             -webkit-box-flex: 0;
@@ -167,6 +201,7 @@ h3.thumbnail-name {
         -ms-flex-negative: 0;
             flex-shrink: 0;
 }
+
 
 .home-thumbnail {
   background: #29d;
@@ -272,6 +307,15 @@ to prevent collapsing during animation*/
   position: relative;
   height: 65px;
 }
+
+.ng-enter#bgvid,
+.ng-leave#bgvid {
+  visibility: visible;
+  opacity: 0;
+  -webkit-animation: none 0s !important;
+          animation: none 0s !important;
+}
+
 
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
