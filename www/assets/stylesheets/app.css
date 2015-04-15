@@ -135,13 +135,21 @@ h3.thumbnail-name {
   top:50%;
   margin: 150px 0 0 -325px;
   -webkit-animation: moveUp 1.5s ease-in-out;
+          animation: moveUp 1.5s ease-in-out;
   -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes moveUp {
-  0%   {-webkit-transform: translateY(-5px);  }
-  100% {-webkit-transform: translateY(-200px);}
+  0%   {-webkit-transform: translateY(-5px);transform: translateY(-5px);  }
+  100% {-webkit-transform: translateY(-200px);transform: translateY(-200px);}
+}
+
+@keyframes moveUp {
+  0%   {-webkit-transform: translateY(-5px);transform: translateY(-5px);  }
+  100% {-webkit-transform: translateY(-200px);transform: translateY(-200px);}
 }
 
 .centered-text>h1 {
@@ -159,12 +167,20 @@ h3.thumbnail-name {
   margin: 300px 0 0 -400px;
   opacity: 0;
   -webkit-animation: fadeIn 2s ease-in-out;
-  -webkit-iteration-count: 1;
+          animation: fadeIn 2s ease-in-out;
+  iteration-count: 1;
   -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes fadeIn {
+  from  {opacity: 0;}
+  to    {opacity: 1;}
+}
+
+@keyframes fadeIn {
   from  {opacity: 0;}
   to    {opacity: 1;}
 }
