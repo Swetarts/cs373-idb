@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Swetarts/cs373-idb.svg?branch=master)](https://travis-ci.org/Swetarts/cs373-idb)
+
 # Environment
 To get your application up and running you need a couple of things:
 * [npm](https://www.npmjs.com/)
@@ -19,7 +21,7 @@ $ npm install -g gulp
 $ npm install
 ```
 
-You can now run gulp tasks. For default just run 
+You can now run gulp tasks. For default just run
 ```bash
 $ gulp
 ```
@@ -32,14 +34,14 @@ $ npm install
 This will install all of the dev dependencies inside of the `package.json` file.
 
 ### **Important**
-You must at least run `$ gulp js` in order to generate the `main.js` file that is used in `index.html`. Failing to do so will leave you with an empty site. 
+You must at least run `$ gulp js` in order to generate the `main.js` file that is used in `index.html`. Failing to do so will leave you with an empty site.
 
 After that create a python virtual environment with
 ```bash
 $ pyvenv-3.4 venv
 ```
 
-This will create a directory called venv. 
+This will create a directory called venv.
 
 To activate your virtual envrionment run:
 ```bash
