@@ -77,6 +77,7 @@ body {
 
 h1, h2, h3, h5, h6 {
   font-family: 'Bangers',serif;
+  letter-spacing: 1px;
   text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
   color: white;
 }
@@ -119,6 +120,105 @@ h3.thumbnail-name {
   margin-bottom: 10px;
 }
 
+/************************************
+*                                   
+*       Home page             
+*                                   
+*************************************/
+
+.centered-text {
+  text-align: center;
+  width: 650px;
+  height:100px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin: 150px 0 0 -325px;
+  -webkit-animation: moveUp 1.5s ease-in-out;
+          animation: moveUp 1.5s ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes moveUp {
+  0%   {-webkit-transform: translateY(-5px);transform: translateY(-5px);  }
+  100% {-webkit-transform: translateY(-200px);transform: translateY(-200px);}
+}
+
+@keyframes moveUp {
+  0%   {-webkit-transform: translateY(-5px);transform: translateY(-5px);  }
+  100% {-webkit-transform: translateY(-200px);transform: translateY(-200px);}
+}
+
+.centered-text>h1 {
+  font-size: 5.3vw;
+  letter-spacing: 2.5px;
+}
+
+.center-content {
+  text-align: center;
+  width: 800px;
+  height:100px;
+  position: absolute;
+  left:50%;
+  top:90%;
+  margin: 300px 0 0 -400px;
+  opacity: 0;
+  -webkit-animation: fadeIn 2s ease-in-out;
+          animation: fadeIn 2s ease-in-out;
+  iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from  {opacity: 0;}
+  to    {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from  {opacity: 0;}
+  to    {opacity: 1;}
+}
+
+.center-content>h3 {
+  font-size: 2.5vw;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(../images/comic_book_collage_background.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
+@media screen and (max-divice-width: 800px) {
+  #bgvid {display: none;}
+}
+
+#search {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#search input[type="search"] {
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0);
+    font-size: 3.0vw;
+    font-family: 'Bangers', serif;
+    text-shadow: -1px 0 black, 0 4px black, 2px 0 black, 0 -1px black;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-align: center;
+    border: 0px;
+    outline: none;
+}
 
 /************************************
 *                                   
@@ -159,6 +259,9 @@ h3.thumbnail-name {
 .flex-items-default {
     width: 200px;
     height: 275px;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
     -webkit-flex-grow: 0;
         -ms-flex-positive: 0;
             -webkit-box-flex: 0;
@@ -167,6 +270,7 @@ h3.thumbnail-name {
         -ms-flex-negative: 0;
             flex-shrink: 0;
 }
+
 
 .home-thumbnail {
   background: #29d;
@@ -245,23 +349,6 @@ figure>img {
 
 /************************************
 *                                   
-*       Home Pages
-*                                   
-*************************************/
-
-#myCarousel {
-  width: 100%;
-}
-
-.carousel_imgs {
-  vertical-align: center;
-  position: center;
-  height:450px;
-  width: 100%;
-}
-
-/************************************
-*                                   
 *       Animation
 *                                   
 *************************************/
@@ -277,30 +364,30 @@ to prevent collapsing during animation*/
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-transition:all .5s ease-in-out;
-  transition:all .5s ease-in-out;
+  -webkit-transition:all .9s ease-in-out;
+  transition:all .9s ease-in-out;
 }
 
 [ui-view].ng-enter {
   opacity: 0;
-  -webkit-transform:scale3d(0.5, 0.5, 0.5);
-  transform:scale3d(0.5, 0.5, 0.5);
+  /*-webkit-transform:scale3d(0.5, 0.5, 0.5);
+  transform:scale3d(0.5, 0.5, 0.5);*/
 }
 
 [ui-view].ng-enter-active {
   opacity: 1;
-  -webkit-transform:scale3d(1, 1, 1);
-  transform:scale3d(1, 1, 1);
+  /*-webkit-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);*/
 }
 
 [ui-view].ng-leave {
   opacity: 1; 
-  -webkit-transform:translate3d(0, 0, 0);
-  transform:translate3d(0, 0, 0);
+  /*-webkit-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);*/
 }
 
 [ui-view].ng-leave-active {
   opacity: 0;
-  -webkit-transform:translate3d(100px, 0, 0);
-  transform:translate3d(100px, 0, 0);
+  /*-webkit-transform:translate3d(100px, 0, 0);
+  transform:translate3d(100px, 0, 0);*/
 }
