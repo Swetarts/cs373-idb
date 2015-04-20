@@ -1,4 +1,13 @@
 from server import db
+from flask.ext.sqlalchemy import BaseQuery
+from sqlalchemy_searchable import SearchQueryMixin
+from sqlalchemy_utils.types import TSVectorType
+from sqlalchemy_searchable import make_searchable
+
+make_searchable()
+
+class CharacterQuery(BaseQuery, SearchQueryMixin):
+    pass
 
 
 ############
@@ -79,6 +88,7 @@ class Character(db.Model):
         enemies(db.relationship): many to many relationship to the charater's enemies
         creators (db.relationship): many to many relationship to the character's creators
     """
+    query_class = CharacterQuery
     __tablename__ = 'character'
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
@@ -106,6 +116,7 @@ class Character(db.Model):
     creators    = db.relationship('Person',                             
                     secondary=character_creator,                        
                     backref=db.backref('characters', lazy='dynamic'))
+    search_vector = db.Column(TSVectorType('name', 'description'))
 
     def __repr__(self):
         return '<Character %r>' % (self.name)

@@ -139,6 +139,13 @@ def run_tests():
   errs = errs.decode()
   return json.dumps({"results": errs})
 
+@app.route('/api/search')
+def search():
+  query = models.Character.query.search('Batman')
+  print(query.all())
+  print(type(query))
+  return json.dumps({"results": "hi"})
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
