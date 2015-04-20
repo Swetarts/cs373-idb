@@ -1,5 +1,5 @@
 from server import db
-
+import flask.ext.whooshalchemy
 
 ############
 # M:N Tables
@@ -79,7 +79,8 @@ class Character(db.Model):
         enemies(db.relationship): many to many relationship to the charater's enemies
         creators (db.relationship): many to many relationship to the character's creators
     """
-    __tablename__ = 'character'
+    __tablename__  = 'character'
+    __searchable__ = ['name', 'alias', 'description', 'origin']
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
     alias       = db.Column(db.String(255))
@@ -177,7 +178,8 @@ class Person(db.Model):
         website (str): url of the person's personal website
         gender (str): gender of character
     """
-    __tablename__ = 'person'
+    __tablename__  = 'person'
+    __searchable__ = ['name', 'description']
     id           = db.Column(db.Integer, primary_key=True)
     name         = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
@@ -247,7 +249,8 @@ class Comic_Issue(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_issue'
+    __tablename__  = 'comic_issue'
+    __searchable__ = ['title', 'description']
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
@@ -316,7 +319,8 @@ class Comic_Volume(db.Model):
         people (db.relationship): Which people worked on this comic
         characters (db.relationship): Which characters appear in the comic
     """
-    __tablename__ = 'comic_volume'
+    __tablename__  = 'comic_volume'
+    __searchable__ = ['title', 'description']
     id           = db.Column(db.Integer, primary_key=True)
     title        = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
@@ -341,7 +345,8 @@ class Publisher(db.Model):
         name (str): name of publishing studio
         comic_series (db.relationship) one studio to many comic series relationship
     """
-    __tablename__ = 'publisher'
+    __tablename__  = 'publisher'
+    __searchable__ = ['name', 'description']
     id           = db.Column(db.Integer, primary_key=True)
     name         = db.Column(db.String(255))
     image        = db.Column(db.String(4000))
@@ -365,7 +370,8 @@ class Power(db.Model):
         id (int): id of power
         name (str): name of power
     """
-    __tablename__ = 'power'
+    __tablename__  = 'power'
+    __searchable__ = ['name', 'description']
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
     description = db.Column(db.String(4000))
@@ -387,7 +393,8 @@ class Team(db.Model):
         id (int): id of team
         name (str): name of team
     """
-    __tablename__ = 'team'
+    __tablename__  = 'team'
+    __searchable__ = ['name', 'description']
     id          = db.Column(db.Integer, primary_key=True)
     name        = db.Column(db.String(255))
     description = db.Column(db.String(4000))
