@@ -1,2 +1,15 @@
 <h1> mad stores yo</h1>
-<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+    <ui-gmap-marker ng-repeat="marker in markers" idKey="marker.place_id" coords="marker.location">
+        <ui-gmap-window coords="marker.location" show="showInfo" ng-click="open()">
+            <div>
+                <div>Name: {{marker.name}} </div>
+                <div>Website: {{marker.website}}</div>
+                <div>Address: {{marker.address}}</div>
+                <div>Phone Number: {{marker.phone_number}}</div>
+                <div>Rating: {{marker.rating}}</div>
+            </div>
+        </ui-gmap-window>
+    </ui-gmap-marker>
+</ui-gmap-google-map>
+

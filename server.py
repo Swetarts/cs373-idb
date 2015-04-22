@@ -139,6 +139,12 @@ def run_tests():
   errs = errs.decode()
   return json.dumps({"results": errs})
 
+@app.route('/api/stores')
+def get_stores():
+  request_url = 'http://www.austiknights.tk/api/details/10606'
+  response = requests.get(request_url)
+  parsed = json.loads(response.content.decode())
+  return json.dumps(parsed)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
