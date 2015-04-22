@@ -18,3 +18,8 @@ class DevelopmentConfig(Config):
 	DEBUG = True
 	TESTING = True
 	WHOOSH_BASE = 'www/assets/indexes'
+
+class LocalConfig(Config):
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'postgresql://localhost:5432/swetards'
+    WHOOSH_BASE = 'www/assets/indexes'

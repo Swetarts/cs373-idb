@@ -1,5 +1,6 @@
 from server import db
-import flask.ext.whooshalchemy
+from server import app
+import flask.ext.whooshalchemy as whooshalchemy
 
 ############
 # M:N Tables
@@ -154,6 +155,8 @@ class Character(db.Model):
             }
         }
 
+whooshalchemy.whoosh_index(app, Character)
+
 ###########
 # Person
 ###########
@@ -224,6 +227,8 @@ class Person(db.Model):
                 'small_url': self.image.replace('square_avatar', 'scale_small')  
             }
         }
+
+whooshalchemy.whoosh_index(app, Person)
 
 
 ##############
@@ -298,6 +303,8 @@ class Comic_Issue(db.Model):
             'character_credits': [i.serialize_clipped for i in self.characters]
         }
 
+whooshalchemy.whoosh_index(app, Comic_Issue)
+
 ##############
 # Comic Volume
 ##############
@@ -332,6 +339,8 @@ class Comic_Volume(db.Model):
     def __repr__(self):
         return '<Comic Volume %r>' % (self.title)
 
+whooshalchemy.whoosh_index(app, Comic_Volume)
+
 ###########
 # Publisher
 ###########
@@ -358,6 +367,8 @@ class Publisher(db.Model):
 
     def __repr__(self):
         return '<Publisher %r>' % (self.name)
+
+whooshalchemy.whoosh_index(app, Publisher)
 
 #######
 # Power
@@ -386,6 +397,8 @@ class Power(db.Model):
             'name': self.name
         }
 
+whooshalchemy.whoosh_index(app, Power)
+
 class Team(db.Model):
     """A simple character powers team
 
@@ -409,4 +422,5 @@ class Team(db.Model):
             'name': self.name
         }
 
+whooshalchemy.whoosh_index(app, Team)
 
