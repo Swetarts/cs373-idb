@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+#filterbtn {
+  border-radius: 0px !important;
+}
+
 #main-container {
   padding-top: 37px;
 }
