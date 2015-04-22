@@ -3,7 +3,6 @@ app.factory('StoreFactory', function($http, HOST) {
 
 
   factory.getStores = function() {
-    var stores = [11050, 3162, 10606];
     return $http.get(HOST + '/api/stores');
   }
 

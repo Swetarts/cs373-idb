@@ -141,10 +141,14 @@ def run_tests():
 
 @app.route('/api/stores')
 def get_stores():
-  request_url = 'http://www.austiknights.tk/api/details/10606'
-  response = requests.get(request_url)
-  parsed = json.loads(response.content.decode())
-  return json.dumps(parsed)
+  store_ids = [10606, 11050, 3162]
+  request_url = 'http://www.austiknights.tk/api/details/'
+  result = []
+  for id in store_ids:
+    response = requests.get(request_url + str(id))
+    parsed = json.loads(response.content.decode())
+    result.append(parsed)
+  return json.dumps(result)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0')
