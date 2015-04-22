@@ -159,6 +159,11 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
             return deferred.promise;
           }
         }
+      })
+      .state('stores', {
+        url: "/stores",
+        templateUrl: "../../templates/stores.html",
+        controller: "StoresCtrl"
       });
       
     $urlRouterProvider.otherwise('/home');
