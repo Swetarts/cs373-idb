@@ -1,5 +1,5 @@
 <h1> mad stores yo</h1>
-<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+<ui-gmap-google-map center='map.center' zoom='map.zoom' options='map.options'>
     <ui-gmap-marker ng-repeat="place in places" 
                     idKey="place.details.place_id" 
                     coords="place.details.location"
