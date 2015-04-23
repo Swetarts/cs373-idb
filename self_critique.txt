@@ -1,0 +1,17 @@
+Self Critique:
+
+What did we do well?
+
+The front end of our website is phenomenal. We've got a lot of eye candy on our splash page. With randomized, cycling movie clips based on comics, spinning hero and villain emblems, and easter egg sound effects, we supremely increased the audio and visual appeal to any given consumer of our web content.
+
+What did we learn?
+    
+The question is, what didn't we learn? First, there's Python. Our configuration, database, models, test, and server scripts are all written in it. Then there's Angular.js, which was resonsible for all of our front end.
+
+What can we do better?
+	
+It's hard to answer this question, since our website is AMAZING!! But seriously, there are currently issues with displaying all the data onto our web pages. There are some issues with intuitive design...because of all the flash on the front page, it might be hard to tell how to navigate to certain areas of the site.
+
+What puzzles us?
+
+Currently, search is tying us up, but not in a way that can't be solved. There might be other things, but I am not thinking of them right now. 
