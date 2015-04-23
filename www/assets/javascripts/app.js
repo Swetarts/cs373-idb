@@ -163,7 +163,24 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
       .state('stores', {
         url: "/stores",
         templateUrl: "../../templates/stores.html",
-        controller: "StoresCtrl"
+        controller: "StoresCtrl",
+        resolve: {
+          places: function(StoreFactory, $q) {
+            var deferred = $q.defer();
+
+            StoreFactory.getStores().then(
+              function(data) {
+                deferred.resolve(data.data);
+                console.log(data.data);
+              },
+              function(err) {
+                deferred.reject();
+                console.log("error getting stores", data);
+              }
+            );
+            return deferred.promise;
+          }
+        }
       });
       
     $urlRouterProvider.otherwise('/home');

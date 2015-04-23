@@ -1,5 +1,7 @@
-app.controller('StoresCtrl', function($scope, StoreFactory){
-  $scope.showInfo = false;
+app.controller('StoresCtrl', function($scope, StoreFactory, places){
+  
+  $scope.places = places;
+
   $scope.map = { 
     center: { 
       latitude: 30.3192393, 
@@ -7,19 +9,5 @@ app.controller('StoresCtrl', function($scope, StoreFactory){
     }, 
     zoom: 10 
   };
-
-  $scope.open = function() {
-    $scope.showInfo = true;
-  }
-
-  StoreFactory.getStores().then(
-    function(data) {
-      $scope.places = data.data;
-      console.log(data);
-    },
-    function(err) {
-      console.log("error getting stores", data);
-    }
-  );
 
 })
