@@ -4,9 +4,11 @@ from flask import *
 from flask.ext.cors import CORS, cross_origin
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.json import jsonify
+from flask import request
 import config
 import subprocess
 from sqlalchemy.exc import *
+import flask.ext.whooshalchemy
 
 app = Flask(__name__)
 # Development settings 
@@ -138,6 +140,23 @@ def run_tests():
   print(outs.decode())
   errs = errs.decode()
   return json.dumps({"results": errs})
+
+@app.route('/api/search/', methods=['GET'])
+@cross_origin()
+def search():
+  if True:
+    search_term = request.args.get('query','')
+    search_results = dict()
+    count = 0
+    for model in [models.Character, models.Person, models.Comic_Issue]:
+      search_results[model.__tablename__] = [item.serialize_clipped for item in model.query.whoosh_search(search_term).all()]
+      count += len(search_results[model.__tablename__])
+    response = {'results': search_results}
+    response['count'] = count
+    print(response)
+    return json.dumps(response)
+
+
 
 
 if __name__ == '__main__':
