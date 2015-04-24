@@ -35,7 +35,7 @@ app.controller('AboutCtrl', function($scope) {
 			"image":"http://i.imgur.com/9RzkScR.png?1",
 			"description":"Dude's been crushing code for ~3 years, mostly in Java and C, but is up and coming in the Python game. His superpowers include the ability to transform any app into Mobile via Android Studio instantly. Once complete, you know the app is stable because he's mastered the skills of automated tests via Calabash. First appeared in UTCS in 2012, and will make the 'real world' debut this summer, May 2015!! POW! BAMM!",
 			"responsibilites":"apiary design and edit, wiki/technical report write up, db population dev, db design, cat coralling",
-			"num_commits":"27",
+			"num_commits":"30",
 			"num_issues":"9",
 			"num_uTests":"3"
 		},
@@ -53,7 +53,7 @@ app.controller('AboutCtrl', function($scope) {
 			"image":"http://i.imgur.com/0IMTMLW.jpg?1",
 			"description":"I enjoy playing soccer and drinking, preferably at the same time. Currently a senior studying brogramming at the University of America. Starting in the summer I will embark on a journey that is software engineering at Blackbaud.",
 			"responsibilites":"Major responsibilities were setting up the database with the one and only Maximilian and populating it. This consisted of figuring out what attributes were needed, the relationships between attributes, and ultimately creating the schema's.",
-			"num_commits":"30",
+			"num_commits":"37",
 			"num_issues":"7",
 			"num_uTests":"3"
 		}
