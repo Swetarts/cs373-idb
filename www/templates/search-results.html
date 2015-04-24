@@ -1,10 +1,28 @@
 <h1 class="text-center">Search Results for: {{query}}</h1>
-<div ng-repeat="character in results.character">
-    <h6>{{character.name}}</h6>
+<div ng-show="noResults" class="text-center">
+    <h2>No Results Found</h2>
 </div>
-<div ng-repeat="comic in results.comic_isssue">
-  <h6>{{comic.name}}</h6> 
+<div ng-hide="results.character == 0">
+    <h2 class="text-center">Characters</h2>
+    <div class="flex-container">
+        <div ng-repeat="character in results.character">
+            <thumbnail type="character" model='character'></thumbnail>
+        </div>
+    </div>
 </div>
-<div ng-repeat="person in results.person">
-  <h6>{{person.name}}</h6>
+<div ng-hide="results.comic_issue == 0">
+    <h2 class="text-center">Comic Issues</h2>
+    <div class="flex-container">
+        <div ng-repeat="comic in results.comic_isssue">
+            <thumbnail type="issue" model='character'></thumbnail>
+        </div>
+    </div>
+</div>
+<div ng-hide="results.person == 0">
+    <h2 class="text-center">People</h2>
+    <div class="flex-container">
+        <div ng-repeat="person in results.person">
+            <thumbnail type="person" model='person'></thumbnail>
+        </div>
+    </div>
 </div>
