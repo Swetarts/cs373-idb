@@ -1,3 +1,405 @@
+commit 481eccd18d39aa6cbded2d7f235cb281cdf3fb63
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 21:14:41 2015 -0500
+
+    updated stats for sean!
+
+commit e6ae90b30b86001c402c64073a3f54acb723eca8
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 21:04:56 2015 -0500
+
+    travis fix
+
+commit 65775ac35a4c61fac7090c7afaa5976d9dc1c635
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 21:02:26 2015 -0500
+
+    travis fix
+
+commit 8db9384b6cfd41a7a7a7dd48af7a4e49fbb5c447
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:58:44 2015 -0500
+
+    fix travis
+
+commit 6bfc71cca1c7c52e2976558a27a67c061ed240f2
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:57:14 2015 -0500
+
+    fix travis
+
+commit bf5a09cad3ebd40b8a8906356a33e2fe485862fe
+Merge: 7e33c6f 922db7b
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:55:32 2015 -0500
+
+    git pusMerge branch 'master' of github.com:Swetarts/cs373-idb
+
+commit 7e33c6fff287d8646ddefe606a5f0db8e601fc0a
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:54:29 2015 -0500
+
+    add file check to travis
+
+commit 922db7b0331395ad43c3db72f728f5fac196b9a7
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 20:53:20 2015 -0500
+
+    updated stats
+
+commit c6540310c3b5a05605ca0d97e4edb2bf16d706c6
+Merge: c916891 7fd4255
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 20:53:07 2015 -0500
+
+    Merge branch 'master' of https://github.com/Swetarts/cs373-idb
+
+commit c916891f2c355d3a835d57655c6b52c25220208e
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 20:51:33 2015 -0500
+
+    Updated member stats
+
+commit 7fd4255cd725b52cad3899b48fe0d33483dfb0ae
+Author: Aaron Dishman <aaron.dishman@utexas.edu>
+Date:   Thu Apr 23 20:50:32 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit fdc511eb6c3aa26e4f4516b442de7fa46c1e9815
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:50:17 2015 -0500
+
+    Transferring blueprint from apiary.io
+
+commit 1d3894d4c1a829fe8fba61c8bd512fc8e7421d28
+Merge: 11f7195 8d71ba4
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:25:00 2015 -0500
+
+    Merge branch 'master' of github.com:Swetarts/cs373-idb
+
+commit 11f7195d9544db46ec36f44266f614ab0ae725c6
+Merge: 0d2c686 faf2910
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:24:51 2015 -0500
+
+    fix merge
+
+commit 8d71ba40c3bd5a3312f3658f6e8c080509da2ee8
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 23 20:24:15 2015 -0500
+
+    Or's for day's. Also, there's some logic for empty urls, which gets pretty nasty 👛💻🔮
+
+commit 0d2c686a8b98ace63f613d86b3e9b2b484a87a22
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:18:03 2015 -0500
+
+    bug fix
+
+commit fd8ac5ca961cfe9a5a7463e46a0c9b3978e861d4
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 20:10:38 2015 -0500
+
+    search on home page
+
+commit faf2910ca1d5638f97d266bacda23d3d480c2cd6
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Apr 23 20:08:29 2015 -0500
+
+    added additional locations to map
+
+commit b035bee1de22a0616ab6b0f6a76da2c89cab7c83
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 19:35:20 2015 -0500
+
+    bug fix
+
+commit 6e3ed543e2cce8855e823833b65dbb269d4287a9
+Merge: 4b7ad8c 94d1802
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 19:22:41 2015 -0500
+
+    fix merge conflict
+
+commit 4b7ad8c9845ec6aebb3dc5e25e8db34b44d78dc5
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 19:21:12 2015 -0500
+
+    fix description pictures
+
+commit 1ef17cee78d4a13ce73846d27f2c755506bd6ba8
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 19:12:41 2015 -0500
+
+    search almost done
+
+commit 6cab4e6dee639e87c3e5fa37877088ced54c4699
+Author: stv8 <stvillars8@gmail.com>
+Date:   Thu Apr 23 18:38:03 2015 -0500
+
+    search results
+
+commit 94d18022d79ee5cf2eff062b16491678d105e6ef
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 23 17:48:30 2015 -0500
+
+    #NOFILTER 📱
+
+commit 9fdd75c4bf650c0f0acf2ef4c63e5476e649f6f3
+Merge: da317a5 93645f5
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Thu Apr 23 17:11:50 2015 -0500
+
+    Merge pull request #83 from Swetarts/search_api
+    
+    Search api and search bars <span class="EmojiInput mj265" title="Gem Stone ::gem::"></span>
+
+commit da317a53fe48c01c9401c00e5cbc2486c5ac7609
+Merge: 770f334 a9da56a
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 16:07:44 2015 -0500
+
+    Merge branch 'master' of https://github.com/stv8/cs373-idb
+
+commit 770f334d503815c2dfbe766715c5abda1eef49ff
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 23 16:06:58 2015 -0500
+
+    added a search_ctlr for search
+
+commit 4fa2b7ac7f72edaa47ac97c1dc3caab067e4a8ed
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Apr 23 16:03:24 2015 -0500
+
+    added custom map markers resolves #82
+
+commit a9da56ae9cfd06b2a8e069d3588d1621eaab660c
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Thu Apr 23 16:00:39 2015 -0500
+
+    closes #81
+
+commit 21a1d859decfeb4e085ea947074fbc2ecfb4ba34
+Author: Maximilian Brown <maximilian.brown@gmail.com>
+Date:   Thu Apr 23 13:02:56 2015 -0500
+
+    Stylized the google map with dark theme resolves #80
+
+commit ab1c07a8e3c23305fad0e9e3f1f9096f4f2d4b41
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Apr 22 22:47:21 2015 -0500
+
+    closes #67
+
+commit d0b57a910b11b3e3205796bfeeadaea148c9dc8b
+Author: Aaron <aaron.dishman@utexas.edu>
+Date:   Wed Apr 22 22:02:22 2015 -0500
+
+    closes #79
+
+commit add6f293cae09279737952766d18681f8d9b629c
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 22 19:02:23 2015 -0500
+
+    bit of refactoring
+
+commit 86281baa587965e01fd020cb7aa5030d69224c1d
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 22 17:53:24 2015 -0500
+
+    add more places from their api
+
+commit 9b3fb7f4ef0d10d62b1023a49468c76c5eab2431
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 22 15:19:20 2015 -0500
+
+    got one place from their API
+
+commit 93645f599e68927f60570df8c34543debb3609bb
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Wed Apr 22 13:02:11 2015 -0500
+
+    Added a search in le navbar LELELELEL XD 🙋
+
+commit 8ff32b6e6e92361895a982644139e0dfb7d82322
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 22 12:55:31 2015 -0500
+
+    maps is pretty much done
+
+commit 6af03c40fcd07350287dbe36343cf90d08cdc720
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 22 12:44:58 2015 -0500
+
+    initial map stuffffs :poop:
+
+commit 8c3f7400fcf7f9bf001161f1723843253964c71b
+Author: tcorley <tyler_corley@me.com>
+Date:   Wed Apr 22 00:13:14 2015 -0500
+
+    SEARCH WORKS WHOOOOOOOO 🎉
+
+commit 295a3ed8f1c0a6fa3d487451d7868a1aa1e21b9d
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Mon Apr 20 13:29:23 2015 -0500
+
+    Search will just return everything at this point. We'll get full text search working in a bit. 🚓
+
+commit 0df8fc19524df4fb14e3991e39dc60bc6ad2bf0e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Apr 19 19:26:48 2015 -0500
+
+    lodash test
+
+commit 73822cd166eed076a372a5b222ab10308ecfbb6e
+Author: stv8 <stvillars8@gmail.com>
+Date:   Sun Apr 19 19:20:58 2015 -0500
+
+    travis test
+
+commit 2c2ae78a10cda13ccff517c14eadbc308cfd8283
+Merge: 53ebc0d 6bd8fbc
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Fri Apr 17 13:19:02 2015 -0500
+
+    Merge pull request #73 from Swetarts/main-page-redesign
+    
+    Main page redesign
+
+commit 6bd8fbc04c31b8f4399f87db9191bdb3e4a0d464
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Fri Apr 17 13:04:04 2015 -0500
+
+    Finalize the videos and clean them up a bit so that it doesn't look like we're sponsored my Marvel™ or something. 📺💸
+
+commit 53ebc0d549978948cd266668ea5ac9abd92bd683
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Thu Apr 16 13:44:09 2015 -0500
+
+    add travis build status to readme
+
+commit da3ee0db256bff4cb6fdd66f501181ae64851584
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Thu Apr 16 13:39:27 2015 -0500
+
+    travis working
+
+commit db233cc78cf6dc0d6f4043846b15cc339d7b266a
+Author: Sean Villars <stvillars8@gmail.com>
+Date:   Thu Apr 16 13:14:37 2015 -0500
+
+    travis working?
+
+commit 3274ed937cb5afc3f213b4e04ced67e26ef72464
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 21:09:12 2015 -0500
+
+    mad commits yo
+
+commit 6e7740e6121935464f2121f907c2bd35ab78ac72
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 15:35:10 2015 -0500
+
+    :poop:
+
+commit 8eb83c5726ee2e3d1f511271ff28752965eda155
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 15:27:08 2015 -0500
+
+    work dammit
+
+commit 6981decc431ee09bf5370f19da9d2120a86aaaba
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 14:20:01 2015 -0500
+
+    trigger travis dammit
+
+commit c78367485ee9b1e2c5837b144844e2f83c299212
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 13:53:59 2015 -0500
+
+    more travis stuffs
+
+commit 64d13bc46581f0d18c0ff4687017aa68a67b6857
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 13:47:43 2015 -0500
+
+    add python version to tarvis
+
+commit c95e545e65911bbb9fbe97c7dd8bf93166762519
+Author: stv8 <stvillars8@gmail.com>
+Date:   Wed Apr 15 13:27:19 2015 -0500
+
+    add .travis.yml
+
+commit 9363e12a76a5d38e2aac292bb4507570e6515eaa
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 14 21:24:23 2015 -0500
+
+    ugh
+
+commit e729f9f8c0811e91e6ee956fafe86c4ea1f60ccc
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 14 21:14:38 2015 -0500
+
+    whoops 😔:
+
+commit 00b228b4a832588ba8ba210c237102f7f94e27c3
+Author: tcorley <tyler_corley@me.com>
+Date:   Tue Apr 14 20:59:59 2015 -0500
+
+    Added new marvel video that is less intrusive... give it a view and see what you think. Also, animations **should** work cross-browser
+
+commit ab63f04d2b8c8340264aae2e78bff5c7c04cc206
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Mon Apr 13 12:39:22 2015 -0500
+
+    Fixing the video to use an angular source instead
+
+commit 908201de6a849364fb4b02d6d65acfde7c90eaf5
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Mon Apr 13 12:33:48 2015 -0500
+
+    Adding new videos, (don't know how well this works with larger file sizes). 5 are from superhero movie montages, the other three consist of two Marvel intros and one DC comics intro
+
+commit 90968571aa1dbc3059884328cd60a8dd24f6c4a8
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Sun Apr 12 21:02:23 2015 -0500
+
+    Got some animations going! In order to make it more fluid, I had to change the transitions to strictly fading in/out 😭. I also got rid of the flex boxes and added a search bar because I'm pretty sure we're gonna need it 😂
+
+commit c7546423f8ae2ea7bcec598fca93d145afd2e838
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Sun Apr 12 17:20:23 2015 -0500
+
+    Adding some ideas for the main page 📚:
+
+commit a71eea8d6ac134615e43623a1de92e12d31a80c3
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Sun Apr 12 17:14:35 2015 -0500
+
+    Fixed issue with centered text not resizing correctly on page width change. Using new 'vw' unit
+
+commit e881e1d9467dac2fadad838ad619006ca0aa221a
+Author: Tyler Corley <tyler_corley@me.com>
+Date:   Sun Apr 12 15:07:43 2015 -0500
+
+    commented out the flexboxes for now so you can see what's going on 🐼
+
+commit 58b135f98ed04dc1e4316fcb755fa928d8461584
+Author: tcorley <tyler_corley@me.com>
+Date:   Sun Apr 12 14:21:41 2015 -0500
+
+    home page work. Incomplete but in progress
+
+commit c752ec118a0bac8ca820ea815768fe3d61f3cd04
+Author: jergamb <ggambo_13@utexas.edu>
+Date:   Thu Apr 9 20:41:14 2015 -0500
+
+    added new log
+
 commit f75af7f3fe4979c4884c2a596219b8c93e2f7301
 Author: jergamb <ggambo_13@utexas.edu>
 Date:   Thu Apr 9 20:39:50 2015 -0500
