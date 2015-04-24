@@ -10,8 +10,8 @@
 <div class="center-content">
     <h3>Select links up top for more or search here</h3>
     <div id="search">
-        <form>
-            <input type="search" value="" placeholder="Search for comics, characters, or people">
+        <form ng-submit="search()">
+            <input ng-model="searchQuery" type="search" placeholder="Search for comics, characters, or people">
         </form>
     </div>
 </div>
