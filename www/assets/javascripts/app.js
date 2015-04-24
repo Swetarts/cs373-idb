@@ -173,6 +173,7 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
           $scope.noResults = ($scope.results.character == 0) 
                           && ($scope.results.comic_issue == 0) 
                           && ($scope.results.person == 0);
+          console.log($scope.results);
         }
       });
       
