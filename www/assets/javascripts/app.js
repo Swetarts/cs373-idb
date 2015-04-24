@@ -170,10 +170,12 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
         controller: function($scope, $stateParams) {
           $scope.results = $stateParams['results'];
           $scope.query = $stateParams['query'];
-          $scope.noResults = ($scope.results.character == 0) 
-                          && ($scope.results.comic_issue == 0) 
-                          && ($scope.results.person == 0);
-          console.log($scope.results);
+          if($scope.results) {
+            $scope.noResults = ($scope.results.character == 0) 
+            && ($scope.results.comic_issue == 0) 
+            && ($scope.results.person == 0);
+          }
+          // console.log($scope.results);
         }
       });
       

@@ -2,27 +2,29 @@
 <div ng-show="noResults" class="text-center">
     <h2>No Results Found</h2>
 </div>
-<div ng-hide="results.character == 0">
-    <h2 class="text-center">Characters</h2>
-    <div class="flex-container">
-        <div ng-repeat="character in results.character">
-            <thumbnail type="character" model='character'></thumbnail>
+<div ng-hide="results == null">
+    <div ng-hide="results.character == 0">
+        <h2 class="text-center">Characters</h2>
+        <div class="flex-container">
+            <div ng-repeat="character in results.character">
+                <thumbnail type="character" model='character'></thumbnail>
+            </div>
         </div>
     </div>
-</div>
-<div ng-hide="results.comic_issue == 0">
-    <h2 class="text-center">Comic Issues</h2>
-    <div class="flex-container">
-        <div ng-repeat="comic in results.comic_issue">
-            <thumbnail type="issue" model='comic'></thumbnail>
+    <div ng-hide="results.comic_issue == 0">
+        <h2 class="text-center">Comic Issues</h2>
+        <div class="flex-container">
+            <div ng-repeat="comic in results.comic_issue">
+                <thumbnail type="issue" model='comic'></thumbnail>
+            </div>
         </div>
     </div>
-</div>
-<div ng-hide="results.person == 0">
-    <h2 class="text-center">People</h2>
-    <div class="flex-container">
-        <div ng-repeat="person in results.person">
-            <thumbnail type="person" model='person'></thumbnail>
+    <div ng-hide="results.person == 0">
+        <h2 class="text-center">People</h2>
+        <div class="flex-container">
+            <div ng-repeat="person in results.person">
+                <thumbnail type="person" model='person'></thumbnail>
+            </div>
         </div>
     </div>
 </div>
