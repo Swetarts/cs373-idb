@@ -204,7 +204,7 @@ class Person(db.Model):
                 'medium_url': self.image.replace('square_avatar', 'scale_medium'),
                 'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
                 'small_url': self.image.replace('square_avatar', 'scale_small')  
-            },
+            } if self.image else {'medium_url':'', 'thumb_url':'', 'small_url':''},
             'birth_date': self.birth_date,
             'country': self.country,
             'description': self.description,
@@ -225,7 +225,7 @@ class Person(db.Model):
                 'medium_url': self.image.replace('square_avatar', 'scale_medium'),
                 'thumb_url': self.image.replace('square_avatar', 'scale_avatar'),
                 'small_url': self.image.replace('square_avatar', 'scale_small')  
-            }
+            } if self.image else {'medium_url':'', 'thumb_url':'', 'small_url':''}
         }
 
 whooshalchemy.whoosh_index(app, Person)
