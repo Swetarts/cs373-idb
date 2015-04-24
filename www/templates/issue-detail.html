@@ -17,7 +17,7 @@
                     </figure>
                     </div>
                 </div>
-                <div ng-bind-html="issue.description | to_trusted"></div>
+                <div ng-bind-html="issue.description | fix-src | to_trusted"></div>
             </tab>
             <tab heading="Characters">
                 <div class="list-group">

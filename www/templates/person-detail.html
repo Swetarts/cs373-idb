@@ -15,7 +15,7 @@
                         <img class='block-center' ng-src="{{ person.image.medium_url }}" alt=""/>
                     </div>
                 </div>
-                <div ng-bind-html="person.description | to_trusted"></div>
+                <div ng-bind-html="person.description | fix-src | to_trusted"></div>
             </tab>
             
             <tab heading="Characters">

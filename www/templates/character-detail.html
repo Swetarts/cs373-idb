@@ -15,7 +15,7 @@
                         <img class='block-center image-container' ng-src="{{ character.image.medium_url }}" alt=""/>
                     </div>
                 </div>
-                <div ng-bind-html="character.description | strip_anchors | to_trusted"></div>
+                <div ng-bind-html="character.description | strip_anchors | fix_src | to_trusted"></div>
             </tab>
     
             <tab heading="Powers">
