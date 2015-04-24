@@ -1,12 +1,7 @@
 // Declare app level module which depends on views, and components
-var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate'])
+var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading-bar', 'ngAnimate', 'uiGmapgoogle-maps'])
 
   .run(function($rootScope, $state) {
-    $rootScope.$on('$stateChangeStart', function(e, to) {
-      // console.log($state);
-      // console.log(e);
-      // console.log(to);
-    });
 
     // Moves screen to top after state change
     $rootScope.$on('$stateChangeSuccess', function() {
@@ -170,12 +165,34 @@ var app = angular.module('myApp', ['ui.router', 'ui.bootstrap', 'angular-loading
         controller: function($scope, $stateParams) {
           $scope.results = $stateParams['results'];
           $scope.query = $stateParams['query'];
+
           if($scope.results) {
             $scope.noResults = ($scope.results.character == 0) 
             && ($scope.results.comic_issue == 0) 
             && ($scope.results.person == 0);
           }
-          // console.log($scope.results);
+        }
+      })
+      .state('stores', {
+        url: "/stores",
+        templateUrl: "../../templates/stores.html",
+        controller: "StoresCtrl",
+        resolve: {
+          places: function(StoreFactory, $q) {
+            var deferred = $q.defer();
+
+            StoreFactory.getStores().then(
+              function(data) {
+                deferred.resolve(data.data);
+                console.log(data.data);
+              },
+              function(err) {
+                deferred.reject();
+                console.log("error getting stores", data);
+              }
+            );
+            return deferred.promise;
+          }
         }
       });
       
