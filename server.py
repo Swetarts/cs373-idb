@@ -149,7 +149,7 @@ def search():
     search_results = dict()
     count = 0
     for model in [models.Character, models.Person, models.Comic_Issue]:
-      search_results[model.__tablename__] = [item.serialize_clipped for item in model.query.whoosh_search(search_term).all()]
+      search_results[model.__tablename__] = [item.serialize_clipped for item in model.query.whoosh_search(search_term, or_=('or' in [i.lower() for i in search_term.split(' ')])).all()]
       count += len(search_results[model.__tablename__])
     response = {'results': search_results}
     response['count'] = count
