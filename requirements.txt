@@ -21,6 +21,6 @@ SQLAlchemy==0.9.9
 sqlalchemy-migrate==0.9.5
 sqlparse==0.1.14
 Tempita==0.5.2
-Werkzeug==0.10.1
+Werkzeug==0.15.3
 Whoosh==2.7.0
 git+git://github.com/miguelgrinberg/flask-whooshalchemy.git
